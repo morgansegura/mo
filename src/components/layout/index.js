@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import { ThemeProvider } from "styled-components"
 
 import { HeaderContainer } from "../../containers/header"
-
-import { MainNavigation } from "../menu"
+import { FooterContainer } from "../../containers/footer"
+import { MenuContainer } from "../../containers/menu"
 
 import GlobalStyles from "../../../global-styles"
 import { useDarkMode } from "../theme/useDarkMode"
@@ -69,7 +69,7 @@ const Layout = ({ children, location }) => {
                     </S.MainNavToggle>
                     <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
 
-                    <MainNavigation
+                    <MenuContainer
                         className={`
                         fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-24 shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
                         ${
@@ -78,15 +78,13 @@ const Layout = ({ children, location }) => {
                                 : `-translate-x-full lg:translate-x-0`
                         }
                     `}
-                    />
+                    ></MenuContainer>
                 </HeaderContainer>
                 <S.Content className="content flex-1 lg:pt-24 ml-0 lg:ml-48">
                     {children}
-                    <S.Footer className="font-semibold text-sm font-headline py-4 flex items-center justify-end">
-                        <div className="flex-1 flex justify-end mr-4">
-                            Morgan Segura | {new Date().getFullYear()}
-                        </div>
-                    </S.Footer>
+                    <FooterContainer>
+                        Morgan Segura | {new Date().getFullYear()}
+                    </FooterContainer>
                 </S.Content>
             </div>
         </ThemeProvider>

@@ -1,4 +1,6 @@
-export const menu = [
+import React from "react"
+import { SiAboutDotMe } from "react-icons/si"
+export const menuList = [
     {
         id: "home",
         title: "",
@@ -10,6 +12,6 @@ export const menu = [
         title: "",
         label: "About",
         path: "/about",
-        icon: "<SiAboutDotMe />",
+        icon: <SiAboutDotMe />,
     },
 ]
