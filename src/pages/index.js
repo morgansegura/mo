@@ -1,65 +1,71 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { HeroSplit } from "../components"
+
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
+
 import { skills, studies, technology } from "../data"
 const IndexPage = () => {
-    const data = useStaticQuery(graphql`
-        query HomePageQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
+    // const data = useStaticQuery(graphql`
+    //     query HomePageQuery {
+    //         site {
+    //             siteMetadata {
+    //                 title
+    //             }
+    //         }
+    //     }
+    // `)
     return (
         <Layout>
             <SEO
                 title="The struggle is real"
                 keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
             />
-            <S.HeroBlock className="flex flex-col xl:flex-row">
-                <S.BioImageContainer>
-                    <S.BioImage
+
+            <HeroSplit className="flex flex-col xl:flex-row">
+                <HeroSplit.ImageContainer>
+                    <HeroSplit.Image
                         className="w-full h-full"
                         style={{ backgroundImage: `url(${quoteImage})` }}
                         alt=""
                     />
-                </S.BioImageContainer>
-                <S.BioContent className="p-10 lg:p-16">
-                    <span className="block font-thin text-base font-sans tracking-normal">
+                </HeroSplit.ImageContainer>
+
+                <HeroSplit.Body className="p-10 lg:p-16">
+                    <HeroSplit.TextSmall className="block font-thin text-base font-sans tracking-normal">
                         Creative Technologist
-                    </span>
-                    <h2 className="font-sans font-headline text-5xl leading-10 font-semibold mb-5">
+                    </HeroSplit.TextSmall>
+                    <HeroSplit.Title className="font-sans font-headline text-5xl leading-10 font-semibold mb-5">
                         Morgan Segura
-                    </h2>
-                    <div className="font-sans text-sm leading-loose">
-                        <p className="mb-3 pt-2">
+                    </HeroSplit.Title>
+                    <HeroSplit.TextContainer className="font-sans text-sm leading-loose">
+                        <HeroSplit.Text className="mb-3 pt-2">
                             Hook leggings snapple dj jazzy jeff david duchovny
                             end of the road gatorade, cornrows pulp fiction alta
                             vista skate tees roseanne barr wesley snipes. Eminem
                             bandanas fanny packs hot pink boy bands when you’re
                             lost out there and you’re all alone.
-                        </p>
-                        <p className="pt-2">
+                        </HeroSplit.Text>
+                        <HeroSplit.Text className="pt-2">
                             Flip flops wearing your cap backwards encarta I've
                             fallen and I can't get up wayne gretzky tamagotchi.
                             Nintendo 64 sup hip hop playa puff daddy, courtney
                             love end of the road warheads push pencils.
-                        </p>
-                    </div>
-                    <S.Button
+                        </HeroSplit.Text>
+                    </HeroSplit.TextContainer>
+                    <HeroSplit.ButtonLink
                         className="mt-6 ml-auto text-center inline-flex lg:block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
                         to={"/"}
                     >
                         Download CV
-                    </S.Button>
-                </S.BioContent>
-            </S.HeroBlock>
+                    </HeroSplit.ButtonLink>
+                </HeroSplit.Body>
+            </HeroSplit>
+
             <S.SkillsBlock className="p-10 lg:p-16">
                 <header className="mb-6">
                     <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
@@ -67,8 +73,8 @@ const IndexPage = () => {
                     </h3>
                 </header>
                 <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {skills.map(skill => (
-                        <div className="card p-4 rounded-md shadow-lg">
+                    {skills.map((skill, i) => (
+                        <div key={i} className="card p-4 rounded-md shadow-lg">
                             <div className="flex items-center mb-1">
                                 {skill.icon}
                                 <h4 className="font-semibold text-lg">
@@ -88,8 +94,9 @@ const IndexPage = () => {
                 </header>
 
                 <div className="grid grid-cols-2 gap-1 md:grid-cols-4">
-                    {technology.map(tech => (
+                    {technology.map((tech, i) => (
                         <a
+                            key={i}
                             className="card relative col-span-1 flex justify-center py-8 px-8"
                             href={tech.url}
                         >
@@ -110,8 +117,8 @@ const IndexPage = () => {
                     </h3>
                 </header>
                 <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {studies.map(study => (
-                        <div className="card p-4 rounded-md shadow-lg">
+                    {studies.map((study, i) => (
+                        <div key={i} className="card p-4 rounded-md shadow-lg">
                             <div className="flex items-center mb-1">
                                 {study.icon}
                                 <h4 className="font-semibold text-lg">

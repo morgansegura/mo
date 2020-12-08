@@ -8,7 +8,8 @@ const customMedia = generateMedia({
     large: "1024px",
     huge: "1600px",
 })
-export const HeaderWrapper = styled.header`
+export const Container = styled.header``
+export const Wrapper = styled.div`
     transition: height 0.15s ease-in-out;
     width: 100%;
     height: 4rem;
@@ -29,22 +30,25 @@ export const HeaderWrapper = styled.header`
         height: 4rem;
     }
     ${customMedia.greaterThan("large")`
-    width: calc(100% - 12rem);
-    height: 6rem;
-    margin-left: 12rem;
-    border-left: 17px solid transparent;     
-      &.scrolled-header:before {
+        width: calc(100% - 12rem);
+        height: 6rem;
+        margin-left: 12rem;
+        border-left: 17px solid transparent;     
+        &.scrolled-header:before {
         opacity: 0.85;
-      }    
-  `};
+        }    
+    `};
     ${customMedia.greaterThan("huge")`
-    margin-left: 0;
-    border-left: 0 solid transparent;   
-    border-bottom: 1px solid ${({ theme }) => theme.borderContent};
-    width: 100%;
-  `};
+        margin-left: 0;
+        border-left: 0 solid transparent;   
+        border-bottom: 1px solid ${({ theme }) => theme.borderContent};
+        width: 100%;
+    `};
 `
-export const Logo = styled(Link)`
+
+export const Navbar = styled.div``
+
+export const LogoContainer = styled(Link)`
     width: 3rem;
     height: 3rem;
     .cls-2 {

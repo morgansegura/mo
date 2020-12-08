@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 
-import Header from "../header"
+import { HeaderContainer } from "../../containers/header"
+
 import { MainNavigation } from "../menu"
 
 import GlobalStyles from "../../../global-styles"
@@ -19,15 +20,15 @@ import ToggleTheme from "../theme/toggleTheme"
 import * as S from "./styles/layout"
 
 const Layout = ({ children, location }) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
+    // const data = useStaticQuery(graphql`
+    //     query SiteTitleQuery {
+    //         site {
+    //             siteMetadata {
+    //                 title
+    //             }
+    //         }
+    //     }
+    // `)
 
     // useState Hook
     const [toggleNav, setToggleNav] = useState(false)
@@ -53,25 +54,24 @@ const Layout = ({ children, location }) => {
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
             <div className="wrapper relative flex flex-col h-screen">
-                <div className="header-wrapper">
-                    <Header
-                        className={`h-16 lg:h-24 lg:ml-48 fixed z-10 px-10 flex items-center justify-between ${
-                            toggleNav ? "drawer-open" : ""
-                        }`}
+                <HeaderContainer
+                    className={`h-16 lg:h-24 lg:ml-48 fixed z-10 px-10 flex items-center justify-between ${
+                        toggleNav ? "drawer-open" : ""
+                    }`}
+                >
+                    <S.MainNavToggle
+                        className="flex"
+                        onClick={() => setToggleNav(!toggleNav)}
                     >
-                        <S.MainNavToggle
-                            className="flex"
-                            onClick={() => setToggleNav(!toggleNav)}
-                        >
-                            <S.Hamburger className="hamburger">
-                                <div className="hamburger__center" />
-                            </S.Hamburger>
-                        </S.MainNavToggle>
-                        <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
-                    </Header>
+                        <S.Hamburger className="hamburger">
+                            <div className="hamburger__center" />
+                        </S.Hamburger>
+                    </S.MainNavToggle>
+                    <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
+
                     <MainNavigation
                         className={`
-                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-64 lg:w-48 shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
+                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-24 shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
                         ${
                             toggleNav
                                 ? `translate-x-0`
@@ -79,7 +79,7 @@ const Layout = ({ children, location }) => {
                         }
                     `}
                     />
-                </div>
+                </HeaderContainer>
                 <S.Content className="content flex-1 lg:pt-24 ml-0 lg:ml-48">
                     {children}
                     <S.Footer className="font-semibold text-sm font-headline py-4 flex items-center justify-end">

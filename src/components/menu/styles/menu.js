@@ -12,7 +12,7 @@ export const Logo = styled(Link)`
         fill: ${({ theme }) => theme.logo};
     }
 `
-export const MenuItem = styled(Link)`
+export const Item = styled(Link)`
     padding: 0.65rem 1rem;
     background-color: ${({ theme }) => theme.bgDrawerNavItem};
     color: ${({ theme }) => theme.textDrawerNavItem};
