@@ -7,6 +7,8 @@ import { HeaderContainer } from "../../containers/header"
 import { FooterContainer } from "../../containers/footer"
 import { MenuContainer } from "../../containers/menu"
 
+import Hamburger from "../../components/hamburger"
+
 import GlobalStyles from "../../../global-styles"
 import { useDarkMode } from "../theme/useDarkMode"
 import {
@@ -55,23 +57,19 @@ const Layout = ({ children, location }) => {
             <GlobalStyles />
             <div className="wrapper relative flex flex-col h-screen">
                 <HeaderContainer
-                    className={`h-16 lg:h-24 lg:ml-48 fixed z-10 px-10 flex items-center justify-between ${
+                    className={`relative h-16 lg:h-24 lg:ml-48 fixed z-10 px-10 flex items-center justify-between ${
                         toggleNav ? "drawer-open" : ""
                     }`}
                 >
-                    <S.MainNavToggle
+                    <Hamburger
                         className="flex"
                         onClick={() => setToggleNav(!toggleNav)}
-                    >
-                        <S.Hamburger className="hamburger">
-                            <div className="hamburger__center" />
-                        </S.Hamburger>
-                    </S.MainNavToggle>
+                    />
                     <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
 
                     <MenuContainer
                         className={`
-                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-24 shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
+                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-24 min-h-device shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
                         ${
                             toggleNav
                                 ? `translate-x-0`

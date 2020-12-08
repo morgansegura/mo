@@ -1,12 +1,13 @@
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-export const Container = styled.div``
-
-export const LogoWrapper = styled.div`
+export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgDrawer};
     border-right: 1px solid ${({ theme }) => theme.borderDrawer};
 `
+
+export const LogoWrapper = styled.div``
+
 export const LogoContainer = styled(Link)`
     width: 3rem;
     height: 3rem;

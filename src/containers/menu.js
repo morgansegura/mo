@@ -3,9 +3,9 @@ import Menu from "../components/menu"
 import LogoImage from "../assets/images/segura-icon.svg"
 import { menuList } from "../fixtures"
 
-export function MenuContainer() {
+export function MenuContainer({ ...restProps }) {
     return (
-        <Menu>
+        <Menu {...restProps}>
             <Menu.LogoWrapper className="h-24 flex flex-col justify-center text-center">
                 <Menu.LogoContainer
                     className="mx-auto"
