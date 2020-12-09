@@ -8,7 +8,7 @@ export function MenuContainer({ ...restProps }) {
         <Menu {...restProps}>
             <Menu.LogoWrapper className="h-24 flex flex-col justify-center text-center">
                 <Menu.LogoContainer
-                    className="mx-auto"
+                    className="mx-auto flex flex-col items-center justify-center"
                     to="/"
                     title="Home"
                     aria-label="Home"

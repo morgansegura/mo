@@ -36,7 +36,9 @@ const ToggleTheme = ({ theme, toggleTheme }) => {
                 onClick={() => setToggleColors(!toggleColors)}
             />
             <S.ThemeSelector>
-                <S.Options>
+                <S.Options
+                    className={`fixed top-20 transform transition-translate ease-out duration-300`}
+                >
                     <div className="options-item theme-color font-sans">
                         {themeOptions.map((item, i) => (
                             <div

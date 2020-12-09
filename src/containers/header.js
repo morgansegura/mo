@@ -30,7 +30,7 @@ export function HeaderContainer({ className, children }) {
                     title="Home"
                     aria-label="Home"
                 >
-                    <LogoImage className="logo w-10 h-10 lg:mx-auto" />
+                    <LogoImage className="logo w-12 h-12 lg:mx-auto" />
                 </Header.LogoContainer>
                 <Header.Navbar className="flex-1 flex justify-end items-center">
                     {children}

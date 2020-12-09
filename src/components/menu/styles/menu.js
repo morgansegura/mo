@@ -6,7 +6,9 @@ export const Container = styled.div`
     border-right: 1px solid ${({ theme }) => theme.borderDrawer};
 `
 
-export const LogoWrapper = styled.div``
+export const LogoWrapper = styled.div`
+    height: 5rem;
+`
 
 export const LogoContainer = styled(Link)`
     width: 3rem;

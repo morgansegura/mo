@@ -1,8 +1,7 @@
 import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
+import { LayoutContainer } from "../containers/layout"
 import SEO from "../components/seo"
-
 import { HeroSplit } from "../components"
 
 import * as S from "../styles/home/styled"
@@ -20,7 +19,7 @@ const IndexPage = () => {
     //     }
     // `)
     return (
-        <Layout>
+        <LayoutContainer>
             <SEO
                 title="The struggle is real"
                 keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
@@ -218,7 +217,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </S.TestimonialBlock>
-        </Layout>
+        </LayoutContainer>
     )
 }
 

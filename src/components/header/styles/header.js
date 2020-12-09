@@ -12,7 +12,7 @@ export const Container = styled.header``
 export const Wrapper = styled.div`
     transition: height 0.15s ease-in-out;
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     &:before {
         content: "";
         position: absolute;
@@ -27,15 +27,13 @@ export const Wrapper = styled.div`
         transition: opacity 0.4s ease-out;
     }
     &.scrolled-header {
-        height: 4rem;
+        /* height: 5rem; */
     }
     ${customMedia.greaterThan("large")`
-        width: calc(100% - 12rem);
-        height: 6rem;
-        margin-left: 12rem;
-        border-left: 17px solid transparent;     
+        width: calc(100% - 6rem);
+        margin-left: 6rem; 
         &.scrolled-header:before {
-        opacity: 0.85;
+            opacity: 0.85;
         }    
     `};
     ${customMedia.greaterThan("huge")`
