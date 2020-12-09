@@ -6,18 +6,33 @@ const customMedia = generateMedia({
     sm: "640px",
     md: "768px",
     lg: "1024px",
-    xl: "1600px",
-    xxl: "1536",
+    xl: "1280px",
+    xxl: "1536px",
 })
+
 export const Container = styled.section`
+    display: flex;
+    flex-direction: column;
     background-color: ${({ theme }) => theme.bgHero};
+    height: 100%;
+
+    ${customMedia.between("xl", "xxl")`
+        flex-direction: row;
+    `};
+    ${customMedia.greaterThan("xxl")`
+        flex-direction: row;
+    `};
 `
 export const ImageContainer = styled.div`
     min-height: 100%;
     flex: 0 0 100%;
     max-width: 100%;
 
-    ${customMedia.greaterThan("lg")`
+    ${customMedia.between("xl", "xxl")`
+        flex: 0 0 50%;
+        max-width: 50%;
+    `};
+    ${customMedia.greaterThan("xxl")`
         flex: 0 0 50%;
         max-width: 50%;
     `};
@@ -40,6 +55,7 @@ export const TextContainer = styled.div``
 export const Title = styled.h2`
     color: ${({ theme }) => theme.textHeadlineHero};
     font-size: 4rem;
+    line-height: 0.95;
     margin-bottom: 2rem;
 `
 export const Subtitle = styled.h3`

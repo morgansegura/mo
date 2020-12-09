@@ -5,14 +5,14 @@ const customMedia = generateMedia({
     sm: "640px",
     md: "768px",
     lg: "1024px",
-    xl: "1600px",
-    xxl: "1536",
+    xl: "1280px",
+    xxl: "1536px",
 })
 
 export const Container = styled.div`
-    ${customMedia.greaterThan("xl")`
-	    display: grid;
-		grid-column: 2;
+    ${customMedia.greaterThan("xxl")`
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
     `};
 `
 

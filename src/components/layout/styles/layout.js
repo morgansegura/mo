@@ -5,8 +5,8 @@ const customMedia = generateMedia({
     sm: "640px",
     md: "768px",
     lg: "1024px",
-    xl: "1600px",
-    xxl: "1536",
+    xl: "1280px",
+    xxl: "1536px",
 })
 
 // Layout Components
@@ -14,7 +14,7 @@ export const Wrapper = styled.div``
 export const Container = styled.div`
     position: relative;
     height: 100%;
-    ${customMedia.greaterThan("large")`
+    ${customMedia.greaterThan("lg")`
 
       &:before {
         content: '';
@@ -26,7 +26,7 @@ export const Container = styled.div`
         border-right: 1px solid ${({ theme }) => theme.borderContent};
       }  
   `};
-    ${customMedia.greaterThan("huge")`
+    ${customMedia.greaterThan("xl")`
 
   `};
 `

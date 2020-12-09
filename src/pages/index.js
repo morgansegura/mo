@@ -24,9 +24,9 @@ const IndexPage = () => {
                 title="The struggle is real"
                 keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
             />
-            <Containers className="2xl:grid grid-cols-2 gap-0">
+            <Containers>
                 <Containers.Child>
-                    <HeroSplit className="flex flex-col xl:flex-row">
+                    <HeroSplit>
                         <HeroSplit.ImageContainer>
                             <HeroSplit.Image
                                 className="w-full h-full"

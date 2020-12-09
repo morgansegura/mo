@@ -5,8 +5,8 @@ const customMedia = generateMedia({
     sm: "640px",
     md: "768px",
     lg: "1024px",
-    xl: "1600px",
-    xxl: "1536",
+    xl: "1280px",
+    xxl: "1536px",
 })
 
 export const Middle = styled.div``
