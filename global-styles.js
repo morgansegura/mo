@@ -37,14 +37,7 @@ const GlobalStyles = createGlobalStyle`
 
   }
   body {
-    line-height: 1;
-    background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-    background-size:  400% 400%;
-    animation: gradient 20s ease infinite;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+  
   }
   ol, ul {
     list-style: none;
@@ -101,6 +94,11 @@ const GlobalStyles = createGlobalStyle`
     &:active {
         background-color: ${({ theme }) => theme.scrollBarActive};
     }
+  }
+  .bg-gradient {
+      background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+      background-size:  400% 400%;
+      animation: gradient 20s ease infinite;
   }
 
   :root { 

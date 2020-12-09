@@ -124,8 +124,31 @@ export const StudyBlock = styled.section`
         }
     }
 `
-
-export const TestimonialBlock = styled.section`
+export const DesignBlock = styled.section`
+    background-color: ${({ theme }) => theme.bgBlock1};
+    h3 {
+        color: ${({ theme }) => theme.borderHeadlineBlock1};
+        border: 1px solid ${({ theme }) => theme.borderHeadlineBlock1};
+        border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock1};
+        background-color: ${({ theme }) => theme.bgHeadlineBlock1};
+    }
+    h4 {
+    }
+    p {
+        color: ${({ theme }) => theme.textBlock1};
+    }
+    .card {
+        background-color: ${({ theme }) => theme.bgCardBlock1};
+        border: 1px solid ${({ theme }) => theme.borderCardBlock1};
+        p {
+            color: ${({ theme }) => theme.textCardBlock1};
+        }
+        a {
+            color: var(--gray-600);
+        }
+    }
+`
+export const CurrentBlock = styled.section`
     background-color: ${({ theme }) => theme.bgBlock4};
     h3 {
         color: ${({ theme }) => theme.borderHeadlineBlock4};
@@ -138,40 +161,14 @@ export const TestimonialBlock = styled.section`
     p {
         color: ${({ theme }) => theme.textBlock4};
     }
-    .avatar {
-        border: 4px solid ${({ theme }) => theme.borderCardBlock4};
-    }
     .card {
-        border: 1px solid ${({ theme }) => theme.borderCardBlock4};
         background-color: ${({ theme }) => theme.bgCardBlock4};
+        border: 1px solid ${({ theme }) => theme.borderCardBlock4};
         p {
             color: ${({ theme }) => theme.textCardBlock4};
         }
         a {
             color: var(--gray-600);
-        }
-    }
-    .label {
-        background-color: ${({ theme }) => theme.borderCardBlock4};
-    }
-    .social {
-        border: 1px solid ${({ theme }) => theme.borderCardBlock4};
-        a {
-            color: ${({ theme }) => theme.borderCardBlock4};
-            transition: all 0.3s ease-out;
-            &:hover {
-                color: ${({ theme }) => theme.textCardBlock4};
-            }
-        }
-    }
-    .email {
-        background-color: ${({ theme }) => theme.bgButton};
-        color: ${({ theme }) => theme.textButton};
-        transition: all 0.3s ease-out;
-        &:hover {
-            background-color: ${({ theme }) => theme.bgButtonHover};
-            color: ${({ theme }) => theme.textButtonHover};
-            box-shadow: 2px 0 10px 2px ${({ theme }) => theme.transHover};
         }
     }
 `

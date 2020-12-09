@@ -43,6 +43,7 @@ export const skills = [
             "Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales odio.",
     },
 ]
+
 export const interests = [
     {
         title: "Automation & Test Driven Design",
@@ -54,15 +55,15 @@ export const interests = [
         title: "Machine Learning",
         icon: <FcMindMap className="mr-3 w-8 h-8" />,
         body:
-            "Machine learning is the future! An ambition of mine is to become learn and eventually utilize Python in my upcoming products and services.",
+            "Machine learning is the future! An ambition of mine is to learn and eventually utilize Python in my upcoming products and services. It will be a challenge, but I am am an adventure seeker and ",
     },
 ]
-export const currentStudies = [
+export const currents = [
     {
-        title: "Full Stack React",
+        title: "Full Stack Development",
         icon: <FcWorkflow className="mr-3 w-8 h-8" />,
         body:
-            "While I do have some experience with Cypress and Jest for testing, my ultimate goal is to be a Test Driven Design Guru. Every component and each section of an application should be accounted for and in working order before ever reaching the end user. Ultimately, I plan to set aside time over the course of the next six months to better properly be a true TDD Developer.",
+            "I have decided to switch stacks. I have been using PHP, Laravel and Vue.jsI have been working diligently on full stack developement with React and GraphQL with Node and MongoDB. To be frank, I love React! I have dedicated my ",
     },
     {
         title: "Machine Learning",

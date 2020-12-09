@@ -7,7 +7,7 @@ import { HeroSplit, BlockNote, CodeBlock, Containers } from "../components"
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
 
-import { skills, interests, technology } from "../data"
+import { skills, interests, technology, currents } from "../data"
 const IndexPage = () => {
     // const data = useStaticQuery(graphql`
     //     query HomePageQuery {
@@ -47,11 +47,19 @@ const IndexPage = () => {
                             <HeroSplit.TextContainer className="font-sans text-base leading-loose">
                                 <HeroSplit.Text className="mb-3 pt-2">
                                     I have been working in the industry for over
-                                    a decade I am still excited to get up
+                                    a decade and I am still excited to get up
                                     everyday and code, design and learn
-                                    something new!
+                                    something new! Technology keeps progressing
+                                    and I love being able to take part in this
+                                    ever-changing movement.
                                 </HeroSplit.Text>
-                                <HeroSplit.Text className="pt-2"></HeroSplit.Text>
+                                <HeroSplit.Text className="pt-2 text-accent">
+                                    Currently looking for the right organization
+                                    to be a part of! While I do have clients, I
+                                    am looking to be a part of a great team who
+                                    is using our craft to make a positive
+                                    difference in the world.
+                                </HeroSplit.Text>
                             </HeroSplit.TextContainer>
                             <HeroSplit.ButtonLink
                                 className="mt-6 ml-auto text-center inline-flex lg:block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
@@ -77,7 +85,7 @@ const IndexPage = () => {
                                 >
                                     <div className="flex items-center mb-1">
                                         {skill.icon}
-                                        <h4 className="font-semibold text-lg">
+                                        <h4 className="font-bold text-xl">
                                             {skill.title}
                                         </h4>
                                     </div>
@@ -87,7 +95,7 @@ const IndexPage = () => {
                         </div>
                     </S.SkillsBlock>
                 </Containers.Child>
-                <Containers.Child>
+                <Containers.Child className="bg-gradient">
                     <BlockNote className="h-full relative flex flex-col py-16 px-10 lg:py-20 lg:px-16">
                         <div className="flex justify-between">
                             <div className="w-1/2 self-center">
@@ -161,8 +169,32 @@ const IndexPage = () => {
                         </div>
                     </S.StackBlock>
                 </Containers.Child>
-                <Containers.Child>Some Designs</Containers.Child>
                 <Containers.Child>
+                    <S.DesignBlock className="h-full p-10 lg:p-16">
+                        <header className="mb-6">
+                            <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
+                                Interested in Learning
+                            </h3>
+                        </header>
+                        <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {interests.map((item, i) => (
+                                <div
+                                    key={i}
+                                    className="card p-4 rounded-md shadow-lg"
+                                >
+                                    <div className="flex items-center mb-1">
+                                        {item.icon}
+                                        <h4 className="font-semibold text-lg">
+                                            {item.title}
+                                        </h4>
+                                    </div>
+                                    <p className="p-2">{item.body}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </S.DesignBlock>
+                </Containers.Child>
+                <Containers.Child className="bg-gradient">
                     <BlockNote className="h-full left py-16 px-10 lg:py-20 lg:px-16 flex flex-col text-left">
                         <BlockNote.Title>Design</BlockNote.Title>
                         <BlockNote.Subtitle>
@@ -176,72 +208,29 @@ const IndexPage = () => {
                     </BlockNote>
                 </Containers.Child>
                 <Containers.Child>
-                    <S.TestimonialBlock className="h-full p-10 lg:p-16">
+                    <S.CurrentBlock className="h-full p-10 lg:p-16">
                         <header className="mb-6">
                             <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
-                                My Network
+                                Current Challenges
                             </h3>
                         </header>
-                        <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-4 gap-y-6">
-                            <div className="relative mb-20 max-w-lg mr-auto">
-                                <div className="card p-4 font-sans text-sm flex rounded-md shadow-lg">
-                                    <p>
-                                        Dallas cowboys roseanne barr keds game
-                                        boy color. Once you pop you can’t stop
-                                        pearl jam flip flops tommy hilfiger
-                                        chillax renting movies at a store, acid
-                                        wash the simpsons push pencils nirvana.
-                                        Pop punk dawg destiny’s child dial-up
-                                        minesweeper cut-off jean shorts. Visor
-                                        blockbuster video skidz and zubas your
-                                        mom.
-                                    </p>
+                        <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {currents.map((item, i) => (
+                                <div
+                                    key={i}
+                                    className="card p-4 rounded-md shadow-lg"
+                                >
+                                    <div className="flex items-center mb-1">
+                                        {item.icon}
+                                        <h4 className="font-semibold text-lg">
+                                            {item.title}
+                                        </h4>
+                                    </div>
+                                    <p className="p-2">{item.body}</p>
                                 </div>
-                                <img
-                                    className="avatar -mt-2 lg:-ml-8 w-20 h-20 rounded-full absolute"
-                                    src="https://uifaces.co/our-content/donated/s9W6Vk2d.jpg"
-                                    alt="Jose Jimenez"
-                                />
-                                <div className="absolute label mt-2 ml-24 xl:ml-16 flex flex-col font-sans rounded-tr-full rounded-br-full rounded-bl-full py-2 px-10">
-                                    <span className="text-base font-semibold -mb-2">
-                                        Jose Jimenez
-                                    </span>
-                                    <span className="text-sm">
-                                        Locost Accessories
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="relative mb-20 max-w-lg ml-auto">
-                                <div className="card font-sans p-4 text-sm flex rounded-md shadow-lg">
-                                    <p>
-                                        Fargo gatorade courtney love flat tops
-                                        scrunchies, toy story dennis rodman big
-                                        lebowski kicks. Generation Y skifree
-                                        push pencils alternative rock,
-                                        goosebumps baywatch madonna desert storm
-                                        magic johnson. Tupac shakur warheads sup
-                                        gak, kazaa velcro sneakers berry lips
-                                        steve urkel. Hush puppies pizza bagels
-                                        apollo 13 julia roberts g-shocks keepin’
-                                        it real.
-                                    </p>
-                                </div>
-                                <img
-                                    className="avatar -mt-2 lg:-ml-8 w-20 h-20 rounded-full absolute"
-                                    src="https://images.generated.photos/qmdENySIv23bkva-PxTHsoxVbZQdB1Wka0ZPcH5shHY/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAzMDE4MzAuanBn.jpg"
-                                    alt="Jose Jimenez"
-                                />
-                                <div className="absolute label mt-2 ml-24 xl:ml-16 flex flex-col font-sans rounded-tr-full rounded-br-full rounded-bl-full py-2 px-10">
-                                    <span className="text-base font-semibold -mb-2">
-                                        Mia Johnson
-                                    </span>
-                                    <span className="text-sm">
-                                        Locost Accessories
-                                    </span>
-                                </div>
-                            </div>
+                            ))}
                         </div>
-                    </S.TestimonialBlock>
+                    </S.CurrentBlock>
                 </Containers.Child>
                 <Containers.Child>
                     <S.StudyBlock className="h-full p-10 lg:p-16">
