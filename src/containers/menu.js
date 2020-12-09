@@ -22,12 +22,10 @@ export function MenuContainer({ ...restProps }) {
                         key={id}
                         title={title}
                         to={path}
-                        className="main-nav-item h-16 flex flex-col justify-center items-center border border-gray-500 hover:bg-color-400 transition ease-out duration-300"
+                        className="main-nav-item flex flex-col justify-center items-center border border-gray-500 hover:bg-color-400 transition ease-out duration-300"
                     >
-                        <div className="">{icon}</div>
-                        <div className="font-normal text-xs uppercase">
-                            {label}
-                        </div>
+                        <div className="icon">{icon}</div>
+                        <div className="label">{label}</div>
                     </Menu.Item>
                 ))}
             </Menu.ItemContainer>

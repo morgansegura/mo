@@ -20,14 +20,22 @@ export const LogoContainer = styled(Link)`
 export const ItemContainer = styled.div``
 
 export const Item = styled(Link)`
-    padding: 0.65rem 1rem;
+    padding: 1.25rem 1rem;
     background-color: ${({ theme }) => theme.bgDrawerNavItem};
     color: ${({ theme }) => theme.textDrawerNavItem};
     border-bottom: 1px solid ${({ theme }) => theme.borderDrawerNavItem};
     transition: all 0.3 ease-out;
+
     &:hover {
         background-color: ${({ theme }) => theme.bgDrawerNavItemHover};
         border-bottom-color: ${({ theme }) => theme.borderDrawerNavItem};
         color: ${({ theme }) => theme.textDrawerNavItemHover};
+    }
+    .label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+    }
+    .icon {
+        font-size: 1.25rem;
     }
 `

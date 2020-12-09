@@ -31,13 +31,15 @@ export const Image = styled.img`
     background-size: cover;
 `
 export const Body = styled.div`
-    background-color: ${({ theme }) => theme.bgCardHero};
-    border: 1px solid ${({ theme }) => theme.borderCardHero};
+    /* background-color: ${({ theme }) => theme.bgCardHero};
+    border: 1px solid ${({ theme }) => theme.borderCardHero}; */
 `
 export const TextContainer = styled.div``
 
 export const Title = styled.h2`
     color: ${({ theme }) => theme.textHeadlineHero};
+    font-size: 4rem;
+    margin-bottom: 2rem;
 `
 export const Subtitle = styled.h3`
     color: ${({ theme }) => theme.textHeadlineHero};
@@ -47,6 +49,7 @@ export const Text = styled.p`
 `
 export const TextSmall = styled.span`
     color: ${({ theme }) => theme.textOffsetHero};
+    margin-bottom: 1rem;
 `
 export const ButtonLink = styled(Link)`
     background-color: ${({ theme }) => theme.bgButton};

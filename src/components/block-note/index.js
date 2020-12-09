@@ -5,7 +5,7 @@ export default function BlockNote({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
 }
 
-BlockNote.Title = function BlockNotetitle({ children, ...restProps }) {
+BlockNote.Title = function BlockNoteTitle({ children, ...restProps }) {
     return <Title {...restProps}>{children}</Title>
 }
 BlockNote.Subtitle = function BlockNoteSubtitle({ children, ...restProps }) {

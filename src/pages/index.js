@@ -2,7 +2,7 @@ import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 import { LayoutContainer } from "../containers/layout"
 import SEO from "../components/seo"
-import { HeroSplit } from "../components"
+import { HeroSplit, BlockNote } from "../components"
 
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
@@ -34,14 +34,14 @@ const IndexPage = () => {
                     />
                 </HeroSplit.ImageContainer>
 
-                <HeroSplit.Body className="p-10 lg:p-16">
+                <HeroSplit.Body className="py-12 px-10 lg:px-16 lg:py-18">
                     <HeroSplit.TextSmall className="block font-thin text-base font-sans tracking-normal">
                         Creative Technologist
                     </HeroSplit.TextSmall>
-                    <HeroSplit.Title className="font-sans font-headline text-5xl leading-10 font-semibold mb-5">
+                    <HeroSplit.Title className="font-headline">
                         Morgan Segura
                     </HeroSplit.Title>
-                    <HeroSplit.TextContainer className="font-sans text-sm leading-loose">
+                    <HeroSplit.TextContainer className="font-sans text-base leading-loose">
                         <HeroSplit.Text className="mb-3 pt-2">
                             Hook leggings snapple dj jazzy jeff david duchovny
                             end of the road gatorade, cornrows pulp fiction alta
@@ -65,6 +65,19 @@ const IndexPage = () => {
                 </HeroSplit.Body>
             </HeroSplit>
 
+            <BlockNote className="right py-16 px-10 lg:py-20 lg:px-16 flex flex-col items-end text-right">
+                <BlockNote.Title>Build</BlockNote.Title>
+                <BlockNote.Subtitle>
+                    quickly with developer friendly code
+                </BlockNote.Subtitle>
+                <BlockNote.Text>
+                    Export Sketch, Figma, and Adobe XD to HTML or React. Get
+                    clean, responsive code components tailored to your team’s
+                    conventions, with zero dependencies and minimal code
+                    refactoring.
+                </BlockNote.Text>
+            </BlockNote>
+
             <S.SkillsBlock className="p-10 lg:p-16">
                 <header className="mb-6">
                     <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
@@ -85,6 +98,19 @@ const IndexPage = () => {
                     ))}
                 </div>
             </S.SkillsBlock>
+
+            <BlockNote className="left py-16 px-10 lg:py-20 lg:px-16 flex flex-col text-left">
+                <BlockNote.Title>Design</BlockNote.Title>
+                <BlockNote.Subtitle>
+                    powerful interactive prototypes
+                </BlockNote.Subtitle>
+                <BlockNote.Text>
+                    Seamlessly transform your static screen designs into fully
+                    responsive, interactive, animated prototypes directly in
+                    Sketch, Figma or Adobe XD.
+                </BlockNote.Text>
+            </BlockNote>
+
             <S.StackBlock className="p-10 lg:p-16">
                 <header className="mb-6">
                     <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">

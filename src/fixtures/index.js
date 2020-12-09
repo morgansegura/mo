@@ -1,17 +1,25 @@
 import React from "react"
-import { SiAboutDotMe } from "react-icons/si"
+import { AiOutlineCoffee, AiOutlineRead, AiOutlineApi } from "react-icons/ai"
 export const menuList = [
     {
-        id: "home",
+        id: "blog",
         title: "",
-        label: "Home",
+        label: "Blog",
         path: "/",
+        icon: <AiOutlineRead />,
     },
     {
         id: "about",
         title: "",
         label: "About",
         path: "/about",
-        icon: <SiAboutDotMe />,
+        icon: <AiOutlineCoffee />,
+    },
+    {
+        id: "contact",
+        title: "",
+        label: "Connect",
+        path: "/contact",
+        icon: <AiOutlineApi />,
     },
 ]

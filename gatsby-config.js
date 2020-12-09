@@ -27,6 +27,25 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: `gatsby-plugin-google-fonts-v2`,
+            options: {
+                fonts: [
+                    {
+                        family: "Open Sans",
+                        weights: ["300", "400", "600", "700"],
+                    },
+                    {
+                        family: "Cairo",
+                        weights: ["400", "600", "700"],
+                    },
+                    {
+                        family: "Roboto Slab",
+                        weights: ["400", "700"],
+                    },
+                ],
+            },
+        },
         `gatsby-plugin-postcss`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
