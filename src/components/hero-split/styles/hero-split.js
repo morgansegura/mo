@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 import { generateMedia } from "styled-media-query"
 
 const customMedia = generateMedia({
-    small: "480px",
-    medium: "768px",
-    large: "1024px",
-    huge: "1600px",
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1600px",
+    xxl: "1536",
 })
 export const Container = styled.section`
     background-color: ${({ theme }) => theme.bgHero};
@@ -16,7 +17,7 @@ export const ImageContainer = styled.div`
     flex: 0 0 100%;
     max-width: 100%;
 
-    ${customMedia.greaterThan("large")`
+    ${customMedia.greaterThan("lg")`
         flex: 0 0 50%;
         max-width: 50%;
     `};

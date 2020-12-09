@@ -3,10 +3,11 @@ import styled from "styled-components"
 import { generateMedia } from "styled-media-query"
 
 const customMedia = generateMedia({
-    small: "480px",
-    medium: "768px",
-    large: "1024px",
-    huge: "1600px",
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1600px",
+    xxl: "1536",
 })
 export const Container = styled.header``
 export const Wrapper = styled.div`
@@ -29,14 +30,14 @@ export const Wrapper = styled.div`
     &.scrolled-header {
         /* height: 5rem; */
     }
-    ${customMedia.greaterThan("large")`
+    ${customMedia.greaterThan("lg")`
         width: calc(100% - 6rem);
         margin-left: 6rem; 
         &.scrolled-header:before {
             opacity: 0.85;
         }    
     `};
-    ${customMedia.greaterThan("huge")`
+    ${customMedia.greaterThan("xl")`
         margin-left: 0;
         border-left: 0 solid transparent;   
         border-bottom: 1px solid ${({ theme }) => theme.borderContent};

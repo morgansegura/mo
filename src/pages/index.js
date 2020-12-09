@@ -2,7 +2,7 @@ import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 import { LayoutContainer } from "../containers/layout"
 import SEO from "../components/seo"
-import { HeroSplit, BlockNote } from "../components"
+import { HeroSplit, BlockNote, CodeBlock } from "../components"
 
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
@@ -24,59 +24,88 @@ const IndexPage = () => {
                 title="The struggle is real"
                 keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
             />
+            <div className="2xl:grid grid-cols-2 gap-0">
+                <HeroSplit className="flex flex-col xl:flex-row">
+                    <HeroSplit.ImageContainer>
+                        <HeroSplit.Image
+                            className="w-full h-full"
+                            style={{ backgroundImage: `url(${quoteImage})` }}
+                            alt=""
+                        />
+                    </HeroSplit.ImageContainer>
 
-            <HeroSplit className="flex flex-col xl:flex-row">
-                <HeroSplit.ImageContainer>
-                    <HeroSplit.Image
-                        className="w-full h-full"
-                        style={{ backgroundImage: `url(${quoteImage})` }}
-                        alt=""
-                    />
-                </HeroSplit.ImageContainer>
+                    <HeroSplit.Body className="py-12 px-10 lg:px-16 lg:py-18">
+                        <HeroSplit.TextSmall className="block font-thin text-base font-sans tracking-normal">
+                            Creative Technologist
+                        </HeroSplit.TextSmall>
+                        <HeroSplit.Title className="font-headline">
+                            Morgan Segura
+                        </HeroSplit.Title>
+                        <HeroSplit.TextContainer className="font-sans text-base leading-loose">
+                            <HeroSplit.Text className="mb-3 pt-2">
+                                Hook leggings snapple dj jazzy jeff david
+                                duchovny end of the road gatorade, cornrows pulp
+                                fiction alta vista skate tees roseanne barr
+                                wesley snipes. Eminem bandanas fanny packs hot
+                                pink boy bands when you’re lost out there and
+                                you’re all alone.
+                            </HeroSplit.Text>
+                            <HeroSplit.Text className="pt-2">
+                                Flip flops wearing your cap backwards encarta
+                                I've fallen and I can't get up wayne gretzky
+                                tamagotchi. Nintendo 64 sup hip hop playa puff
+                                daddy, courtney love end of the road warheads
+                                push pencils.
+                            </HeroSplit.Text>
+                        </HeroSplit.TextContainer>
+                        <HeroSplit.ButtonLink
+                            className="mt-6 ml-auto text-center inline-flex lg:block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
+                            to={"/"}
+                        >
+                            Download CV
+                        </HeroSplit.ButtonLink>
+                    </HeroSplit.Body>
+                </HeroSplit>
 
-                <HeroSplit.Body className="py-12 px-10 lg:px-16 lg:py-18">
-                    <HeroSplit.TextSmall className="block font-thin text-base font-sans tracking-normal">
-                        Creative Technologist
-                    </HeroSplit.TextSmall>
-                    <HeroSplit.Title className="font-headline">
-                        Morgan Segura
-                    </HeroSplit.Title>
-                    <HeroSplit.TextContainer className="font-sans text-base leading-loose">
-                        <HeroSplit.Text className="mb-3 pt-2">
-                            Hook leggings snapple dj jazzy jeff david duchovny
-                            end of the road gatorade, cornrows pulp fiction alta
-                            vista skate tees roseanne barr wesley snipes. Eminem
-                            bandanas fanny packs hot pink boy bands when you’re
-                            lost out there and you’re all alone.
-                        </HeroSplit.Text>
-                        <HeroSplit.Text className="pt-2">
-                            Flip flops wearing your cap backwards encarta I've
-                            fallen and I can't get up wayne gretzky tamagotchi.
-                            Nintendo 64 sup hip hop playa puff daddy, courtney
-                            love end of the road warheads push pencils.
-                        </HeroSplit.Text>
-                    </HeroSplit.TextContainer>
-                    <HeroSplit.ButtonLink
-                        className="mt-6 ml-auto text-center inline-flex lg:block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
-                        to={"/"}
-                    >
-                        Download CV
-                    </HeroSplit.ButtonLink>
-                </HeroSplit.Body>
-            </HeroSplit>
-
-            <BlockNote className="right py-16 px-10 lg:py-20 lg:px-16 flex flex-col items-end text-right">
-                <BlockNote.Title>Build</BlockNote.Title>
-                <BlockNote.Subtitle>
-                    quickly with developer friendly code
-                </BlockNote.Subtitle>
-                <BlockNote.Text>
-                    Export Sketch, Figma, and Adobe XD to HTML or React. Get
-                    clean, responsive code components tailored to your team’s
-                    conventions, with zero dependencies and minimal code
-                    refactoring.
-                </BlockNote.Text>
-            </BlockNote>
+                <BlockNote className="relative flex flex-col py-16 px-10 lg:py-20 lg:px-16">
+                    <div className="flex justify-between">
+                        <div className="w-1/2 self-center">
+                            <CodeBlock browser={true} className="with--label">
+                                <CodeBlock.Label>Javascript</CodeBlock.Label>
+                                <CodeBlock.Row>
+                                    <span className="const">const </span>
+                                    <span className="">happyFun </span>
+                                    <span className="punct"> = </span>
+                                    <span className="key"> 'goodness'</span>
+                                    <span className="punct">; </span>
+                                </CodeBlock.Row>
+                                <CodeBlock.Row className="typewriter">
+                                    <span className="rule">{`<span>`}</span>
+                                    <span className="string">
+                                        {" "}
+                                        You bet your ass{" "}
+                                    </span>
+                                    <span className="rule">{`</span>`}</span>
+                                </CodeBlock.Row>
+                            </CodeBlock>
+                        </div>
+                        <div className="w-1/2 flex flex-col text-right">
+                            <BlockNote.Title className="">
+                                Build
+                            </BlockNote.Title>
+                            <BlockNote.Subtitle className="">
+                                quickly with developer friendly code
+                            </BlockNote.Subtitle>
+                        </div>
+                    </div>
+                    <BlockNote.Text className="self-end text-right w-2/3">
+                        Export Sketch, Figma, and Adobe XD to HTML or React. Get
+                        clean, responsive code components tailored to your
+                        team’s conventions, with zero dependencies and minimal
+                        code refactoring.
+                    </BlockNote.Text>
+                </BlockNote>
+            </div>
 
             <S.SkillsBlock className="p-10 lg:p-16">
                 <header className="mb-6">

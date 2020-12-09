@@ -2,11 +2,13 @@ import styled from "styled-components"
 import { generateMedia } from "styled-media-query"
 
 const customMedia = generateMedia({
-    small: "480px",
-    medium: "768px",
-    large: "1024px",
-    huge: "1400px",
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1600px",
+    xxl: "1536",
 })
+
 export const ThemeSelector = styled.div`
     position: relative;
 `
@@ -85,7 +87,7 @@ export const Options = styled.div`
         }
     }
 
-    ${customMedia.greaterThan("large")`
+    ${customMedia.greaterThan("lg")`
 
   `}
 `

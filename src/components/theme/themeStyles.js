@@ -147,6 +147,13 @@ export const lightTheme = {
     codeTokenAtRule: "#e6db74",
     codeTokenKeyword: "#66d9ef",
     codeTokenRegex: "#fd971f",
+
+    /* Light */
+    codeBrowserBackground: "#ccc",
+    codeBrowserBorder: "rgba(255, 255, 255, 0.5)",
+    /* Dark */
+    // codeBrowserBackground: "#202124",
+    // codeBrowserBorder: "rgba(0, 0, 0, 0.2)",
 }
 
 export const darkTheme = {
@@ -286,6 +293,12 @@ export const darkTheme = {
     codeTokenAtRule: "#e6db74",
     codeTokenKeyword: "#66d9ef",
     codeTokenRegex: "#fd971f",
+
+    codeBrowserBackground: "#ccc",
+    codeBrowserBorder: "rgba(255, 255, 255, 0.5)",
+    /* Dark */
+    // codeBrowserBackground: "#202124",
+    // codeBrowserBorder: "rgba(0, 0, 0, 0.2)",
 }
 
 export const alt1Theme = {
@@ -426,6 +439,12 @@ export const alt1Theme = {
     codeTokenAtRule: "#e6db74",
     codeTokenKeyword: "#66d9ef",
     codeTokenRegex: "#fd971f",
+
+    codeBrowserBackground: "#ccc",
+    codeBrowserBorder: "rgba(255, 255, 255, 0.5)",
+    /* Dark */
+    // codeBrowserBackground: "#202124",
+    // codeBrowserBorder: "rgba(0, 0, 0, 0.2)",
 }
 
 export const alt2Theme = {
@@ -565,6 +584,12 @@ export const alt2Theme = {
     codeTokenAtRule: "#e6db74",
     codeTokenKeyword: "#66d9ef",
     codeTokenRegex: "#fd971f",
+
+    codeBrowserBackground: "#ccc",
+    codeBrowserBorder: "rgba(255, 255, 255, 0.5)",
+    /* Dark */
+    // codeBrowserBackground: "#202124",
+    // codeBrowserBorder: "rgba(0, 0, 0, 0.2)",
 }
 
 export const fontSizeNormal = {

@@ -2,10 +2,11 @@ import styled from "styled-components"
 import { generateMedia } from "styled-media-query"
 
 const customMedia = generateMedia({
-    small: "480px",
-    medium: "768px",
-    large: "1024px",
-    huge: "1600px",
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1600px",
+    xxl: "1536",
 })
 
 export const Middle = styled.div``
@@ -131,7 +132,7 @@ export const Container = styled.div`
     .squeeze-menu & {
         display: none;
     }
-    ${customMedia.greaterThan("large")`
+    ${customMedia.greaterThan("lg")`
         display: none;
   `};
 `
