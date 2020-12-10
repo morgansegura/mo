@@ -3,6 +3,7 @@ import React from "react"
 import { LayoutContainer } from "../containers/layout"
 import SEO from "../components/seo"
 import { HeroSplit, BlockNote, CodeBlock, Containers } from "../components"
+import DigitalBG from "../assets/images/digital.svg"
 
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
@@ -95,7 +96,8 @@ const IndexPage = () => {
                         </div>
                     </S.SkillsBlock>
                 </Containers.Child>
-                <Containers.Child className="bg-gradient">
+                <Containers.Child className="bg-gradient relative overflow-hidden">
+                    <DigitalBG className="absolute opacity-50" />
                     <BlockNote className="h-full relative flex flex-col py-16 px-10 lg:py-20 lg:px-16">
                         <div className="flex justify-between">
                             <div className="w-1/2 self-center">

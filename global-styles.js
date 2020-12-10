@@ -100,6 +100,23 @@ const GlobalStyles = createGlobalStyle`
       background-size:  400% 400%;
       animation: gradient 20s ease infinite;
   }
+  .bg-digital {
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      z-index: 1000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/src/assets/images/digital.svg');
+    }
+  }
 
   :root { 
     /* Light && Dark Theme */
