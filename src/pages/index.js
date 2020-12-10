@@ -3,12 +3,15 @@ import React from "react"
 import { LayoutContainer } from "../containers/layout"
 import SEO from "../components/seo"
 import { HeroSplit, BlockNote, CodeBlock, Containers } from "../components"
-import DigitalBG from "../assets/images/digital.svg"
 
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
+import DigitalBG from "../assets/images/digital.svg"
+import DesignBG from "../assets/images/design.svg"
+import DesignIcons from "../assets/images/design-icons.svg"
 
-import { skills, interests, technology, currents } from "../data"
+import { skills, interests, technology, currents } from "../fixtures"
+
 const IndexPage = () => {
     // const data = useStaticQuery(graphql`
     //     query HomePageQuery {
@@ -98,6 +101,7 @@ const IndexPage = () => {
                 </Containers.Child>
                 <Containers.Child className="bg-gradient relative overflow-hidden">
                     <DigitalBG className="absolute opacity-50" />
+
                     <BlockNote className="h-full relative flex flex-col py-16 px-10 lg:py-20 lg:px-16">
                         <div className="flex justify-between">
                             <div className="w-1/2 self-center">
@@ -196,8 +200,10 @@ const IndexPage = () => {
                         </div>
                     </S.DesignBlock>
                 </Containers.Child>
-                <Containers.Child className="bg-gradient">
-                    <BlockNote className="h-full left py-16 px-10 lg:py-20 lg:px-16 flex flex-col text-left">
+                <Containers.Child className="overflow-hidden bg-gradient">
+                    <BlockNote className="relative h-full left py-16 px-10 lg:py-20 lg:px-16 flex flex-col text-left">
+                        <DesignBG className="absolute -mt-32 top-0 left-0 opacity-50" />
+                        <DesignIcons className="absolute z-0 w-3/12 top-0 right-0 transform -translate-x-64 translate-y-10 opacity-50" />
                         <BlockNote.Title>Design</BlockNote.Title>
                         <BlockNote.Subtitle>
                             powerful interactive prototypes

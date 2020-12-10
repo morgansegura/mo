@@ -10,12 +10,13 @@ const customMedia = generateMedia({
 })
 
 // Layout Components
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+    background-color: ${({ theme }) => theme.bgBody};
+`
 export const Container = styled.div`
     position: relative;
     height: 100%;
     ${customMedia.greaterThan("lg")`
-
       &:before {
         content: '';
         position: absolute;

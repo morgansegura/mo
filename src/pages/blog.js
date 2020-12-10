@@ -16,26 +16,29 @@ export default ({ data }) => {
     return (
         <LayoutContainer>
             <IndexWrapper className="p-16 lg:p-20 h-full text-gray-900">
-                {/* <Dump data={data}></Dump> */}
-                {data.allMdx.nodes.map(
-                    ({ id, excerpt, frontmatter, fields }) => (
-                        <PostWrapper key={id}>
-                            <Link to={fields.slug}>
-                                {!!frontmatter.cover ? (
-                                    <Image
-                                        sizes={
-                                            frontmatter.cover.childImageSharp
-                                                .sizes
-                                        }
-                                    />
-                                ) : null}
-                                <h1>{frontmatter.title}</h1>
-                                <p>{frontmatter.date}</p>
-                                <p>{excerpt}</p>
-                            </Link>
-                        </PostWrapper>
-                    )
-                )}
+                <div className={`grid gap-4 ${data.all}`}>
+                    {data.allMdx.nodes.length}
+                    {/* <Dump data={data}></Dump> */}
+                    {data.allMdx.nodes.map(
+                        ({ id, excerpt, frontmatter, fields }) => (
+                            <PostWrapper key={id}>
+                                <Link to={fields.slug}>
+                                    {!!frontmatter.cover ? (
+                                        <Image
+                                            sizes={
+                                                frontmatter.cover
+                                                    .childImageSharp.sizes
+                                            }
+                                        />
+                                    ) : null}
+                                    <h1>{frontmatter.title}</h1>
+                                    <p>{frontmatter.date}</p>
+                                    <p>{excerpt}</p>
+                                </Link>
+                            </PostWrapper>
+                        )
+                    )}
+                </div>
             </IndexWrapper>
         </LayoutContainer>
     )

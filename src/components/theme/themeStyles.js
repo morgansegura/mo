@@ -21,7 +21,7 @@ export const lightTheme = {
     logo: "var(--gray-900)",
     logoHover: "var(--gray-700)",
     transHover: "var(--gray-100)",
-    bgBody: "transparent",
+    bgBody: "var(--gray-50)",
     textBody: "var(--gray-900)",
     /**
      * [Header & Footer]
@@ -168,7 +168,7 @@ export const darkTheme = {
     logo: "var(--gray-100)",
     logoHover: "white",
     transHover: "var(--gray-800)",
-    bgBody: "transparent",
+    bgBody: "var(--gray-800)",
     textBody: "var(--gray-900)",
     /**
      * [Header & Footer]
@@ -313,7 +313,7 @@ export const alt1Theme = {
     logo: "var(--orange-200)",
     logoHover: "var(--purple)",
     transHover: "var(--gray-100)",
-    bgBody: "transparent",
+    bgBody: "var(--orange-800)",
     textBody: "var(--orange-100)",
     /**
      * [Header & Footer]
@@ -459,7 +459,7 @@ export const alt2Theme = {
     logo: "var(--aqua-100)",
     logoHover: "var(--gray-100)",
     transHover: "var(--gray-100)",
-    bgBody: "transparent",
+    bgBody: "var(--aqua-800)",
     textBody: "var(--aqua-100)",
     /**
      * [Header & Footer]

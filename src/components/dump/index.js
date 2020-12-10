@@ -1,23 +1,15 @@
 import React from "react"
+import { Container, Pre } from "./styles/dump"
 
 const Dump = props => (
-    <div
-        style={{
-            fontSize: 20,
-            border: "1px solid #efefef",
-            padding: 10,
-            background: "white",
-        }}
-    >
+    <Container>
         {Object.entries(props).map(([key, val]) => (
-            <pre key={key}>
-                <strong style={{ color: "white", background: "red" }}>
-                    {key} ?
-                </strong>
+            <Pre key={key}>
+                <strong>{key} ?</strong>
                 {JSON.stringify(val, "", " ")}
-            </pre>
+            </Pre>
         ))}
-    </div>
+    </Container>
 )
 
 export default Dump

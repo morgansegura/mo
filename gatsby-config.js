@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: `Morgan Segura 2020`,
         description: `This is the personal blog and portfolio site of Morgan Seugra. Welcome ^^`,
-        author: `@gatsbyjs`,
+        author: `@codestandard`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,

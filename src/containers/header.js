@@ -22,10 +22,7 @@ export function HeaderContainer({ className, children }) {
     }
 
     return (
-        <Header
-            className={`header bg-gradient ${className}`}
-            onScroll={handleScroll}
-        >
+        <Header className={`header ${className}`} onScroll={handleScroll}>
             <Header.Container className="flex w-full items-center">
                 <Header.LogoContainer
                     className="flex items-center w-48 lg:hidden transition ease-out duration-150"
