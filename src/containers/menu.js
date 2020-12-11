@@ -2,6 +2,7 @@ import React from "react"
 import Menu from "../components/menu"
 import LogoImage from "../assets/images/segura-icon.svg"
 import { menuList } from "../fixtures"
+import { Example } from "../components"
 
 export function MenuContainer({ ...restProps }) {
     return (
