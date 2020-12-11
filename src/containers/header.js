@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { Header } from "../components"
+
 import LogoImage from "../assets/images/segura-icon.svg"
 
 export function HeaderContainer({ className, children }) {

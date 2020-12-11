@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components"
 import { HeaderContainer } from "./header"
 import { FooterContainer } from "./footer"
 import { MenuContainer } from "./menu"
+
 import Layout from "../components/layout"
 import Hamburger from "../components/hamburger"
 
@@ -64,7 +65,6 @@ export function LayoutContainer({ children, location }) {
                         onClick={() => setToggleNav(!toggleNav)}
                     />
                     <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
-
                     <MenuContainer
                         className={`
                         fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-24 min-h-device shadow-lg lg:shadow-none transform transition-translate ease-out duration-300

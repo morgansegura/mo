@@ -35,6 +35,7 @@ const ToggleTheme = ({ theme, toggleTheme }) => {
             <WiMoonAltFirstQuarter
                 onClick={() => setToggleColors(!toggleColors)}
             />
+
             <S.ThemeSelector>
                 <S.Options
                     className={`fixed top-20 transform transition-translate ease-out duration-300`}
