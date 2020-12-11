@@ -3,9 +3,9 @@ import { Block } from "../components"
 import { BlockNote, CodeBlock } from "../components"
 import DigitalBG from "../assets/images/digital.svg"
 
-export function DevCreativeContainer() {
+export function DevCreativeContainer({ className }) {
     return (
-        <Block className="block2 h-full p-10 lg:p-16">
+        <Block className={`h-full p-10 lg:p-16 ${className}`}>
             <DigitalBG className="absolute opacity-50" />
 
             <BlockNote className="h-full relative flex flex-col py-16 px-10 lg:py-20 lg:px-16">

@@ -2,9 +2,9 @@ import React from "react"
 import { Block } from "../components"
 import { devGoals } from "../fixtures"
 
-export function DevGoalsContainer() {
+export function DevGoalsContainer({ className }) {
     return (
-        <Block className="block2 h-full p-10 lg:p-16">
+        <Block className={`h-full p-10 lg:p-16 ${className}`}>
             <header className="mb-6">
                 <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
                     {new Date().getFullYear() + 1} Dev Goals
