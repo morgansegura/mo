@@ -16,7 +16,7 @@ export const Container = styled.section`
     background-color: ${({ theme }) => theme.bgHero};
     height: 100%;
 
-    ${customMedia.between("xl", "xxl")`
+    ${customMedia.between("md", "xxl")`
         flex-direction: row;
     `};
     ${customMedia.greaterThan("xxl")`
@@ -28,7 +28,7 @@ export const ImageContainer = styled.div`
     flex: 0 0 100%;
     max-width: 100%;
 
-    ${customMedia.between("xl", "xxl")`
+    ${customMedia.between("md", "xxl")`
         flex: 0 0 50%;
         max-width: 50%;
     `};
@@ -46,10 +46,7 @@ export const Image = styled.img`
     background-repeat: no-repeat;
     background-size: cover;
 `
-export const Body = styled.div`
-    /* background-color: ${({ theme }) => theme.bgCardHero};
-    border: 1px solid ${({ theme }) => theme.borderCardHero}; */
-`
+export const Body = styled.div``
 export const TextContainer = styled.div``
 
 export const Title = styled.h2`

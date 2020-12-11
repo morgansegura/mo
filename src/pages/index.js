@@ -1,14 +1,23 @@
 import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 import { LayoutContainer } from "../containers/layout"
+
 import SEO from "../components/seo"
-import { HeroSplit, BlockNote, CodeBlock, Containers } from "../components"
+import {
+    HeroSplit,
+    BlockNote,
+    CodeBlock,
+    Containers,
+    AuthorCard,
+} from "../components"
 
 import * as S from "../styles/home/styled"
 import quoteImage from "../assets/images/quote.jpg"
+import avatarImage from "../assets/images/morgansegura-400x400.jpg"
 import DigitalBG from "../assets/images/digital.svg"
 import DesignBG from "../assets/images/design.svg"
 import DesignIcons from "../assets/images/design-icons.svg"
+import { SiLinkedin, SiGithub, SiTwitter } from "react-icons/si"
 
 import { skills, interests, technology, currents } from "../fixtures"
 
@@ -31,7 +40,7 @@ const IndexPage = () => {
             <Containers>
                 <Containers.Child>
                     <HeroSplit>
-                        <HeroSplit.ImageContainer>
+                        <HeroSplit.ImageContainer className="relative">
                             <HeroSplit.Image
                                 className="w-full h-full"
                                 style={{
@@ -42,11 +51,46 @@ const IndexPage = () => {
                         </HeroSplit.ImageContainer>
 
                         <HeroSplit.Body className="py-12 px-10 lg:px-16 lg:py-18">
-                            <HeroSplit.TextSmall className="block font-thin text-base font-sans tracking-normal">
-                                Creative Technologist
+                            <HeroSplit.TextSmall className="flex justify-between font-thin text-base font-sans tracking-normal">
+                                <div>Creative Technologist</div>
+                                <div className="flex">
+                                    <a
+                                        className="w-6 h-6 mr-3"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href="https://github.com/morgansegura"
+                                    >
+                                        <SiGithub />
+                                    </a>
+                                    <a
+                                        className="w-6 h-6 mr-3"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href="https://www.linkedin.com/in/morgan-segura-4b08429/"
+                                    >
+                                        <SiLinkedin />
+                                    </a>
+                                    <a
+                                        className="w-6 h-6 mr-3"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href="https://twitter.com/codestandard"
+                                    >
+                                        <SiTwitter />
+                                    </a>
+                                </div>
                             </HeroSplit.TextSmall>
-                            <HeroSplit.Title className="font-sans font-bold">
-                                Morgan Segura
+                            <HeroSplit.Title className="relative flex justify-between font-sans font-bold">
+                                <div className="w-3/4 relative z-10">
+                                    Morgan Segura
+                                </div>
+                                <AuthorCard className="z-1 absolute right-0 self-center">
+                                    <AuthorCard.Image
+                                        className="ml-auto block rounded-full w-32 h-32"
+                                        src={avatarImage}
+                                        alt="Morgan Segura"
+                                    />
+                                </AuthorCard>
                             </HeroSplit.Title>
                             <HeroSplit.TextContainer className="font-sans text-base leading-loose">
                                 <HeroSplit.Text className="mb-3 pt-2">
