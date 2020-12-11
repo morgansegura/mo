@@ -6,6 +6,9 @@ import {
     FcStatistics,
     FcWorkflow,
     FcMindMap,
+    FcFlowChart,
+    FcRadarPlot,
+    FcOrgUnit,
 } from "react-icons/fc"
 import {
     SiTailwindcss,
@@ -45,32 +48,59 @@ export const skills = [
     },
 ]
 
-export const interests = [
+export const devGoals = [
     {
-        title: "Automation & Test Driven Design",
+        title: "[MERN] Full Stack development",
         icon: <FcWorkflow className="mr-3 w-8 h-8" />,
         body:
-            "While I do have some experience with Cypress and Jest for testing, my ultimate goal is to be a Test Driven Design Guru. Every component and each section of an application should be accounted for and in working order before ever reaching the end user. Ultimately, I plan to set aside time over the course of the next six months to better properly be a true TDD Developer.",
+            "Throughout my career I have always had a desire to level up in an area where I know that I can be more valuable as a developer. I have been studying in VanillaJS, NodeJS, ReactJS, GraphQL, MongoDB... full-time in an effort to master the MERN Stack. In all honesty, I love working with Javascript and I prefer React to Vue.js and Angular, however I will be working more with each of the three powerhouse frameworks over the course of 2021.",
     },
     {
-        title: "Machine Learning",
+        title: "Machine Learning with Python",
         icon: <FcMindMap className="mr-3 w-8 h-8" />,
         body:
             "Machine learning is the future! An ambition of mine is to learn and eventually utilize Python in my upcoming products and services. It will be a challenge, but I am am an adventure seeker and ",
     },
 ]
-export const currents = [
+
+export const interests = [
     {
-        title: "Full Stack Development",
-        icon: <FcWorkflow className="mr-3 w-8 h-8" />,
+        title: "Automation & Test Driven Design",
+        icon: <FcFlowChart className="mr-3 w-8 h-8" />,
         body:
-            "I have decided to switch stacks. I have been using PHP, Laravel and Vue.jsI have been working diligently on full stack developement with React and GraphQL with Node and MongoDB. To be frank, I love React! I have dedicated my ",
+            "While I do have some experience with Cypress and Jest for testing, my ultimate goal is to be a Test Driven Design Guru. Every component and each section of an application should be accounted for and in working order before ever reaching the end user. Ultimately, I plan to set aside time over the course of the next six months to better properly be a true TDD Developer.",
     },
     {
-        title: "Machine Learning",
+        title: "Machine Learning with Python",
         icon: <FcMindMap className="mr-3 w-8 h-8" />,
         body:
-            "Machine learning is the future! An ambition of mine is to become learn and eventually utilize Python in my upcoming products and services.",
+            "Machine learning is the future! An ambition of mine is to learn and eventually utilize Python in my upcoming products and services. It will be a challenge, but I am am an adventure seeker and love learning anything and everything in the tech. Unfortunately, there are only 24 hours in a day.",
+    },
+    {
+        title: "Blockchain Programming",
+        icon: <FcRadarPlot className="mr-3 w-8 h-8" />,
+        body:
+            "If I am being honest, I do not really know much about Blockchain programming, however I love learning and I will be studying this craft and at the very least build a few programs in the future.",
+    },
+    {
+        title: "Dev Ops",
+        icon: <FcOrgUnit className="mr-3 w-8 h-8" />,
+        body:
+            "Although I do have a Master's Degree in Information Systems, and I do work with tools such as Docker, AWS, Google Cloud, etc., there are still so many technologies that I'd like to get my hands on to build a greater depth of knowledge in Dev Ops.",
+    },
+]
+export const designGoals = [
+    {
+        title: "Design for AI",
+        icon: <FcWorkflow className="mr-3 w-8 h-8" />,
+        body:
+            "Have you ever watched CSI Las Vegas and laughed out loud at the interfaces and fake typing that go on while they are figuring out `who done it?` Well, the times are catching up with Sci-fi. Data based AI will be integrated into almost every product imaginable and I can't wait to take part.",
+    },
+    {
+        title: "Behavioral Design",
+        icon: <FcMindMap className="mr-3 w-8 h-8" />,
+        body:
+            "Design is much much more than just art, it's Science as well and learning the behaviors and habits of Internet Surfers is a huge treasure trove for marketers",
     },
 ]
 export const technology = [
