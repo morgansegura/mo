@@ -10,7 +10,7 @@ import { DevCreativeContainer } from "../containers/dev-creative"
 import { LearningGoalsContainer } from "../containers/learning-goals"
 import { PreferredTechContainer } from "../containers/preferred-tech"
 
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import { Containers } from "../components"
 
 const IndexPage = () => {
