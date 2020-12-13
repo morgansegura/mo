@@ -1,8 +1,10 @@
 import { graphql, Link } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import SEO from "../components/seo"
 import { LayoutContainer } from "../containers/layout"
+import { Article, CodeBlock } from "../components"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export default ({ data, pageContext }) => {
@@ -17,6 +19,8 @@ export default ({ data, pageContext }) => {
     const { frontmatter, body, fields, excerpt } = data.mdx
     const { title, date, cover } = frontmatter
     const { previous, next } = pageContext
+
+    const shortcodes = { CodeBlock }
     return (
         <LayoutContainer>
             <SEO
@@ -36,10 +40,14 @@ export default ({ data, pageContext }) => {
                 publishedDate={date}
                 modifiedDate={new Date(Date.now()).toISOString()}
             />
-            <div className="p-16 lg:p-20 h-full bg-blue-200">
-                <h1 className="font-bold text-2xl">{frontmatter.title}</h1>
-                <p>{frontmatter.date}</p>
-                <MDXRenderer>{body}</MDXRenderer>
+            <Article className="pt-32 pb-20 px-10 lg:px-16 lg:pt-20">
+                <Article.Title className="font-bold text-2xl">
+                    {frontmatter.title}
+                </Article.Title>
+                <Article.Text>{frontmatter.date}</Article.Text>
+                <MDXProvider components={shortcodes}>
+                    <MDXRenderer>{body}</MDXRenderer>
+                </MDXProvider>
                 {previous === false ? null : (
                     <>
                         {previous && (
@@ -58,7 +66,7 @@ export default ({ data, pageContext }) => {
                         )}
                     </>
                 )}
-            </div>
+            </Article>
         </LayoutContainer>
     )
 }

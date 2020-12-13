@@ -10,7 +10,13 @@ import {
     BrowserButtonGreen,
 } from "./styles/code-block"
 
-export default function CodeBlock({ browser = false, children, ...restProps }) {
+export default function CodeBlock({
+    browser = false,
+    light = true,
+    theme = true,
+    children,
+    ...restProps
+}) {
     return (
         <Container {...restProps}>
             {browser && (

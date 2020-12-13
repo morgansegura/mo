@@ -1,30 +1,30 @@
 import React from "react"
-import { Block } from "../components"
+import { Block, Card } from "../components"
 import { technology } from "../fixtures"
 
 export function PreferredTechContainer({ className }) {
     return (
-        <Block className={`h-full p-10 lg:p-16 ${className}`}>
-            <header className="mb-6">
-                <h3 className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
+        <Block className={className}>
+            <Block.Header>
+                <Block.Title className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
                     Preferred Tech
-                </h3>
-            </header>
+                </Block.Title>
+            </Block.Header>
 
             <div className="grid grid-cols-2 gap-1 md:grid-cols-4">
                 {technology.map((tech, i) => (
-                    <a
+                    <Card
                         key={i}
-                        className="card relative col-span-1 flex justify-center py-8 px-8"
+                        className="small-card relative col-span-1 rounded-md flex justify-center py-8 px-8"
                         href={tech.url}
                     >
-                        <div className="icon-container rounded-full p-2">
+                        <div className="bg-offset rounded-full p-2">
                             {tech.icon}
                         </div>
-                        <p className="absolute z-10 right-0 -mr-4 xl:mr-8 flex h-6 pl-2 pr-3 items-center text-sm font-headline pl-2 bg-gray-200 rounded-tl-full rounded-tr-full rounded-br-full">
+                        <p className="bg-label shadow-lg absolute flex h-6 pl-2 pr-3 items-center text-sm font-headline bg-gray-200 rounded-tl-full rounded-tr-full rounded-br-full">
                             {tech.caption}
                         </p>
-                    </a>
+                    </Card>
                 ))}
             </div>
         </Block>

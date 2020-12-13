@@ -5,12 +5,11 @@ import DigitalBG from "../assets/images/digital.svg"
 
 export function DevCreativeContainer({ className }) {
     return (
-        <Block className={`h-full p-10 lg:p-16 ${className}`}>
+        <Block className={`relative h-full py-20 px-10 lg:px-16 ${className}`}>
             <DigitalBG className="absolute opacity-50" />
-
-            <BlockNote className="h-full relative flex flex-col py-16 px-10 lg:py-20 lg:px-16">
-                <div className="flex justify-between">
-                    <div className="w-1/2 self-center">
+            <BlockNote className="h-full relative flex flex-col">
+                <div className="flex flex-col lg:flex-row justify-between">
+                    <div className="w-full order-2 mb-8 lg:mb-0 lg:w-1/2 self-center">
                         <CodeBlock browser={true} className="with--label">
                             <CodeBlock.Label>Javascript</CodeBlock.Label>
                             <CodeBlock.Row>
@@ -30,21 +29,24 @@ export function DevCreativeContainer({ className }) {
                             </CodeBlock.Row>
                         </CodeBlock>
                     </div>
-                    <div className="w-1/2 h-full bg-transparent flex flex-col text-right">
-                        <BlockNote.Title className="">Code</BlockNote.Title>
-                        <BlockNote.Subtitle className="pl-12">
+                    <div className="w-full order-1 lg:order-2 bg-transparent flex flex-col lg:w-1/2">
+                        <BlockNote.Title className="text-center lg:text-right">
+                            Code
+                        </BlockNote.Title>
+                        <BlockNote.Subtitle className="text-center lg:text-right lg:pl-12">
                             Over 10 years of{" "}
                             <strong className="font-bold">
                                 professional experience
                             </strong>{" "}
                         </BlockNote.Subtitle>
+                        <BlockNote.Text className="text-center lg:self-end lg:text-right">
+                            I've been in the weeds, worked countless hours and
+                            put in over ten years designing and devloping
+                            professional code for clients and employers. My
+                            favorite part of my professional
+                        </BlockNote.Text>
                     </div>
                 </div>
-                <BlockNote.Text className="self-end text-right w-2/3">
-                    I've been in the weeds, worked countless hours and put in
-                    over ten years designing and devloping professional code for
-                    clients and employers. My favorite part of my professional
-                </BlockNote.Text>
             </BlockNote>
         </Block>
     )

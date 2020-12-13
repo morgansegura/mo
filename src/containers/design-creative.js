@@ -6,10 +6,8 @@ import DesignIcons from "../assets/images/design-icons.svg"
 
 export function DesignCreativeContainer({ className }) {
     return (
-        <Block className={`h-full p-10 lg:p-16 ${className}`}>
-            <BlockNote className="relative h-full left py-16 px-10 lg:py-20 lg:px-16 flex flex-col text-left">
-                <DesignBG className="absolute -mt-32 top-0 left-0 opacity-50" />
-                <DesignIcons className="absolute z-0 w-3/12 top-0 right-0 transform -translate-x-64 translate-y-10 opacity-50" />
+        <Block className={`relative h-full p-10 lg:p-16 ${className}`}>
+            <BlockNote className="relative h-full flex flex-col text-left">
                 <BlockNote.Title>Design</BlockNote.Title>
                 <BlockNote.Subtitle>
                     powerful interactive prototypes
@@ -20,6 +18,8 @@ export function DesignCreativeContainer({ className }) {
                     Sketch, Figma or Adobe XD.
                 </BlockNote.Text>
             </BlockNote>
+            <DesignIcons className="absolute z-0 w-3/12 top-0 right-0 transform -translate-x-64 translate-y-10 opacity-75" />
+            <DesignBG className="absolute bottom-0 left-0 opacity-75" />
         </Block>
     )
 }

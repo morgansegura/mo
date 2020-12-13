@@ -34,6 +34,8 @@ export const BrowserButtonGreen = styled.div`
 `
 
 export const Container = styled.div`
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     position: relative;
     min-height: 12rem;
     z-index: 1;
@@ -64,11 +66,13 @@ export const Inner = styled.div`
     position: relative;
     letter-spacing: 0.05em;
     z-index: 1;
-    padding: 1.25rem;
+    padding: 2rem 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: start;
     height: 100%;
+    width: auto;
+    overflow-x: scroll;
 `
 export const Label = styled.span`
     position: absolute;

@@ -13,10 +13,6 @@ import { PreferredTechContainer } from "../containers/preferred-tech"
 import SEO from "../components/seo"
 import { Containers } from "../components"
 
-import * as S from "../styles/home/styled"
-
-import { technology, interests } from "../fixtures"
-
 const IndexPage = () => {
     // const data = useStaticQuery(graphql`
     //     query HomePageQuery {
@@ -40,23 +36,23 @@ const IndexPage = () => {
                 <Containers.Child>
                     <ExpertiseContainer className="block1" />
                 </Containers.Child>
-                <Containers.Child className="overflow-hidden bg-gradient">
-                    <DesignCreativeContainer />
+                <Containers.Child>
+                    <DesignCreativeContainer className="overflow-hidden bg-gradient" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DesignGoalsContainer className="block4" />
+                    <DesignGoalsContainer className="block2" />
                 </Containers.Child>
-                <Containers.Child className="bg-gradient relative overflow-hidden">
-                    <DevCreativeContainer />
+                <Containers.Child>
+                    <DevCreativeContainer className="bg-gradient relative overflow-hidden" />
                 </Containers.Child>
                 <Containers.Child>
                     <DevGoalsContainer className="block3" />
                 </Containers.Child>
                 <Containers.Child>
-                    <PreferredTechContainer className="block2" />
+                    <PreferredTechContainer className="block4" />
                 </Containers.Child>
                 <Containers.Child>
-                    <LearningGoalsContainer className="block3" />
+                    <LearningGoalsContainer className="block2" />
                 </Containers.Child>
             </Containers>
         </LayoutContainer>

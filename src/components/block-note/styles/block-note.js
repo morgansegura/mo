@@ -44,7 +44,7 @@ export const Text = styled.p`
     display: block;
     font-size: 1.125rem;
     line-height: 2.5rem;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     font-weight: 400;
     color: ${({ theme }) => theme.textHeadlineHero};
 

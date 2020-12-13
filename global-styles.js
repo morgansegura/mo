@@ -142,12 +142,12 @@ const GlobalStyles = createGlobalStyle`
     
     /* Aqua Theme */
     --aqua-100: #7FC0CF;    
-    --aqua-200: #4AA2B6;    
-    --aqua-300: #288CA4;    
-    --aqua-400: #04819E;    
-    --aqua-500: #03637A;    
-    --aqua-600: #024E60;    
-    --aqua-700: #0A5A6C;    
+    --aqua-200: #6fb5c5;    
+    --aqua-300: #5fa3b3;    
+    --aqua-400: #2c889e;    
+    --aqua-500: #1e6c80;    
+    --aqua-600: #0A5A6C;    
+    --aqua-700: #024E60;    
     --aqua-800: #02495A;    
     --aqua-900: #013642;     
     
