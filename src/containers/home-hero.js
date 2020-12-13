@@ -1,20 +1,34 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import { HeroSplit, AuthorCard } from "../components"
-import quoteImage from "../assets/images/quote.jpg"
 import avatarImage from "../assets/images/morgansegura-400x400.jpg"
 import { SiLinkedin, SiGithub, SiTwitter } from "react-icons/si"
 
 export function HomeHeroContainer() {
+    const data = useStaticQuery(
+        graphql`
+            query {
+                heroImage: file(relativePath: { eq: "quote.jpg" }) {
+                    childImageSharp {
+                        fluid(quality: 90, maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid_withWebp
+                        }
+                    }
+                }
+            }
+        `
+    )
+    const imageData = data.heroImage.childImageSharp.fluid
+
     return (
         <HeroSplit>
             <HeroSplit.ImageContainer className="relative">
-                <HeroSplit.Image
-                    className="w-full h-full"
-                    style={{
-                        backgroundImage: `url(${quoteImage})`,
-                    }}
-                    alt=""
-                />
+                <BackgroundImage
+                    Tag="div"
+                    className="bg-image w-full h-full"
+                    fluid={imageData}
+                ></BackgroundImage>
             </HeroSplit.ImageContainer>
 
             <HeroSplit.Body className="py-12 px-10 lg:px-16 lg:py-18">
@@ -48,7 +62,7 @@ export function HomeHeroContainer() {
                     </div>
                 </HeroSplit.TextSmall>
                 <HeroSplit.Title className="relative flex justify-between font-sans font-bold">
-                    <div className="w-3/4 relative z-10">Morgan Segura</div>
+                    <div className="w-3/4 relative">Morgan Segura</div>
                     <AuthorCard className="z-1 absolute right-0 self-center">
                         <AuthorCard.Image
                             className="ml-auto block rounded-full w-32 h-32"

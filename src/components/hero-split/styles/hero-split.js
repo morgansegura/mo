@@ -36,6 +36,15 @@ export const ImageContainer = styled.div`
         flex: 0 0 50%;
         max-width: 50%;
     `};
+    .bg-image {
+        position: relative;
+        height: 100%;
+        min-height: 300px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 `
 export const Image = styled.img`
     position: relative;
