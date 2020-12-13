@@ -7,6 +7,7 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-netlify-cms`,
+        `gatsby-plugin-netlify`,
         `gatsby-transformer-yaml`,
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-react-helmet`,
