@@ -72,7 +72,7 @@ export const Inner = styled.div`
     align-items: start;
     height: 100%;
     width: auto;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 `
 export const Label = styled.span`
     position: absolute;

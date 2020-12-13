@@ -52,7 +52,7 @@ export function MenuContainer({ ...restProps }) {
                         className="w-8 h-8 flex items-center justify-center mt-4 mr-4 ml-auto font-semibold rounded-full p-1 text-2xl shadow-lg"
                         onClick={() => setToggleModal(!toggleModal)}
                     >
-                        <GrFormClose />
+                        <GrFormClose className="fill-current" />
                     </Modal.CloseButton>
                     <ContactFormContainer />
                 </Modal>

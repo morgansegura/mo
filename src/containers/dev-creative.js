@@ -5,11 +5,11 @@ import DigitalBG from "../assets/images/digital.svg"
 
 export function DevCreativeContainer({ className }) {
     return (
-        <Block className={`relative h-full py-20 px-10 lg:px-16 ${className}`}>
+        <Block className={`relative h-full px-10 py-20 lg:px-16 ${className}`}>
             <DigitalBG className="absolute opacity-50" />
             <BlockNote className="h-full relative flex flex-col">
                 <div className="flex flex-col lg:flex-row justify-between">
-                    <div className="w-full order-2 mb-8 lg:mb-0 lg:w-1/2 self-center">
+                    <div className="w-full order-2 mt-4 lg:mt-0 lg:w-1/2 self-center">
                         <CodeBlock browser={true} className="with--label">
                             <CodeBlock.Label>Javascript</CodeBlock.Label>
                             <CodeBlock.Row>
@@ -42,8 +42,7 @@ export function DevCreativeContainer({ className }) {
                         <BlockNote.Text className="text-center lg:self-end lg:text-right">
                             I've been in the weeds, worked countless hours and
                             put in over ten years designing and devloping
-                            professional code for clients and employers. My
-                            favorite part of my professional
+                            professional code for clients and employers.
                         </BlockNote.Text>
                     </div>
                 </div>

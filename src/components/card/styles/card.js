@@ -10,120 +10,115 @@ import styled from "styled-components"
 // })
 
 export const Container = styled.div`
+    .block1 &.card,
     .block1 & {
         background-color: ${({ theme }) => theme.bgCardBlock1};
         border: 1px solid ${({ theme }) => theme.borderCardBlock1};
 
-        & h3 {
+        h3 {
             color: ${({ theme }) => theme.textHeadlineCardBlock1};
         }
-        & > p,
-        & p {
+        p {
             color: ${({ theme }) => theme.textCardBlock1};
         }
-        & > a,
-        & a {
+        a {
             opacity: 0.9;
             transition: opacity 0.3s ease-out;
             &:hover {
                 opacity: 1;
             }
         }
-        & .bg-offset {
+        .bg-offset {
             background-color: ${({ theme }) => theme.bgOffsetBlock1};
         }
-        & .small-card {
+        .small-card {
             background-color: ${({ theme }) => theme.bgCardBlock1};
         }
-        & .bg-label {
+        .bg-label {
             color: ${({ theme }) => theme.textOffsetBlock1};
             background-color: ${({ theme }) => theme.bgOffsetBlock1};
         }
     }
+    .block2 &.card,
     .block2 & {
         background-color: ${({ theme }) => theme.bgCardBlock2};
         border: 1px solid ${({ theme }) => theme.borderCardBlock2};
-        & h3 {
+        h3 {
             color: ${({ theme }) => theme.textHeadlineCardBlock2};
         }
-        & > p,
-        & p {
+        p {
             color: ${({ theme }) => theme.textCardBlock2};
         }
-        & > a,
-        & a {
+        a {
             opacity: 0.9;
             transition: opacity 0.3s ease-out;
             &:hover {
                 opacity: 1;
             }
         }
-        & .bg-offset {
+        .bg-offset {
             background-color: ${({ theme }) => theme.bgOffsetBlock2};
         }
-        & .small-card {
+        .small-card {
             background-color: ${({ theme }) => theme.bgCardBlock2};
         }
-        & .bg-label {
+        .bg-label {
             color: ${({ theme }) => theme.textOffsetBlock2};
             background-color: ${({ theme }) => theme.bgOffsetBlock2};
         }
     }
+    .block3 &.card,
     .block3 & {
         background-color: ${({ theme }) => theme.bgCardBlock3};
         border: 1px solid ${({ theme }) => theme.borderCardBlock3};
-        & h3,
-        & h3 {
+        h3 {
             color: ${({ theme }) => theme.textHeadlineCardBlock3};
         }
-        & > p,
-        & p {
+        p {
             color: ${({ theme }) => theme.textCardBlock3};
         }
-        & > a,
-        & a {
+        a {
             opacity: 0.9;
             transition: opacity 0.3s ease-out;
             &:hover {
                 opacity: 1;
             }
         }
-        & .bg-offset {
+        .bg-offset {
             background-color: ${({ theme }) => theme.bgOffsetBlock3};
         }
-        & .small-card {
+        .small-card {
             background-color: ${({ theme }) => theme.bgCardBlock3};
         }
-        & .bg-label {
+        .bg-label {
             color: ${({ theme }) => theme.textOffsetBlock3};
             background-color: ${({ theme }) => theme.bgOffsetBlock3};
         }
     }
+    .block4 &.card,
     .block4 & {
         background-color: ${({ theme }) => theme.bgCardBlock4};
         border: 1px solid ${({ theme }) => theme.borderCardBlock4};
-        & h3 {
+        h3 {
             color: ${({ theme }) => theme.textHeadlineCardBlock4};
         }
-        & > p,
-        & p {
+        p {
             color: ${({ theme }) => theme.textCardBlock4};
         }
-        & > a,
-        & a {
+        a {
             opacity: 0.9;
             transition: opacity 0.3s ease-out;
             &:hover {
                 opacity: 1;
             }
         }
-        & .bg-offset {
+        .bg-offset {
             background-color: ${({ theme }) => theme.bgOffsetBlock4};
         }
-        & .small-card {
+        .small-card {
             background-color: ${({ theme }) => theme.bgCardBlock4};
         }
-        & .bg-label {
+        .bg-label {
             left: 100%;
             min-width: 70px;
             display: flex;

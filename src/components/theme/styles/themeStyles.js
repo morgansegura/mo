@@ -491,13 +491,13 @@ export const alt2Theme = {
      */
     white: "var(--white)",
     black: "var(--black)",
-    scrollBar: "var(--gray-500)",
-    scrollBarHover: "rgba(128, 90, 213, 0.75)",
-    scrollBarActive: "rgba(128, 90, 213, 0.75)",
+    scrollBar: "var(--cyan)",
+    scrollBarHover: "rgba(0, 255, 255, 0.75)",
+    scrollBarActive: "rgba(0, 255, 255, 0.85)",
     logo: "var(--aqua-100)",
-    logoHover: "var(--gray-100)",
+    logoHover: "var(--cyan)",
     transHover: "var(--gray-100)",
-    bgBody: "var(--aqua-800)",
+    bgBody: "var(--aqua-900)",
     textBody: "var(--aqua-100)",
     /**
      * [Header & Footer]
@@ -509,9 +509,9 @@ export const alt2Theme = {
     iconHeaderBG: "transparent",
     iconHeaderHover: "var(--aqua-100)",
     iconHeaderBGHover: "rgba(0,0,0,0.125)",
-    bgFooter: "var(--gray-800)",
-    textFooter: "var(--gray-400)",
-    iconFooter: "var(--gray-800)",
+    bgFooter: "var(--aqua-800)",
+    textFooter: "var(--aqua-400)",
+    iconFooter: "var(--aqua-800)",
     iconFooterHover: "rgba(0,0,0,0.25)",
     /**
      * [Drawer & Navigation]
@@ -520,9 +520,9 @@ export const alt2Theme = {
     borderDrawer: "var(--aqua-600)",
     bgDrawerMenu: "var(--aqua-700)",
     bgDrawerNavItem: "var(--aqua-600)",
-    bgDrawerNavItemHover: "var(--aqua-700)",
-    textDrawerNavItem: "var(--aqua-100)",
-    textDrawerNavItemHover: "var(--gray-100)",
+    bgDrawerNavItemHover: "var(--aqua-800)",
+    textDrawerNavItem: "var(--cyan)",
+    textDrawerNavItemHover: "var(--cyan)",
     borderDrawerNavItem: "var(--aqua-800)",
     borderDrawerNavItemHover: "",
     /**
@@ -600,7 +600,7 @@ export const alt2Theme = {
      */
     bgButton: "var(--cyan)",
     textButton: "var(--gray-600)",
-    bgButtonHover: "#6b46c1",
+    bgButtonHover: "rgba(0, 255, 255, 0.65)",
     textButtonHover: "white",
     bgButtonDefault: "var(--gray-400)",
     textButtonDefault: "var(--gray-100)",

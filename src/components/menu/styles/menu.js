@@ -31,6 +31,11 @@ export const LogoContainer = styled(Link)`
     }
     .cls-2 {
         fill: ${({ theme }) => theme.logo};
+        transition: fill 0.3s ease-out;
+
+        &:hover {
+            fill: ${({ theme }) => theme.logoHover};
+        }
     }
     ${customMedia.greaterThan("lg")`
         .logo {
@@ -51,7 +56,7 @@ export const Item = styled(Link)`
     background-color: ${({ theme }) => theme.bgDrawerNavItem};
     color: ${({ theme }) => theme.textDrawerNavItem};
     border-bottom: 1px solid ${({ theme }) => theme.borderDrawerNavItem};
-    transition: all 0.3 ease-out;
+    transition: all 0.3s ease-out;
 
     &:hover {
         background-color: ${({ theme }) => theme.bgDrawerNavItemHover};

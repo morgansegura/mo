@@ -26,13 +26,18 @@ export const Container = styled.div`
 export const CloseButton = styled.div`
     cursor: pointer;
     background-color: ${({ theme }) => theme.bgButton};
-    color: ${({ theme }) => theme.textButton};
     transition: all 0.3s ease-out;
+
+    svg {
+        fill: ${({ theme }) => theme.textButton};
+        transition: all 0.3s ease-out;
+        &:hover {
+            fill: ${({ theme }) => theme.textButtonHover};
+        }
+    }
 
     &:hover {
         background-color: ${({ theme }) => theme.bgButtonHover};
-        color: ${({ theme }) => theme.textButtonHover};
-        // box-shadow: 2px 0 10px 2px ${({ theme }) => theme.bgButton};
     }
 `
 export const Inner = styled.div`

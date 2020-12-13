@@ -34,22 +34,22 @@ const IndexPage = () => {
                     <HomeHeroContainer />
                 </Containers.Child>
                 <Containers.Child>
-                    <ExpertiseContainer className="block1" />
+                    <ExpertiseContainer className="block2" />
                 </Containers.Child>
                 <Containers.Child>
                     <DesignCreativeContainer className="overflow-hidden bg-gradient" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DesignGoalsContainer className="block2" />
+                    <DesignGoalsContainer className="block3" />
+                </Containers.Child>
+                <Containers.Child>
+                    <PreferredTechContainer className="block4" />
                 </Containers.Child>
                 <Containers.Child>
                     <DevCreativeContainer className="bg-gradient relative overflow-hidden" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DevGoalsContainer className="block3" />
-                </Containers.Child>
-                <Containers.Child>
-                    <PreferredTechContainer className="block4" />
+                    <DevGoalsContainer className="block1" />
                 </Containers.Child>
                 <Containers.Child>
                     <LearningGoalsContainer className="block2" />
