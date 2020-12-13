@@ -60,9 +60,16 @@ export const TextContainer = styled.div``
 
 export const Title = styled.h2`
     color: ${({ theme }) => theme.textHeadlineHero};
-    font-size: 4rem;
+    font-size: 2.9rem;
     line-height: 0.95;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    ${customMedia.between("md")`
+        font-size: 4rem;
+    `};
+    ${customMedia.greaterThan("xxl")`
+        margin-bottom: 2rem;
+    `};
 `
 export const Subtitle = styled.h3`
     color: ${({ theme }) => theme.textHeadlineHero};

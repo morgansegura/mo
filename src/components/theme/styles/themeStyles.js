@@ -530,8 +530,8 @@ export const alt2Theme = {
      */
     bgHero: "var(--aqua-700)",
     textHero: "var(--aqua-100)",
-    textOffsetHero: "var(--gray-600)",
-    textHeadlineHero: "var(--gray-100)",
+    textOffsetHero: "var(--cyan)",
+    textHeadlineHero: "rgba(255, 255, 255, .75)",
     /**
      * [Blocks & Cards]
      */

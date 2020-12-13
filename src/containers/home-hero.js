@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import { HeroSplit, AuthorCard } from "../components"
-import avatarImage from "../assets/images/morgansegura-400x400.jpg"
+// import avatarImage from "../assets/images/morgansegura-400x400.jpg"
 import { SiLinkedin, SiGithub, SiTwitter } from "react-icons/si"
 
 export function HomeHeroContainer() {
@@ -16,10 +16,18 @@ export function HomeHeroContainer() {
                         }
                     }
                 }
+                avatar: file(relativePath: { eq: "morgansegura-400x400.jpg" }) {
+                    childImageSharp {
+                        fluid(quality: 90, maxWidth: 400) {
+                            ...GatsbyImageSharpFluid_withWebp
+                        }
+                    }
+                }
             }
         `
     )
-    const imageData = data.heroImage.childImageSharp.fluid
+    const heroImage = data.heroImage.childImageSharp.fluid
+    const avatar = data.avatar.childImageSharp.fluid
 
     return (
         <HeroSplit>
@@ -27,49 +35,46 @@ export function HomeHeroContainer() {
                 <BackgroundImage
                     Tag="div"
                     className="bg-image w-full h-full"
-                    fluid={imageData}
+                    fluid={heroImage}
                 ></BackgroundImage>
             </HeroSplit.ImageContainer>
 
-            <HeroSplit.Body className="py-12 px-10 lg:px-16 lg:py-18">
-                <HeroSplit.TextSmall className="flex justify-between font-thin text-base font-sans tracking-normal">
-                    <div>Creative Technologist</div>
-                    <div className="flex">
+            <HeroSplit.Body className="py-12 px-10 md:pt-24 lg:px-16 lg:py-12">
+                <HeroSplit.TextSmall className="flex justify-between font-light text-base font-sans tracking-normal">
+                    <div className="mini-title">Creative Technologist</div>
+                    <div className="flex justify-end items-center">
                         <a
-                            className="w-6 h-6 mr-3"
                             target="_blank"
                             rel="noreferrer"
                             href="https://github.com/morgansegura"
                         >
-                            <SiGithub />
+                            <SiGithub className="w-4 h-4 mr-3" />
                         </a>
                         <a
-                            className="w-6 h-6 mr-3"
                             target="_blank"
                             rel="noreferrer"
                             href="https://www.linkedin.com/in/morgan-segura-4b08429/"
                         >
-                            <SiLinkedin />
+                            <SiLinkedin className="w-4 h-4 mr-3" />
                         </a>
                         <a
-                            className="w-6 h-6 mr-3"
                             target="_blank"
                             rel="noreferrer"
                             href="https://twitter.com/codestandard"
                         >
-                            <SiTwitter />
+                            <SiTwitter className="w-4 h-4" />
                         </a>
                     </div>
                 </HeroSplit.TextSmall>
-                <HeroSplit.Title className="relative flex justify-between font-sans font-bold">
-                    <div className="w-3/4 relative">Morgan Segura</div>
-                    <AuthorCard className="z-1 absolute right-0 self-center">
+                <HeroSplit.Title className="relative flex items-center font-sans font-bold">
+                    <AuthorCard className="self-center mr-4">
                         <AuthorCard.Image
-                            className="ml-auto block rounded-full w-32 h-32"
-                            src={avatarImage}
+                            className="block rounded-full w-16 h-16"
+                            fluid={avatar}
                             alt="Morgan Segura"
                         />
                     </AuthorCard>
+                    <div className="relative">Morgan Segura</div>
                 </HeroSplit.Title>
                 <HeroSplit.TextContainer className="font-sans text-base leading-loose">
                     <HeroSplit.Text className="mb-3 pt-2">
@@ -87,7 +92,7 @@ export function HomeHeroContainer() {
                     </HeroSplit.Text>
                 </HeroSplit.TextContainer>
                 <HeroSplit.ButtonLink
-                    className="mt-6 ml-auto text-center inline-flex lg:block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
+                    className="mt-6 ml-auto text-center block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
                     to={"/"}
                 >
                     Download CV
