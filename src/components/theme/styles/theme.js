@@ -13,15 +13,21 @@ export const ThemeSelector = styled.div`
     position: relative;
 `
 export const Options = styled.div`
+    position: fixed;
     width: 100%;
     z-index: -1;
-    top: 3rem;
+    top: 3.85rem;
+    left: 100%;
     border-radius: 4px 0 0 4px;
     box-shadow: -3px 2px 2px 2px rgba(0, 0, 0, 0.1);
     color: ${({ theme }) => theme.textDrawerNavItem};
     background: ${({ theme }) => theme.bgDrawerNavItem};
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+
+    ${customMedia.greaterThan("lg")`
+        top: 5rem;
+    `}
 
     .color-drawer--open & {
         z-index: 1;
@@ -42,8 +48,12 @@ export const Options = styled.div`
             width: 100%;
             padding: 0.5rem 1.5rem;
             background-color: transparent;
-            border-bottom: 1px solid ${({ theme }) => theme.borderDrawerNavItem};
             transition: background-color 0.3s ease-out;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid
+                    ${({ theme }) => theme.borderDrawerNavItem};
+            }
 
             &:hover {
                 color: ${({ theme }) => theme.textDrawerNavItemHover};
@@ -86,10 +96,6 @@ export const Options = styled.div`
             background-color: var(--aqua-500);
         }
     }
-
-    ${customMedia.greaterThan("lg")`
-
-  `}
 `
 export const ToggleContainer = styled.div`
     position: relative;
@@ -151,7 +157,9 @@ export const FontToolbar = styled.div`
     margin-bottom: 0.5rem;
     padding-bottom: 1.5rem;
 
-    border-bottom: 1px solid ${({ theme }) => theme.textOffset};
+    &:not(:last-child) {
+        border-bottom: 1px solid ${({ theme }) => theme.textOffset};
+    }
 
     .normal,
     .medium,

@@ -48,8 +48,10 @@ export const Wrapper = styled.div`
 export const Navbar = styled.div``
 
 export const LogoContainer = styled(Link)`
-    width: 3rem;
-    height: 3rem;
+    .logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
     .cls-2 {
         fill: ${({ theme }) => theme.logo};
         transition: fill 0.3s ease-out;
@@ -59,4 +61,10 @@ export const LogoContainer = styled(Link)`
             fill: ${({ theme }) => theme.logoHover};
         }
     }
+    ${customMedia.greaterThan("lg")`
+        .logo {
+            width: 3rem;
+            height: 3rem;
+        }    
+	`}
 `

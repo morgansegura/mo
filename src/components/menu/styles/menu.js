@@ -25,19 +25,28 @@ export const LogoWrapper = styled.div`
 `
 
 export const LogoContainer = styled(Link)`
-    width: 2.5rem;
-    height: 2.5rem;
+    .logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
     .cls-2 {
         fill: ${({ theme }) => theme.logo};
     }
     ${customMedia.greaterThan("lg")`
-        width: 3rem;
-        height: 3rem;
+        .logo {
+            width: 3rem;
+            height: 3rem;
+        }
 	`}
 `
 export const ItemContainer = styled.div``
 
 export const Item = styled(Link)`
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1.25rem 1rem;
     background-color: ${({ theme }) => theme.bgDrawerNavItem};
     color: ${({ theme }) => theme.textDrawerNavItem};

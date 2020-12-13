@@ -516,11 +516,11 @@ export const alt2Theme = {
     /**
      * [Drawer & Navigation]
      */
-    bgDrawer: "var(--aqua-800)",
-    borderDrawer: "var(--aqua-700)",
-    bgDrawerMenu: "var(--gray-100)",
+    bgDrawer: "var(--aqua-700)",
+    borderDrawer: "var(--aqua-600)",
+    bgDrawerMenu: "var(--aqua-700)",
     bgDrawerNavItem: "var(--aqua-600)",
-    bgDrawerNavItemHover: "var(--aqua-500)",
+    bgDrawerNavItemHover: "var(--aqua-700)",
     textDrawerNavItem: "var(--aqua-100)",
     textDrawerNavItemHover: "var(--gray-100)",
     borderDrawerNavItem: "var(--aqua-800)",

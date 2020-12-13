@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { func, string } from "prop-types"
 
 import { WiMoonAltFirstQuarter } from "react-icons/wi"
-import * as S from "./styled"
+import * as S from "./styles/theme"
 
 const themeOptions = [
     {
@@ -37,9 +37,7 @@ const ToggleTheme = ({ theme, toggleTheme }) => {
             />
 
             <S.ThemeSelector>
-                <S.Options
-                    className={`fixed top-20 transform transition-translate ease-out duration-300`}
-                >
+                <S.Options>
                     <div className="options-item theme-color font-sans">
                         {themeOptions.map((item, i) => (
                             <div

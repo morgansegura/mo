@@ -2,7 +2,7 @@ import React from "react"
 
 import { func, string } from "prop-types"
 
-import * as S from "./styled"
+import * as S from "./styles/theme"
 
 const ToggleFontSize = ({ fontSize, toggleFontSize }) => {
     return (

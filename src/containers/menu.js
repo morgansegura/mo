@@ -11,14 +11,14 @@ export function MenuContainer({ ...restProps }) {
     return (
         <>
             <Menu {...restProps}>
-                <Menu.LogoWrapper className="flex flex-col justify-center text-center lg:h-24">
+                <Menu.LogoWrapper className="flex flex-col justify-center text-center">
                     <Menu.LogoContainer
                         className="mx-auto flex flex-col items-center justify-center"
                         to="/"
                         title="Home"
                         aria-label="Home"
                     >
-                        <LogoImage className="logo w-12 h-12 lg:mx-auto" />
+                        <LogoImage className="logo lg:mx-auto" />
                     </Menu.LogoContainer>
                 </Menu.LogoWrapper>
                 <Menu.ItemContainer className="w-full grid grid-cols-1 text-center">
@@ -27,7 +27,7 @@ export function MenuContainer({ ...restProps }) {
                             key={id}
                             title={title}
                             to={path}
-                            className="main-nav-item flex flex-col justify-center items-center border border-gray-500 hover:bg-color-400 transition ease-out duration-300"
+                            className="main-nav-item"
                         >
                             <div className="icon">{icon}</div>
                             <div className="label">{label}</div>
@@ -37,7 +37,7 @@ export function MenuContainer({ ...restProps }) {
                         onClick={() => setToggleModal(!toggleModal)}
                         title="Connect"
                         to="/"
-                        className="cursor-pointer main-nav-item flex flex-col justify-center items-center border border-gray-500 hover:bg-color-400 transition ease-out duration-300"
+                        className="main-nav-item"
                     >
                         <div className="icon">
                             <AiOutlineApi />

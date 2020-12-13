@@ -11,13 +11,13 @@ import Layout from "../components/layout"
 import Hamburger from "../components/hamburger"
 
 import GlobalStyles from "../../global-styles"
-import { useDarkMode } from "../components/theme/useDarkMode"
+import { useThemeMode } from "../components/theme/useThemeMode"
 import {
     lightTheme,
     darkTheme,
     alt1Theme,
     alt2Theme,
-} from "../components/theme/themeStyles"
+} from "../components/theme/styles/themeStyles"
 import ToggleTheme from "../components/theme/toggleTheme"
 
 export function LayoutContainer({ children, location }) {
@@ -35,7 +35,7 @@ export function LayoutContainer({ children, location }) {
     const [toggleNav, setToggleNav] = useState(false)
 
     // Toggle Theme Colors Mode
-    const [theme, toggleTheme, componentMounted] = useDarkMode()
+    const [theme, toggleTheme, componentMounted] = useThemeMode()
     const themeMode =
         theme === "light"
             ? lightTheme
