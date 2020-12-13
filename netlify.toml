@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build || { cat /opt/buildhome/.npm/_logs/* ; sleep 30 ; false; }"
+  command = "yarn build || { cat /opt/buildhome/.yarn/_logs/* ; sleep 30 ; false; }"
   publish = "public/"
 
 [build.environment]
