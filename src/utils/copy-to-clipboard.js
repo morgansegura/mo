@@ -1,70 +1,30 @@
-import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/nightOwl"
-import React from "react"
-import styled from "styled-components"
-import { copyToClipboard } from "../utils/copy-to-clipboard"
+// https://github.com/gatsbyjs/gatsby/blob/master/www/src/utils/copy-to-clipboard.js
 
-export const Pre = styled.pre`
-    text-align: left;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    overflow-x: auto;
-    border-radius: 3px;
+export const copyToClipboard = str => {
+    const clipboard = window.navigator.clipboard
+    /*
+     * fallback to older browsers (including Safari)
+     * if clipboard API not supported
+     */
+    if (!clipboard || typeof clipboard.writeText !== `function`) {
+        const textarea = document.createElement(`textarea`)
+        textarea.value = str
+        textarea.setAttribute(`readonly`, true)
+        textarea.setAttribute(`contenteditable`, true)
+        textarea.style.position = `absolute`
+        textarea.style.left = `-9999px`
+        document.body.appendChild(textarea)
+        textarea.select()
+        const range = document.createRange()
+        const sel = window.getSelection()
+        sel.removeAllRanges()
+        sel.addRange(range)
+        textarea.setSelectionRange(0, textarea.value.length)
+        document.execCommand(`copy`)
+        document.body.removeChild(textarea)
 
-    & .token-line {
-        line-height: 1.3rem;
-        height: 1.3rem;
-    }
-    font-family: "Courier New", Courier, monospace;
-    position: relative;
-`
-
-export const LineNo = styled.span`
-    display: inline-block;
-    width: 2rem;
-    user-select: none;
-    opacity: 0.3;
-`
-
-const CopyCode = styled.button`
-    position: absolute;
-    right: 0.25rem;
-    border: 0;
-    border-radius: 3px;
-    margin: 0.25em;
-    opacity: 0.3;
-    &:hover {
-        opacity: 1;
-    }
-`
-
-const Code = ({ codeString, language }) => {
-    const handleClick = () => {
-        copyToClipboard(codeString)
+        return Promise.resolve(true)
     }
 
-    return (
-        <Highlight
-            {...defaultProps}
-            code={codeString}
-            language={language}
-            theme={theme}
-        >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <Pre className={className} style={style}>
-                    <CopyCode onClick={handleClick}>Copy</CopyCode>
-                    {tokens.map((line, i) => (
-                        <div {...getLineProps({ line, key: i })}>
-                            <LineNo>{i + 1}</LineNo>
-                            {line.map((token, key) => (
-                                <span {...getTokenProps({ token, key })} />
-                            ))}
-                        </div>
-                    ))}
-                </Pre>
-            )}
-        </Highlight>
-    )
+    return clipboard.writeText(str)
 }
-
-export default Code

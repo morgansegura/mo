@@ -11,7 +11,7 @@ export function MenuContainer({ ...restProps }) {
     return (
         <>
             <Menu {...restProps}>
-                <Menu.LogoWrapper className="h-24 flex flex-col justify-center text-center">
+                <Menu.LogoWrapper className="flex flex-col justify-center text-center lg:h-24">
                     <Menu.LogoContainer
                         className="mx-auto flex flex-col items-center justify-center"
                         to="/"
