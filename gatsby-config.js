@@ -25,7 +25,7 @@ module.exports = {
                 extensions: [`.mdx`, `.md`],
                 defaultLayouts: {
                     posts: require.resolve("./src/templates/blog-post.js"),
-                    default: require.resolve("./src/templates/blog-post.js"),
+                    projects: require.resolve("./src/templates/blog-post.js"),
                 },
                 gatsbyRemarkPlugins: [
                     {
@@ -92,6 +92,13 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
+                name: `media`,
+                path: `${__dirname}/content/media`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
                 name: `images`,
                 path: `${__dirname}/src/assets/images`,
             },
@@ -108,6 +115,13 @@ module.exports = {
             options: {
                 path: `${__dirname}/content/posts`,
                 name: `posts`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/content/projects`,
+                name: `projects`,
             },
         },
         // Styled Components

@@ -45,13 +45,13 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-    query SITE_INDEX_QUERY {
+    query SITE_PROJECT_QUERY {
         allMdx(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: {
                 frontmatter: {
                     published: { eq: true }
-                    templateKey: { eq: "blog" }
+                    templateKey: { eq: "projects" }
                 }
             }
         ) {

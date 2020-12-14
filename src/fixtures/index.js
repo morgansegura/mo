@@ -20,7 +20,11 @@ import {
     SiNetlify,
 } from "react-icons/si"
 import { FaLaravel, FaVuejs, FaReact, FaSass, FaNodeJs } from "react-icons/fa"
-import { AiOutlineCoffee, AiOutlineRead } from "react-icons/ai"
+import {
+    AiOutlineCoffee,
+    AiOutlineRead,
+    AiOutlineExperiment,
+} from "react-icons/ai"
 export const skills = [
     {
         title: "UX/UI Theory and Design",
@@ -167,11 +171,18 @@ export const technology = [
 ]
 export const menuList = [
     {
-        id: "about",
+        id: "home",
         title: "",
-        label: "About",
+        label: "Home",
         path: "/",
         icon: <AiOutlineCoffee />,
+    },
+    {
+        id: "projects",
+        title: "",
+        label: "Projects",
+        path: "/project",
+        icon: <AiOutlineExperiment />,
     },
     {
         id: "blog",
