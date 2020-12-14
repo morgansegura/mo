@@ -67,7 +67,7 @@ export function LayoutContainer({ children, location }) {
                     <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
                     <MenuContainer
                         className={`
-                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col w-24 min-h-device shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
+                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
                         ${
                             toggleNav
                                 ? `translate-x-0`
@@ -76,7 +76,7 @@ export function LayoutContainer({ children, location }) {
                     `}
                     ></MenuContainer>
                 </HeaderContainer>
-                <Layout.Container className="content flex-1 lg:pt-20 ml-0 lg:ml-20">
+                <Layout.Container className="content flex-1 lg:pt-20">
                     {children}
                     <FooterContainer>
                         Morgan Segura | {new Date().getFullYear()}

@@ -12,6 +12,9 @@ const customMedia = generateMedia({
 
 export const Container = styled.div`
     z-index: 10;
+    width: 290px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: ${({ theme }) => theme.bgDrawer};
     border-right: 1px solid ${({ theme }) => theme.borderDrawer};
 `

@@ -31,8 +31,8 @@ export const Wrapper = styled.div`
         /* height: 5rem; */
     }
     ${customMedia.greaterThan("lg")`
-        width: calc(100% - 6rem);
-        margin-left: 6rem; 
+        width: calc(100% - 290px);
+        margin-left: 290px; 
         &.scrolled-header:before {
             opacity: 0.85;
         }    

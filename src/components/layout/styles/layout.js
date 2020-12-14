@@ -27,7 +27,7 @@ export const Container = styled.div`
         border-right: 1px solid ${({ theme }) => theme.borderContent};
       }  
   `};
-    ${customMedia.greaterThan("xl")`
-
-  `};
+    ${customMedia.greaterThan("lg")`
+      margin-left: 290px;
+    `};
 `

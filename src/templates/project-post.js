@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import SEO from "../components/seo"
 import { LayoutContainer } from "../containers/layout"
-import { Article, CodeBlock } from "../components"
+import { CodeBlock } from "../components"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export default ({ data, pageContext }) => {
@@ -40,33 +40,31 @@ export default ({ data, pageContext }) => {
                 publishedDate={date}
                 modifiedDate={new Date(Date.now()).toISOString()}
             />
-            <Article className="pt-32 pb-20 px-10 lg:px-16 lg:pt-20">
-                <Article.Title className="font-bold text-2xl">
-                    {frontmatter.title}
-                </Article.Title>
-                <Article.Text>{frontmatter.date}</Article.Text>
+            <div className="pt-32 pb-20 px-10 lg:px-16 lg:pt-20">
+                <h1 className="font-bold text-2xl">{frontmatter.title}</h1>
+                <h2>{frontmatter.date}</h2>
                 <MDXProvider components={shortcodes}>
                     <MDXRenderer>{body}</MDXRenderer>
                 </MDXProvider>
                 {previous === false ? null : (
-                    <>
+                    <React.Fragment>
                         {previous && (
                             <Link to={previous.fields.slug}>
                                 <p>{previous.frontmatter.title}</p>
                             </Link>
                         )}
-                    </>
+                    </React.Fragment>
                 )}
                 {next === false ? null : (
-                    <>
+                    <React.Fragment>
                         {next && (
                             <Link to={next.fields.slug}>
                                 <p>{next.frontmatter.title}</p>
                             </Link>
                         )}
-                    </>
+                    </React.Fragment>
                 )}
-            </Article>
+            </div>
         </LayoutContainer>
     )
 }
