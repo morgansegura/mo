@@ -30,16 +30,16 @@ export function DevCreativeContainer({ className }) {
                         </CodeBlock>
                     </div>
                     <div className="w-full order-1 lg:order-2 bg-transparent flex flex-col lg:w-1/2">
-                        <BlockNote.Title className="text-center lg:text-right">
+                        <BlockNote.Title className="text-white text-center lg:text-right">
                             Code
                         </BlockNote.Title>
-                        <BlockNote.Subtitle className="text-center lg:text-right lg:pl-12">
+                        <BlockNote.Subtitle className="text-white text-center lg:text-right lg:pl-12">
                             Over 10 years of{" "}
                             <strong className="font-bold">
                                 professional experience
                             </strong>{" "}
                         </BlockNote.Subtitle>
-                        <BlockNote.Text className="text-center lg:self-end lg:text-right">
+                        <BlockNote.Text className="text-white text-center lg:self-end lg:text-right">
                             I've been in the weeds, worked countless hours and
                             put in over ten years designing and devloping
                             professional code for clients and employers.

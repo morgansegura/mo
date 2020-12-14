@@ -15,7 +15,6 @@ export const Title = styled.h2`
     font-weight: 800;
     color: white;
     margin-bottom: 2rem;
-    color: ${({ theme }) => theme.textHeadlineHero};
 
     ${customMedia.greaterThan("lg")`
 		font-size: 9rem;
@@ -46,7 +45,6 @@ export const Text = styled.p`
     line-height: 2.5rem;
     /* padding-top: 2rem; */
     font-weight: 400;
-    color: ${({ theme }) => theme.textHeadlineHero};
 
     ${customMedia.greaterThan("lg")`
         position: relative;

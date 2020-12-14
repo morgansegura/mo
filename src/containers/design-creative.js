@@ -8,13 +8,13 @@ export function DesignCreativeContainer({ className }) {
     return (
         <Block className={`relative h-full px-10 py-20 lg:px-16 ${className}`}>
             <BlockNote className="relative h-full flex flex-col">
-                <BlockNote.Title className="text-center md:text-left">
+                <BlockNote.Title className="text-white text-center md:text-left">
                     Design
                 </BlockNote.Title>
-                <BlockNote.Subtitle className="text-center md:text-left">
+                <BlockNote.Subtitle className="text-white text-center md:text-left">
                     powerful interactive prototypes
                 </BlockNote.Subtitle>
-                <BlockNote.Text className="text-center md:text-left md:w-2/3">
+                <BlockNote.Text className="text-white text-center md:text-left md:w-2/3">
                     Seamlessly transform your static screen designs into fully
                     responsive, interactive, animated prototypes directly in
                     Sketch, Figma or Adobe XD.
