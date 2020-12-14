@@ -103,7 +103,7 @@ export const ToggleContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 1.5rem;
     margin-right: -1rem;
     width: 50px;
     height: 50px;
@@ -129,8 +129,8 @@ export const ToggleContainer = styled.div`
         position: absolute;
         z-index: -1;
         background-color: ${({ theme }) => theme.iconHeaderBGHover};
-        width: 45px;
-        height: 45px;
+        width: 30px;
+        height: 30px;
         border-radius: 100%;
         transform-origin: 50% 50%;
         transform: scale(0);

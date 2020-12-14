@@ -47,8 +47,10 @@ export const Wrapper = styled.div`
 
 export const Navbar = styled.div``
 
-export const LogoContainer = styled(Link)`
+export const LogoContainer = styled.div`
+    height: 2.5rem;
     .logo {
+        margin-left: -30px;
         width: 2.5rem;
         height: 2.5rem;
     }
@@ -62,6 +64,7 @@ export const LogoContainer = styled(Link)`
         }
     }
     ${customMedia.greaterThan("lg")`
+        height: 3rem;
         .logo {
             width: 3rem;
             height: 3rem;

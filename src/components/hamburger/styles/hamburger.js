@@ -12,11 +12,13 @@ const customMedia = generateMedia({
 export const Middle = styled.div``
 export const Inner = styled.div`
     position: relative;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 14px;
+    /* background: red; */
 
     .drawer-open & {
         margin-bottom: 0;
@@ -32,48 +34,47 @@ export const Inner = styled.div`
         height: 3px;
         border-radius: 10px;
         border: none;
-        transition: rotate 0.3s ease-in, background-color 0.2s ease-out;
+        transition: background-color 0.2s ease-out;
+        width: 30px;
     }
     &:before {
-        top: 30%;
-        width: 25px;
+        top: 0;
+        width: 20px;
         transform-origin: 50% 50%;
-        transform: translateX(0) rotate(180deg);
-        transition: background-color 0.3s ease-out;
+        transform: translateX(0) translateY(0) rotate(0);
+        transition: translateY 0.5s ease-out;
 
         .drawer-open & {
+            top: 50%;
+            transform: translateX(0) translateY(-50%) rotate(0);
             opacity: 0;
         }
     }
     & .hamburger__center {
-        top: 46%;
-        width: 25px;
+        top: 50%;
+        width: 20px;
         transform-origin: 50% 50%;
-        transform: translateX(0) rotate(180deg);
-        transition: width 0.3s ease-in, transform 0.1s ease-in,
-            background-color 0.3s ease-out;
+        transform: translateX(0) translateY(-50%) rotate(0);
+        transition: background-color 0.3s ease-out;
 
         .drawer-open & {
-            width: 28px;
-            top: 48%;
-            transform: rotate(-45deg) translateX(0);
-            left: 22%;
-            background-color: ${({ theme }) => theme.iconHeaderHover};
+            width: 20px;
+            transform: translateX(0) translateY(-50%) rotate(-45deg);
+            transition: transform 0.2s ease-out, rotate 0.2s ease-out;
         }
     }
     &:after {
-        top: 62%;
-        transform: translateX(-50%);
-        width: 25px;
+        top: 100%;
+        width: 20px;
         transform-origin: 50% 50%;
-        transform: translateX(0) rotate(-180deg);
-        transition: width 0.2s ease-in, background-color 0.3s ease-out;
+        transform: translateX(0) translateY(-100%) rotate(0);
+        transition: background-color 0.3s ease-out;
 
         .drawer-open & {
-            top: 48%;
-            width: 28px;
-            transform: rotate(45deg) translateX(0);
-            background-color: ${({ theme }) => theme.iconHeaderHover};
+            top: 50%;
+            width: 20px;
+            transform: translateX(0) translateY(-50%) rotate(45deg);
+            transition: transform 0.2s ease-out, rotate 0.2s ease-out;
         }
     }
     &:hover {
@@ -87,8 +88,8 @@ export const Inner = styled.div`
 
 export const Container = styled.div`
     position: relative;
+    top: 0;
     z-index: -1;
-    font-size: 11px;
     z-index: 10;
     font-family: var(--headline-font);
     font-weight: 600;
@@ -97,16 +98,16 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 
     &:after {
         content: "";
         position: absolute;
         z-index: -1;
         background-color: ${({ theme }) => theme.iconHeaderBGHover};
-        width: 45px;
-        height: 45px;
+        width: 30px;
+        height: 30px;
         border-radius: 100%;
         transform-origin: 50% 50%;
         transform: scale(0);

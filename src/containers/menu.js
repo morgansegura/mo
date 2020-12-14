@@ -28,16 +28,6 @@ export function MenuContainer({ ...restProps }) {
     return (
         <>
             <Menu {...restProps}>
-                <Menu.LogoWrapper className="flex flex-col justify-center text-center">
-                    <Menu.LogoContainer
-                        className="mx-auto flex flex-col items-center justify-center"
-                        to="/"
-                        title="Home"
-                        aria-label="Home"
-                    >
-                        <LogoImage className="logo lg:mx-auto" />
-                    </Menu.LogoContainer>
-                </Menu.LogoWrapper>
                 <AuthorCard className="self-center items-center">
                     <AuthorCard.Image
                         className="block rounded-full w-24 h-24"

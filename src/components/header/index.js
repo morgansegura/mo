@@ -14,11 +14,7 @@ Header.LogoContainer = function HeaderLogoContainer({
     children,
     ...restProps
 }) {
-    return (
-        <LogoContainer {...restProps} to={to}>
-            {children}
-        </LogoContainer>
-    )
+    return <LogoContainer {...restProps}>{children}</LogoContainer>
 }
 Header.Navbar = function HeaderNavbar({ children, ...restProps }) {
     return <Navbar {...restProps}>{children}</Navbar>
