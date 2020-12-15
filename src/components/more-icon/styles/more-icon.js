@@ -42,10 +42,7 @@ export const Container = styled.div`
         transform: scale(0);
         transition: transform 0.2s ease-in;
     }
-    .drawer-open & {
-        z-index: 11;
-        transform: translateX(195px);
-
+    .author-drawer-open & {
         &:after {
             /* background-color: ${({ theme }) => theme.iconHeaderBGHover}; */
             /* transform: scale(1); */

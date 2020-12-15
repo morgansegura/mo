@@ -20,7 +20,8 @@ export const Inner = styled.div`
     height: 14px;
     /* background: red; */
 
-    .drawer-open & {
+    .nav-drawer-open & {
+        z-index: 11;
         margin-bottom: 0;
     }
 
@@ -44,7 +45,7 @@ export const Inner = styled.div`
         transform: translateX(0) translateY(0) rotate(0);
         transition: translateY 0.5s ease-out;
 
-        .drawer-open & {
+        .nav-drawer-open & {
             top: 50%;
             transform: translateX(0) translateY(-50%) rotate(0);
             opacity: 0;
@@ -57,7 +58,7 @@ export const Inner = styled.div`
         transform: translateX(0) translateY(-50%) rotate(0);
         transition: background-color 0.3s ease-out;
 
-        .drawer-open & {
+        .nav-drawer-open & {
             width: 20px;
             transform: translateX(0) translateY(-50%) rotate(-45deg);
             transition: transform 0.2s ease-out, rotate 0.2s ease-out;
@@ -70,7 +71,7 @@ export const Inner = styled.div`
         transform: translateX(0) translateY(-100%) rotate(0);
         transition: background-color 0.3s ease-out;
 
-        .drawer-open & {
+        .nav-drawer-open & {
             top: 50%;
             width: 20px;
             transform: translateX(0) translateY(-50%) rotate(45deg);
@@ -89,8 +90,6 @@ export const Inner = styled.div`
 export const Container = styled.div`
     position: relative;
     top: 0;
-    z-index: -1;
-    z-index: 10;
     font-family: var(--headline-font);
     font-weight: 600;
     text-transform: uppercase;
@@ -100,6 +99,13 @@ export const Container = styled.div`
     justify-content: center;
     width: 30px;
     height: 30px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+
+    .nav-drawer-open & {
+        z-index: 11;
+        transform: translateX(-80px);
+    }
 
     &:after {
         content: "";
@@ -113,7 +119,7 @@ export const Container = styled.div`
         transform: scale(0);
         transition: transform 0.2s ease-in;
     }
-    .drawer-open & {
+    .nav-drawer-open & {
         &:after {
             background-color: ${({ theme }) => theme.iconHeaderBGHover};
             transform: scale(1);

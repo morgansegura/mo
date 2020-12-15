@@ -30,8 +30,8 @@ export function HeaderContainer({ className, children }) {
         <Header className={`header ${className}`} onScroll={handleScroll}>
             <Header.Container className="flex w-full items-center">
                 <Header.LogoContainer
-                    className={`flex items-center lg:hidden transition ease-out duration-150 ${
-                        toggleAuthor ? "drawer-open" : ""
+                    className={`flex items-center transition ease-out duration-150 ${
+                        toggleAuthor ? "author-drawer-open" : ""
                     }`}
                 >
                     <MoreIcon
@@ -42,14 +42,7 @@ export function HeaderContainer({ className, children }) {
                         <LogoImage className="logo" />
                     </Link>
                     <MenuContainer
-                        className={`
-                        fixed font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-lg lg:shadow-none transform transition-translate ease-out duration-300
-                        ${
-                            toggleAuthor
-                                ? `translate-x-0`
-                                : `-translate-x-full lg:translate-x-0`
-                        }
-                    `}
+                        className={`author-menu font-sans font-semibold flex items-center flex-col min-h-device shadow-lg lg:shadow-none`}
                     ></MenuContainer>
                 </Header.LogoContainer>
                 <Header.Navbar className="flex-1 flex justify-end items-center">

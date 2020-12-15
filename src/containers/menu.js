@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { ContactFormContainer } from "../containers/contact-form"
-import { Menu, Modal, AuthorCard } from "../components"
-import LogoImage from "../assets/images/segura-icon.svg"
-import { menuList } from "../fixtures"
-import { AiOutlineApi } from "react-icons/ai"
+import {
+    Menu,
+    Modal,
+    AuthorCard,
+    CircularProgress,
+    LineProgress,
+} from "../components"
 import { GrFormClose } from "react-icons/gr"
 
 export function MenuContainer({ ...restProps }) {
@@ -28,96 +31,120 @@ export function MenuContainer({ ...restProps }) {
     return (
         <>
             <Menu {...restProps}>
-                <AuthorCard className="self-center items-center">
+                <AuthorCard className="author-block self-center items-center">
                     <AuthorCard.Image
                         className="block rounded-full w-24 h-24"
                         fluid={avatar}
                         alt="Morgan Segura"
                     />
                     <div className="text-center py-2">
-                        <AuthorCard.Title className="relative">
-                            Morgan Segura
-                        </AuthorCard.Title>
-                        <AuthorCard.Subtitle className="text-sm font-normal">
-                            Front-end Web Developer
-                        </AuthorCard.Subtitle>
-                        <AuthorCard.Subtitle className="text-sm font-normal">
-                            UI/UX Designer
-                        </AuthorCard.Subtitle>
+                        <p className="title text-xl">Morgan Segura</p>
+                        <p className="text">Front-end Web Developer</p>
+                        <p className="text">UI/UX Designer</p>
                     </div>
                 </AuthorCard>
 
-                <div className="flex flex-col">
-                    <div className="flex space-between">
-                        <div className="">Residence:</div>
-                        <div className="">United States</div>
+                <div className="skills-block w-full">
+                    <div className="location flex w-full justify-between">
+                        <div className="title flex-1">Residence:</div>
+                        <div className="subtitle">United States</div>
                     </div>
-                    <div className="flex space-between">
-                        <div className="">City:</div>
-                        <div className="">San Diego</div>
+                    <div className="location flex w-full justify-between">
+                        <div className="title">Location:</div>
+                        <div className="subtitle">San Diego, CA.</div>
                     </div>
-                    <div className="flex space-between">
-                        <div className="">Age:</div>
-                        <div className="">40</div>
+                    <div className="location flex w-full justify-between">
+                        <div className="title">Years of Exp.</div>
+                        <div className="subtitle">9</div>
                     </div>
-                </div>
-                <hr />
-                <div className="">
-                    <div className="art-lang-skills-item">
-                        <div
-                            id="circleprog1-1"
-                            data-type="circles"
-                            data-value="100"
-                            className="art-cirkle-progress art-skills-progress relative w-12 h-12"
-                        >
-                            <svg viewBox="0 0 100 100" className="block w-full">
-                                <path
-                                    d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                                    stroke="#eee"
-                                    stroke-width="7"
-                                    fill-opacity="0"
-                                ></path>
-                                <path
-                                    d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93"
-                                    stroke="#555"
-                                    stroke-width="7"
-                                    fill-opacity="0"
-                                    stroke-dasharray="292.273, 292.273"
-                                    stroke-dashoffset="0"
-                                ></path>
-                            </svg>
-                            <div className="progressbar-text absolute left-0 ml-1/2 p-0 m-0 transform -translate-x-1/2 -translate-y-1/2">
-                                100
-                            </div>
-                        </div>
-                        <h6>French</h6>
-                    </div>
+                    <div className="hr" />
                 </div>
 
-                <Menu.ItemContainer className="w-full grid grid-cols-1 text-center">
-                    {menuList.map(({ id, title, label, path, icon }) => (
-                        <Menu.Item
-                            key={id}
-                            title={title}
-                            to={path}
-                            className="main-nav-item"
-                        >
-                            <div className="icon">{icon}</div>
-                            <div className="label">{label}</div>
-                        </Menu.Item>
-                    ))}
-                    <Menu.Item
-                        onClick={() => setToggleModal(!toggleModal)}
-                        title="Connect"
-                        to="/"
-                        className="main-nav-item"
-                    >
-                        <div className="icon">
-                            <AiOutlineApi />
+                <div className="circle-progress">
+                    <div className="grid grid-cols-3 gap-4">
+                        <div className="circle-progress-inner">
+                            <CircularProgress
+                                progress={70}
+                                size={50}
+                                strokeWidth={4}
+                                circleOneStroke="#111"
+                                circleTwoStroke="#7ea9e1"
+                            />
+                            <div className="label">Label 1</div>
                         </div>
-                        <div className="label">Connect</div>
-                    </Menu.Item>
-                </Menu.ItemContainer>
+                        <div className="circle-progress-inner">
+                            <CircularProgress
+                                progress={100}
+                                size={50}
+                                strokeWidth={4}
+                                circleOneStroke="#111"
+                                circleTwoStroke="#7ea9e1"
+                            />
+                            <div className="label">Label 1</div>
+                        </div>
+                        <div className="circle-progress-inner">
+                            <CircularProgress
+                                progress={80}
+                                size={50}
+                                strokeWidth={4}
+                                circleOneStroke="#111"
+                                circleTwoStroke="#7ea9e1"
+                            />
+                            <div className="label">Label 1</div>
+                        </div>
+                    </div>
+                    <div className="hr" />
+                </div>
+                <div className="skills-block">
+                    <div className="line-progress">
+                        <div className="line-progress-inner">
+                            <LineProgress
+                                label="Label1"
+                                progress={90}
+                                strokeWidth={10}
+                                lineOneStroke=""
+                                lineTwoStroke=""
+                            />
+                        </div>
+                        <div className="line-progress-inner">
+                            <LineProgress
+                                label="Label1"
+                                progress={95}
+                                strokeWidth={10}
+                                lineOneStroke=""
+                                lineTwoStroke=""
+                            />
+                        </div>
+                        <div className="line-progress-inner">
+                            <LineProgress
+                                label="Label1"
+                                progress={75}
+                                strokeWidth={10}
+                                lineOneStroke=""
+                                lineTwoStroke=""
+                            />
+                        </div>
+                        <div className="line-progress-inner">
+                            <LineProgress
+                                label="Label1"
+                                progress={65}
+                                strokeWidth={10}
+                                lineOneStroke=""
+                                lineTwoStroke=""
+                            />
+                        </div>
+                        <div className="line-progress-inner">
+                            <LineProgress
+                                label="Label1"
+                                progress={85}
+                                strokeWidth={10}
+                                lineOneStroke=""
+                                lineTwoStroke=""
+                            />
+                        </div>
+                    </div>
+                    <div className="hr" />
+                </div>
             </Menu>
             {toggleModal && (
                 <Modal>

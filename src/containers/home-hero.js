@@ -39,7 +39,7 @@ export function HomeHeroContainer() {
                 ></BackgroundImage>
             </HeroSplit.ImageContainer>
 
-            <HeroSplit.Body className="py-12 px-10 md:pt-24 lg:px-16 lg:py-12">
+            <HeroSplit.Body className="py-12 px-10 lg:px-16">
                 <HeroSplit.TextSmall className="flex justify-between font-light text-base font-sans tracking-normal">
                     <div className="mini-title">Creative Technologist</div>
                     <div className="flex justify-end items-center">

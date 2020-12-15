@@ -40,7 +40,7 @@ export default ({ data, pageContext }) => {
                 publishedDate={date}
                 modifiedDate={new Date(Date.now()).toISOString()}
             />
-            <Article className="pt-32 pb-20 px-10 lg:px-16 lg:pt-20">
+            <Article className="pb-20 px-10 lg:px-16">
                 <Article.Title className="font-bold text-2xl">
                     {frontmatter.title}
                 </Article.Title>

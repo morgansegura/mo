@@ -1,9 +1,8 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
 import { Menu } from "../components"
 import { menuList } from "../fixtures"
-import { AiOutlineMore } from "react-icons/ai"
 
 export function MenuNavigationContainer({ ...restProps }) {
     const [toggleModal, setToggleModal] = useState(false)
@@ -29,9 +28,6 @@ export function MenuNavigationContainer({ ...restProps }) {
                         to="/"
                         className="main-nav-item"
                     >
-                        <div className="icon">
-                            <AiOutlineApi />
-                        </div>
                         <div className="label">Connect</div>
                     </Menu.Item>
                 </Menu.ItemContainer>

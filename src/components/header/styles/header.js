@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styled from "styled-components"
 import { generateMedia } from "styled-media-query"
 
@@ -13,7 +13,8 @@ export const Container = styled.header``
 export const Wrapper = styled.div`
     transition: height 0.15s ease-in-out;
     width: 100%;
-    height: 5rem;
+    height: 4rem;
+
     &:before {
         content: "";
         position: absolute;
@@ -31,11 +32,7 @@ export const Wrapper = styled.div`
         /* height: 5rem; */
     }
     ${customMedia.greaterThan("lg")`
-        width: calc(100% - 290px);
-        margin-left: 290px; 
-        &.scrolled-header:before {
-            opacity: 0.85;
-        }    
+
     `};
     ${customMedia.greaterThan("xl")`
         margin-left: 0;
@@ -50,7 +47,7 @@ export const Navbar = styled.div``
 export const LogoContainer = styled.div`
     height: 2.5rem;
     .logo {
-        margin-left: -30px;
+        margin-left: -25px;
         width: 2.5rem;
         height: 2.5rem;
     }
@@ -64,10 +61,8 @@ export const LogoContainer = styled.div`
         }
     }
     ${customMedia.greaterThan("lg")`
-        height: 3rem;
         .logo {
-            width: 3rem;
-            height: 3rem;
-        }    
+            margin-left: 0;
+        }
 	`}
 `

@@ -11,12 +11,130 @@ const customMedia = generateMedia({
 })
 
 export const Container = styled.div`
-    z-index: 10;
-    width: 290px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: ${({ theme }) => theme.bgDrawer};
-    border-right: 1px solid ${({ theme }) => theme.borderDrawer};
+    &.author-menu {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        left: 0;
+        width: 290px;
+        margin-top: 4rem;
+        background-color: ${({ theme }) => theme.bgDrawer};
+        border-right: 1px solid ${({ theme }) => theme.borderDrawer};
+        transform: translateY(0) translateX(-100%);
+        transition: transform 0.3s ease-out;
+
+        .author-drawer-open & {
+            transform: translateY(0) translateX(0);
+        }
+
+        .title {
+            font-size: 0.75rem;
+            color: ${({ theme }) => theme.textDrawerNavItemHover};
+        }
+        .subtitle {
+            font-weight: normal;
+            font-size: 0.75rem;
+            color: ${({ theme }) => theme.textDrawerNavItem};
+        }
+        .text {
+            font-weight: normal;
+            font-size: 0.75rem;
+            color: ${({ theme }) => theme.textDrawerNavItem};
+        }
+        .hr {
+            box-sizing: border-box;
+            height: 2px;
+            width: 100%;
+            border-radius: 30px;
+            display: block;
+            margin-top: 1.5rem;
+            background-color: ${({ theme }) => theme.borderDrawer};
+        }
+
+        .author-block {
+            background-color: ${({ theme }) => theme.borderDrawer};
+            padding-top: 1.5rem;
+            width: 100%;
+        }
+        .skills-block {
+            padding: 1.5rem 2rem;
+        }
+        .circle-progress {
+            width: 100%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            box-sizing: border-box;
+            text-align: center;
+
+            &-inner {
+                text-align: center;
+            }
+
+            .label {
+                margin-top: 0.75rem;
+                font-size: 0.75rem;
+                color: white;
+            }
+        }
+        .line-progress {
+            width: 100%;
+            text-align: left;
+
+            &-inner {
+                width: 100%;
+                position: relative;
+                margin-bottom: 0.75rem;
+
+                svg {
+                    .svg-line {
+                        stroke: green;
+                    }
+                    .svg-line-bg {
+                        stroke: red;
+                    }
+                }
+            }
+
+            .label {
+                justify-self: start;
+                font-size: 0.75rem;
+                color: white;
+            }
+            .svg-line-label-box {
+                display: flex;
+                justify-content: space-between;
+            }
+            .svg-line-text {
+                font-size: 0.75rem;
+                color: white;
+            }
+        }
+
+        ${customMedia.greaterThan("lg")`
+            transform: translateY(0) translateX(0);
+	    `}
+    }
+    &.nav-menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        width: 200px;
+        padding-top: 5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: ${({ theme }) => theme.bgDrawer};
+        border-right: 1px solid ${({ theme }) => theme.borderDrawer};
+        transform: translateY(0) translateX(100%);
+        transition: transform 0.3s ease-out;
+
+        .nav-drawer-open & {
+            transform: translateX(0);
+        }
+    }
 `
 
 export const LogoWrapper = styled.div`
@@ -47,7 +165,10 @@ export const LogoContainer = styled(Link)`
         }
 	`}
 `
-export const ItemContainer = styled.div``
+export const ItemContainer = styled.div`
+    .nav-drawer-open & {
+    }
+`
 
 export const Item = styled(Link)`
     cursor: pointer;

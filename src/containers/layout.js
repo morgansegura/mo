@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components"
 
 import { HeaderContainer } from "./header"
 import { FooterContainer } from "./footer"
+import { MenuNavigationContainer } from "./menu-navigation"
 
 import Layout from "../components/layout"
 import Hamburger from "../components/hamburger"
@@ -54,8 +55,8 @@ export function LayoutContainer({ children, location }) {
             <GlobalStyles />
             <Layout className="wrapper relative flex flex-col h-screen">
                 <HeaderContainer
-                    className={`h-16 lg:h-20 fixed z-10 px-10 flex items-center justify-between ${
-                        toggleNav ? "drawer-open" : ""
+                    className={`fixed z-10 px-10 flex items-center justify-between ${
+                        toggleNav ? "nav-drawer-open" : ""
                     }`}
                 >
                     <Hamburger
@@ -63,8 +64,12 @@ export function LayoutContainer({ children, location }) {
                         onClick={() => setToggleNav(!toggleNav)}
                     />
                     <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
+
+                    <MenuNavigationContainer
+                        className={`nav-menu font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-lg lg:shadow-none`}
+                    ></MenuNavigationContainer>
                 </HeaderContainer>
-                <Layout.Container className="content flex-1 lg:pt-20">
+                <Layout.Container className="content flex-1">
                     {children}
                     <FooterContainer>
                         Morgan Segura | {new Date().getFullYear()}

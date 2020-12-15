@@ -16,7 +16,11 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
     position: relative;
     height: 100%;
+    margin-top: 4rem;
+
     ${customMedia.greaterThan("lg")`
+      margin-left: 290px;
+
       &:before {
         content: '';
         position: absolute;
@@ -26,8 +30,5 @@ export const Container = styled.div`
         bottom: 0;
         border-right: 1px solid ${({ theme }) => theme.borderContent};
       }  
-  `};
-    ${customMedia.greaterThan("lg")`
-      margin-left: 290px;
-    `};
+   `};
 `
