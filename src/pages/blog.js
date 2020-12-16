@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
 import { LayoutContainer } from "../containers/layout"
+import { Containers, Card } from "../components"
 
 const IndexWrapper = styled.main``
 
@@ -15,31 +16,33 @@ const Image = styled(Img)`
 export default ({ data }) => {
     return (
         <LayoutContainer>
-            <IndexWrapper className="p-16 lg:p-20 h-full text-gray-900">
-                <div className={`grid gap-4 ${data.all}`}>
-                    {data.allMdx.nodes.length}
-                    {/* <Dump data={data}></Dump> */}
-                    {data.allMdx.nodes.map(
-                        ({ id, excerpt, frontmatter, fields }) => (
-                            <PostWrapper key={id}>
-                                <Link to={fields.slug}>
-                                    {!!frontmatter.cover ? (
-                                        <Image
-                                            fluid={
-                                                frontmatter.cover
-                                                    .childImageSharp.fluid
-                                            }
-                                        />
-                                    ) : null}
-                                    <h1>{frontmatter.title}</h1>
-                                    <p>{frontmatter.date}</p>
-                                    <p>{excerpt}</p>
-                                </Link>
-                            </PostWrapper>
-                        )
-                    )}
-                </div>
-            </IndexWrapper>
+            <Containers className="h-full p-4 lg:p-6">
+                <Card className="card p-4 rounded-sm">
+                    <div className="">
+                        {data.allMdx.nodes.length}
+                        {/* <Dump data={data}></Dump> */}
+                        {data.allMdx.nodes.map(
+                            ({ id, excerpt, frontmatter, fields }) => (
+                                <PostWrapper key={id}>
+                                    <Link to={fields.slug}>
+                                        {!!frontmatter.cover ? (
+                                            <Image
+                                                fluid={
+                                                    frontmatter.cover
+                                                        .childImageSharp.fluid
+                                                }
+                                            />
+                                        ) : null}
+                                        <h1>{frontmatter.title}</h1>
+                                        <p>{frontmatter.date}</p>
+                                        <p>{excerpt}</p>
+                                    </Link>
+                                </PostWrapper>
+                            )
+                        )}
+                    </div>
+                </Card>
+            </Containers>
         </LayoutContainer>
     )
 }

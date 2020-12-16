@@ -17,9 +17,6 @@ export const Container = styled.section`
     border: 1px solid ${({ theme }) => theme.borderHero};
     height: 100%;
 
-    ${customMedia.between("md", "xxl")`
-        flex-direction: row;
-    `};
     ${customMedia.greaterThan("xxl")`
         flex-direction: row;
     `};
@@ -29,10 +26,6 @@ export const ImageContainer = styled.div`
     flex: 0 0 100%;
     max-width: 100%;
 
-    ${customMedia.between("md", "xxl")`
-        flex: 0 0 50%;
-        max-width: 50%;
-    `};
     ${customMedia.greaterThan("xxl")`
         flex: 0 0 50%;
         max-width: 50%;
