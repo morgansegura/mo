@@ -80,7 +80,7 @@ const GlobalStyles = createGlobalStyle`
     position: absolute;
     z-index: 12;
     width: 0.5rem;
-    margin-left: -16px;
+    margin-left: -8px;
     background-color: ${({ theme }) => theme.bgDrawer};    
   }
   
@@ -139,14 +139,19 @@ const GlobalStyles = createGlobalStyle`
   .t-accent {
       color: ${({ theme }) => theme.accentColor};
   }  
-
+/* 
+#5c5c6f  
+#1e1e28
+#c0c0ca
+#f4f4f6
+*/
   :root { 
     /* Light && Dark Theme */
-    --gray-50: #FAFAFA;    
-    --gray-100: #F3F3F3;    
-    --gray-200: #E0E0E0;    
-    --gray-300: #CACACA;    
-    --gray-400: #AEAEAE;    
+    --gray-50: #fefefe;
+    --gray-100: #f0f0f5;    
+    --gray-200: #e0e0e6;    
+    --gray-300: #d6d6d6;    
+    --gray-400: #8c8c8e;    
     --gray-500: #4a4a4a;    
     --gray-600: #3b3b3b;    
     --gray-700: #343434;

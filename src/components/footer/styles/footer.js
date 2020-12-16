@@ -17,6 +17,7 @@ export const Container = styled.footer`
     color: ${({ theme }) => theme.textFooter};
     width: 100%;
     padding: 1rem 2rem;
+    /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
 
     a,
     .social-icon {

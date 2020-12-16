@@ -15,42 +15,44 @@ export const lightTheme = {
      */
     white: "var(--white)",
     black: "var(--black)",
-    scrollBar: "var(--gray-500)",
+    scrollBar: "var(--purple)",
     scrollBarHover: "rgba(128, 90, 213, 0.75)",
     scrollBarActive: "var(--purple)",
-    logo: "var(--gray-900)",
+    logo: "#5c5c6f",
     logoHover: "var(--gray-700)",
     transHover: "var(--gray-100)",
-    bgBody: "var(--gray-50)",
+    bgBody: "var(--gray-200)",
+    bgLayout: "var(--gray-100)",
     textBody: "var(--gray-900)",
-    accentColor: "var(--aqua-400)",
-    textBase: "var(--gray-900)",
-    textOffset: "var(--gray-900)",
-    textNeutral: "var(--gray-900)",
+
+    accentColor: "var(--purple)",
+    textBase: "black",
+    textOffset: "var(--gray-100)",
+    textNeutral: "#5c5c6f",
 
     /**
      * [Header & Footer]
      */
-    bgHeader: "white",
+    bgHeader: "var(--gray-50)",
     borderHeader: "var(--gray-100)",
     borderContent: "var(--gray-300)",
-    iconHeader: "var(--gray-800)",
+    iconHeader: "#5c5c6f",
     iconHeaderBG: "transparent",
     iconHeaderHover: "var(--gray-700)",
     iconHeaderBGHover: "rgba(0,0,0,0.075)",
-    bgFooter: "var(--gray-800)",
-    borderFooter: "var(--gray-800)",
-    textFooter: "var(--gray-400)",
+    bgFooter: "var(--gray-50)",
+    borderFooter: "var(--gray-200)",
+    textFooter: "#5c5c6f",
     iconFooter: "var(--gray-800)",
     iconFooterHover: "rgba(0,0,0,0.25)",
 
     /**
      * [Drawer & Navigation]
      */
-    bgDrawer: "var(--gray-50)",
-    borderDrawer: "var(--gray-300)",
-    bgDrawerMenu: "var(--gray-100)",
-    bgDrawerNavItem: "var(--gray-50)",
+    bgDrawer: "var(--gray-100)",
+    borderDrawer: "var(--gray-200)",
+    bgDrawerMenu: "var(--gray-50)",
+    bgDrawerNavItem: "var(--gray-100)",
     bgDrawerNavItemHover: "rgba(0,0,0,0.05)",
     textDrawerNavItem: "var(--gray-800)",
     textDrawerNavItemHover: "var(--gray-900)",
@@ -60,15 +62,15 @@ export const lightTheme = {
      * [Hero]
      */
     bgHero: "var(--gray-50)",
-    borderHero: "var(--gray-700)",
+    borderHero: "var(--gray-200)",
     textHero: "var(--gray-800)",
-    textOffsetHero: "var(--gray-600)",
+    textOffsetHero: "var(--purple)",
     textHeadlineHero: "var(--gray-900)",
     /**
      * [Blocks & Cards]
      */
     // Block 1
-    bgBlock: "var(--gray-50)",
+    bgBlock: "transparent",
     textBlock: "var(--gray-200)",
     bgOffsetBlock: "var(--gray-50)",
     textOffsetBlock: "var(--aqua-100)",
@@ -77,10 +79,10 @@ export const lightTheme = {
     borderHeadlineBlock: "var(--purple)",
     textHeadlineOffsetBlock: "var(--gray-800)",
     // Card 1
-    bgCardBlock: "white",
+    bgCardBlock: "var(--gray-50)",
     borderCardBlock: "var(--gray-200)",
     textHeadlineCardBlock: "var(--gray-700)",
-    textCardBlock: "var(--gray-600)",
+    textCardBlock: "#5c5c6f",
 
     /**
      * [Buttons]

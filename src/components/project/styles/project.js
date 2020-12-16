@@ -15,10 +15,6 @@ export const Container = styled.section`
     flex-direction: column;
     background-color: ${({ theme }) => theme.bgHero};
     height: 100%;
-
-    ${customMedia.between("md", "xxl")`
-        
-    `};
 `
 
 export const Image = styled(Img)``

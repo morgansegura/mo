@@ -21,7 +21,7 @@ export const SVG = styled.svg`
         font-weight: normal;
         text-anchor: middle;
         transform: translate(0, 8%);
-        fill: #fff;
+        fill: ${({ theme }) => theme.textNeutral};
     }
 
     .svg-line-bg {
@@ -38,6 +38,6 @@ export const SVG = styled.svg`
         text-anchor: end;
         transform: translate(0, 8%);
         height: 20px;
-        fill: #fff;
+        fill: ${({ theme }) => theme.textNeutral};
     }
 `

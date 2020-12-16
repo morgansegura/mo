@@ -34,7 +34,8 @@ export const Wrapper = styled.div`
     height: 4rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    /* box-shadow: 0 3px 2px 2px rgba(0, 0, 0, 0.1); */
+    border: 1px solid ${({ theme }) => theme.borderHeader};
+    /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
 
     &:before {
         content: "";

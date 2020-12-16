@@ -70,7 +70,7 @@ export function LayoutContainer({ children, location }) {
                         className={`nav-menu font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-xl`}
                     ></MenuNavigationContainer>
                 </HeaderContainer>
-                <Layout.Container className="layout content flex-1">
+                <Layout.Container className="layout content">
                     {children}
                     <FooterContainer>
                         Morgan Segura | {new Date().getFullYear()}

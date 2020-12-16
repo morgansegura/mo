@@ -23,6 +23,7 @@ export const Container = styled.div`
         background-color: ${({ theme }) => theme.bgDrawer};
         border-right: 1px solid ${({ theme }) => theme.borderDrawer};
         transform: translateY(0) translateX(calc(-100% - 1rem));
+        /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2); */
         transition: transform 0.3s ease-out;
 
         ${customMedia.greaterThan("lg")`
@@ -33,7 +34,7 @@ export const Container = styled.div`
 
         .author-drawer-open & {
             transform: translateY(0) translateX(-1rem);
-            box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
 
             ${customMedia.greaterThan("lg")`
                 top: 5rem;
@@ -62,6 +63,24 @@ export const Container = styled.div`
         .skills-block {
             padding: 1.5rem 2rem;
         }
+        .social-block {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            padding: 1.5rem 2rem;
+            justify-content: space-between;
+            background-color: ${({ theme }) => theme.bgDrawerMenu};
+
+            a {
+                color: ${({ theme }) => theme.accentColor};
+                transition: all 0.3s ease-out;
+
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+        }
         .circle-progress {
             width: 100%;
             padding-left: 2rem;
@@ -83,7 +102,7 @@ export const Container = styled.div`
             .label {
                 margin-top: 0.75rem;
                 font-size: 0.75rem;
-                color: white;
+                color: ${({ theme }) => theme.textBase};
             }
         }
         .line-progress {
@@ -108,7 +127,7 @@ export const Container = styled.div`
             .label {
                 justify-self: start;
                 font-size: 0.75rem;
-                color: white;
+                color: ${({ theme }) => theme.textBase};
             }
             .svg-line-label-box {
                 display: flex;
@@ -116,7 +135,7 @@ export const Container = styled.div`
             }
             .svg-line-text {
                 font-size: 0.75rem;
-                color: white;
+                color: ${({ theme }) => theme.textNeutral};
             }
         }
 
@@ -131,7 +150,7 @@ export const Container = styled.div`
         left: auto;
         right: 0;
         width: 200px;
-        padding-top: 5rem;
+        padding-top: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
         background-color: ${({ theme }) => theme.bgDrawer};
@@ -145,8 +164,8 @@ export const Container = styled.div`
         `}
 
         .nav-drawer-open & {
-            box-shadow: -3px 2px 2px 2px rgba(0, 0, 0, 0.1);
-            transform: translateX(0);
+            box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
+            transform: translateX(-1rem);
         }
     }
 `

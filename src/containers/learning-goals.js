@@ -6,7 +6,7 @@ export function LearningGoalsContainer({ className }) {
     return (
         <Block className={className}>
             <Block.Header>
-                <Block.Title className="inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
+                <Block.Title className="block-title inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
                     Interested in Learning
                 </Block.Title>
             </Block.Header>

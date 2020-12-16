@@ -15,10 +15,13 @@ export const Container = styled.section`
     flex-direction: column;
     background-color: ${({ theme }) => theme.bgHero};
     border: 1px solid ${({ theme }) => theme.borderHero};
-    height: 100%;
+    flex-direction: column;
 
+    ${customMedia.between("")`
+        flex-direction: column;
+    `};
     ${customMedia.greaterThan("xxl")`
-        flex-direction: row;
+   
     `};
 `
 export const ImageContainer = styled.div`
@@ -26,9 +29,12 @@ export const ImageContainer = styled.div`
     flex: 0 0 100%;
     max-width: 100%;
 
+    ${customMedia.between("md", "xxl")`
+
+    `};
+
     ${customMedia.greaterThan("xxl")`
-        flex: 0 0 50%;
-        max-width: 50%;
+
     `};
     .bg-image {
         position: relative;
@@ -58,7 +64,7 @@ export const Title = styled.h2`
     line-height: 0.95;
     margin-bottom: 1rem;
 
-    ${customMedia.between("md")`
+    ${customMedia.between("md", "xxl")`
         font-size: 4rem;
     `};
     ${customMedia.greaterThan("xxl")`
@@ -82,6 +88,6 @@ export const ButtonLink = styled(Link)`
     &:hover {
         background-color: ${({ theme }) => theme.bgButtonHover};
         color: ${({ theme }) => theme.textButtonHover};
-        // box-shadow: 2px 0 10px 2px ${({ theme }) => theme.bgButton};
+        box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
     }
 `

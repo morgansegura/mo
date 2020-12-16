@@ -45,7 +45,7 @@ export const Container = styled.div`
     font-family: ${({ theme }) => theme.codeFontFamily};
     color: ${({ theme }) => theme.codeFontColor};
     background-color: ${({ theme }) => theme.codeBackground};
-    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
 
     &:after {
         content: "";

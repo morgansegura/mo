@@ -67,13 +67,6 @@ export function HomeHeroContainer() {
                     </div>
                 </HeroSplit.TextSmall>
                 <HeroSplit.Title className="relative flex items-center font-sans font-bold">
-                    <AuthorCard className="self-center mr-4">
-                        <AuthorCard.Image
-                            className="block rounded-full w-16 h-16"
-                            fluid={avatar}
-                            alt="Morgan Segura"
-                        />
-                    </AuthorCard>
                     <div className="relative">Morgan Segura</div>
                 </HeroSplit.Title>
                 <HeroSplit.TextContainer className="font-sans text-base leading-loose">

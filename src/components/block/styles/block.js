@@ -10,17 +10,15 @@ const customMedia = generateMedia({
 })
 
 export const Container = styled.section`
-    height: 100%;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    /* padding-top: 1.5rem;
+    padding-bottom: 1.5rem; */
     color: ${({ theme }) => theme.textBlock};
 
     ${customMedia.greaterThan("lg")`
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+
     `};
     background-color: ${({ theme }) => theme.bgBlock};
-    h2 {
+    h2.block-title {
         color: ${({ theme }) => theme.textHeadlineBlock};
         border: 1px solid ${({ theme }) => theme.borderHeadlineBlock};
         border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock};

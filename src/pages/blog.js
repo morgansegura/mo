@@ -16,33 +16,29 @@ const Image = styled(Img)`
 export default ({ data }) => {
     return (
         <LayoutContainer>
-            <Containers className="h-full p-4 lg:p-6">
-                <Card className="card p-4 rounded-sm">
-                    <div className="">
-                        {data.allMdx.nodes.length}
-                        {/* <Dump data={data}></Dump> */}
-                        {data.allMdx.nodes.map(
-                            ({ id, excerpt, frontmatter, fields }) => (
-                                <PostWrapper key={id}>
-                                    <Link to={fields.slug}>
-                                        {!!frontmatter.cover ? (
-                                            <Image
-                                                fluid={
-                                                    frontmatter.cover
-                                                        .childImageSharp.fluid
-                                                }
-                                            />
-                                        ) : null}
-                                        <h1>{frontmatter.title}</h1>
-                                        <p>{frontmatter.date}</p>
-                                        <p>{excerpt}</p>
-                                    </Link>
-                                </PostWrapper>
-                            )
-                        )}
-                    </div>
-                </Card>
-            </Containers>
+            <div className="h-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 mb-4">
+                    {data.allMdx.nodes.map(
+                        ({ id, excerpt, frontmatter, fields }) => (
+                            <Card key={id} className="card p-4 rounded-sm">
+                                <Link to={fields.slug}>
+                                    {!!frontmatter.cover ? (
+                                        <Image
+                                            fluid={
+                                                frontmatter.cover
+                                                    .childImageSharp.fluid
+                                            }
+                                        />
+                                    ) : null}
+                                    <h1>{frontmatter.title}</h1>
+                                    <p>{frontmatter.date}</p>
+                                    <p>{excerpt}</p>
+                                </Link>
+                            </Card>
+                        )
+                    )}
+                </div>
+            </div>
         </LayoutContainer>
     )
 }

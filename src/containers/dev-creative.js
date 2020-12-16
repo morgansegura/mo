@@ -8,8 +8,8 @@ export function DevCreativeContainer({ className }) {
         <Block className={`relative h-full px-10 py-20 lg:px-16 ${className}`}>
             <DigitalBG className="absolute opacity-50" />
             <BlockNote className="h-full relative flex flex-col">
-                <div className="flex flex-col lg:flex-row justify-between">
-                    <div className="w-full order-2 mt-4 lg:mt-0 lg:w-1/2 self-center">
+                <div className="flex flex-col xxl:flex-row justify-between">
+                    <div className="w-full order-2 mt-4 xl:mt-0 xxl:w-1/2 self-center">
                         <CodeBlock browser={true} className="with--label">
                             <CodeBlock.Label>Javascript</CodeBlock.Label>
                             <CodeBlock.Row>
@@ -29,17 +29,17 @@ export function DevCreativeContainer({ className }) {
                             </CodeBlock.Row>
                         </CodeBlock>
                     </div>
-                    <div className="w-full order-1 lg:order-2 bg-transparent flex flex-col lg:w-1/2">
-                        <BlockNote.Title className="text-white text-center lg:text-right">
+                    <div className="w-full order-1 xxl:order-2 bg-transparent flex flex-col xxl:w-1/2">
+                        <BlockNote.Title className="text-white text-center xl:text-right">
                             Code
                         </BlockNote.Title>
-                        <BlockNote.Subtitle className="text-white text-center lg:text-right lg:pl-12">
+                        <BlockNote.Subtitle className="text-white text-center xl:text-right xl:pl-12">
                             Over 10 years of{" "}
                             <strong className="font-bold">
                                 professional experience
                             </strong>{" "}
                         </BlockNote.Subtitle>
-                        <BlockNote.Text className="text-white text-center lg:self-end lg:text-right">
+                        <BlockNote.Text className="text-white text-center xl:self-end xl:text-right">
                             I've been in the weeds, worked countless hours and
                             put in over ten years designing and devloping
                             professional code for clients and employers.

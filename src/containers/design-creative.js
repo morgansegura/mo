@@ -20,8 +20,8 @@ export function DesignCreativeContainer({ className }) {
                     Sketch, Figma or Adobe XD.
                 </BlockNote.Text>
             </BlockNote>
-            <DesignIcons className="hidden md:block absolute z-0 w-3/12 top-0 right-0 transform -translate-x-32 translate-y-10 opacity-75" />
-            <DesignBG className="absolute bottom-0 left-0 opacity-25" />
+            <DesignIcons className="hidden md:block absolute z-0 w-3/12 top-0 right-0 transform -translate-x-16 translate-y-10 opacity-75" />
+            <DesignBG className="absolute bottom-0 left-0 opacity-75 h-full" />
         </Block>
     )
 }

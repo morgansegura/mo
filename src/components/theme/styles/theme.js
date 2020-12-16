@@ -19,7 +19,7 @@ export const Options = styled.div`
     top: 3.85rem;
     left: 100%;
     border-radius: 4px 0 0 4px;
-    box-shadow: -3px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
     color: ${({ theme }) => theme.textDrawerNavItem};
     background: ${({ theme }) => theme.bgDrawerNavItem};
     transform: translateX(100%);
@@ -73,7 +73,7 @@ export const Options = styled.div`
             transition: box-shadow 0.3s ease-out;
 
             &:hover {
-                box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
             }
         }
         .light-theme,
