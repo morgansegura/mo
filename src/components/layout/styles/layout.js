@@ -16,9 +16,10 @@ export const Wrapper = styled.div`
     `};
 `
 export const Container = styled.div`
+    position: relative;
     background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
-    margin-top: 4rem;
+    top: 4rem;
     padding-top: 1rem;
     overflow-y: auto;
     height: calc(100vh - 4rem);

@@ -17,9 +17,6 @@ export const Container = styled.section`
     border: 1px solid ${({ theme }) => theme.borderHero};
     flex-direction: column;
 
-    ${customMedia.between("")`
-        flex-direction: column;
-    `};
     ${customMedia.greaterThan("xxl")`
    
     `};

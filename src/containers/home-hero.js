@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import { HeroSplit, AuthorCard } from "../components"
+import { HeroSplit } from "../components"
 // import avatarImage from "../assets/images/morgansegura-400x400.jpg"
 import { SiLinkedin, SiGithub, SiTwitter } from "react-icons/si"
 
@@ -27,7 +27,7 @@ export function HomeHeroContainer() {
         `
     )
     const heroImage = data.heroImage.childImageSharp.fluid
-    const avatar = data.avatar.childImageSharp.fluid
+    // const avatar = data.avatar.childImageSharp.fluid
 
     return (
         <HeroSplit>

@@ -1,14 +1,14 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { generateMedia } from "styled-media-query"
+// import { generateMedia } from "styled-media-query"
 
-const customMedia = generateMedia({
-    sm: "640px",
-    md: "768px",
-    lg: "1024px",
-    xl: "1280px",
-    xxl: "1536px",
-})
+// const customMedia = generateMedia({
+//     sm: "640px",
+//     md: "768px",
+//     lg: "1024px",
+//     xl: "1280px",
+//     xxl: "1536px",
+// })
 
 export const Container = styled.section`
     display: flex;

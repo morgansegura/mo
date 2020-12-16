@@ -3,11 +3,11 @@ import Img from "gatsby-image"
 import React from "react"
 import styled from "styled-components"
 import { LayoutContainer } from "../containers/layout"
-import { Containers, Card } from "../components"
+import { Card } from "../components"
 
-const IndexWrapper = styled.main``
+// const IndexWrapper = styled.main``
 
-const PostWrapper = styled.div``
+// const PostWrapper = styled.div``
 
 const Image = styled(Img)`
     border-radius: 5px;
