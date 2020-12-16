@@ -23,6 +23,11 @@ export const lightTheme = {
     transHover: "var(--gray-100)",
     bgBody: "var(--gray-50)",
     textBody: "var(--gray-900)",
+    accentColor: "var(--aqua-400)",
+    textBase: "var(--gray-900)",
+    textOffset: "var(--gray-900)",
+    textNeutral: "var(--gray-900)",
+
     /**
      * [Header & Footer]
      */
@@ -34,6 +39,7 @@ export const lightTheme = {
     iconHeaderHover: "var(--gray-700)",
     iconHeaderBGHover: "rgba(0,0,0,0.075)",
     bgFooter: "var(--gray-800)",
+    borderFooter: "var(--gray-800)",
     textFooter: "var(--gray-400)",
     iconFooter: "var(--gray-800)",
     iconFooterHover: "rgba(0,0,0,0.25)",
@@ -54,6 +60,7 @@ export const lightTheme = {
      * [Hero]
      */
     bgHero: "var(--gray-50)",
+    borderHero: "var(--gray-700)",
     textHero: "var(--gray-800)",
     textOffsetHero: "var(--gray-600)",
     textHeadlineHero: "var(--gray-900)",
@@ -61,64 +68,19 @@ export const lightTheme = {
      * [Blocks & Cards]
      */
     // Block 1
-    bgBlock1: "var(--gray-50)",
-    textBlock1: "var(--gray-200)",
-    bgOffsetBlock1: "var(--gray-50)",
-    textOffsetBlock1: "var(--aqua-100)",
-    bgHeadlineBlock1: "transparent",
-    textHeadlineBlock1: "var(--purple)",
-    borderHeadlineBlock1: "var(--purple)",
-    textHeadlineOffsetBlock1: "var(--gray-800)",
+    bgBlock: "var(--gray-50)",
+    textBlock: "var(--gray-200)",
+    bgOffsetBlock: "var(--gray-50)",
+    textOffsetBlock: "var(--aqua-100)",
+    bgHeadlineBlock: "transparent",
+    textHeadlineBlock: "var(--purple)",
+    borderHeadlineBlock: "var(--purple)",
+    textHeadlineOffsetBlock: "var(--gray-800)",
     // Card 1
-    bgCardBlock1: "white",
-    borderCardBlock1: "var(--gray-200)",
-    textHeadlineCardBlock1: "var(--gray-700)",
-    textCardBlock1: "var(--gray-600)",
-
-    // Block 2
-    bgBlock2: "var(--gray-100)",
-    textBlock2: "var(--gray-500)",
-    bgOffsetBlock2: "var(--gray-50)",
-    textOffsetBlock2: "var(--gray-200)",
-    bgHeadlineBlock2: "transparent",
-    textHeadlineBlock2: "var(--purple)",
-    borderHeadlineBlock2: "var(--purple)",
-    textHeadlineOffsetBlock2: "var(--gray-200)",
-    // Card 2
-    bgCardBlock2: "white",
-    borderCardBlock2: "var(--gray-200)",
-    textHeadlineCardBlock2: "var(--gray-800)",
-    textCardBlock2: "var(--gray-600)",
-
-    // Block 3
-    bgBlock3: "var(--gray-200)",
-    textBlock3: "var(--gray-200)",
-    bgOffsetBlock3: "var(--gray-50)",
-    textOffsetBlock3: "var(--gray-200)",
-    bgHeadlineBlock3: "transparent",
-    textHeadlineBlock3: "var(--purple)",
-    borderHeadlineBlock3: "var(--purple)",
-    textHeadlineOffsetBlock3: "var(--gray-200)",
-    // Card 3
-    bgCardBlock3: "var(--gray-100)",
-    borderCardBlock3: "var(--gray-300)",
-    textHeadlineCardBlock3: "var(--gray-900)",
-    textCardBlock3: "var(--gray-800)",
-
-    // Block 4
-    bgBlock4: "var(--gray-300)",
-    textBlock4: "var(--gray-200)",
-    bgOffsetBlock4: "white",
-    textOffsetBlock4: "var(--gray-600)",
-    bgHeadlineBlock4: "transparent",
-    textHeadlineBlock4: "var(--purple)",
-    borderHeadlineBlock4: "var(--purple)",
-    textHeadlineOffsetBlock4: "var(--gray-200)",
-    // Card 4
-    bgCardBlock4: "var(--gray-200)",
-    borderCardBlock4: "var(--gray-100)",
-    textHeadlineCardBlock4: "var(--gray-300)",
-    textCardBlock4: "var(--gray-700)",
+    bgCardBlock: "white",
+    borderCardBlock: "var(--gray-200)",
+    textHeadlineCardBlock: "var(--gray-700)",
+    textCardBlock: "var(--gray-600)",
 
     /**
      * [Buttons]
@@ -175,36 +137,45 @@ export const darkTheme = {
      */
     white: "var(--white)",
     black: "var(--black)",
-    scrollBar: "var(--aqua-200)",
+    scrollBar: "var(--aqua-300)",
     scrollBarHover: "var(--aqua-100)",
-    scrollBarActive: "var(--aqua-100)",
+    scrollBarActive: "var(--aqua-400)",
     logo: "var(--gray-100)",
     logoHover: "white",
     transHover: "var(--gray-800)",
-    bgBody: "var(--gray-800)",
+    bgBody: "var(--gray-900)",
+    bgLayout: "var(--gray-800)",
     textBody: "var(--gray-900)",
+
+    accentColor: "var(--aqua-400)",
+    textBase: "var(--gray-100)",
+    textOffset: "var(--gray-900)",
+    textNeutral: "var(--gray-400)",
+
     /**
      * [Header & Footer]
      */
     bgHeader: "var(--gray-700)",
-    borderHeader: "transparent",
+    borderHeader: "var(--gray-600)",
     borderContent: "var(--gray-700)",
     iconHeader: "var(--gray-200)",
     iconHeaderBG: "transparent",
     iconHeaderHover: "white",
-    iconHeaderBGHover: "rgba(255,255,255,0.125)",
+    iconHeaderBGHover: "var(--gray-800)",
     bgFooter: "var(--gray-700)",
+    borderFooter: "var(--gray-700)",
     textFooter: "var(--gray-400)",
     iconFooter: "var(--gray-400)",
     iconFooterHover: "var(--gray-200)",
+
     /**
      * [Drawer & Navigation]
      */
-    bgDrawer: "var(--gray-800)",
+    bgDrawer: "var(--gray-700)",
     borderDrawer: "var(--gray-700)",
-    bgDrawerMenu: "var(--gray-700)",
-    bgDrawerNavItem: "var(--gray-700)",
-    bgDrawerNavItemHover: "var(--gray-600)",
+    bgDrawerMenu: "var(--gray-600)",
+    bgDrawerNavItem: "var(--gray-600)",
+    bgDrawerNavItemHover: "var(--gray-500)",
     textDrawerNavItem: "var(--gray-200)",
     textDrawerNavItemHover: "var(--gray-100)",
     borderDrawerNavItem: "var(--gray-800)",
@@ -213,6 +184,7 @@ export const darkTheme = {
      * [Hero]
      */
     bgHero: "var(--gray-700)",
+    borderHero: "var(--gray-700)",
     textHero: "var(--gray-300)",
     textOffsetHero: "var(--aqua-100)",
     textHeadlineHero: "var(--gray-100)",
@@ -220,64 +192,19 @@ export const darkTheme = {
      * [Blocks & Cards]
      */
     // Block 1
-    bgBlock1: "var(--gray-500)",
-    textBlock1: "var(--gray-800)",
-    bgOffsetBlock1: "var(--gray-50)",
-    textOffsetBlock1: "var(--aqua-200)",
-    bgHeadlineBlock1: "transparent",
-    textHeadlineBlock1: "var(--aqua-700)",
-    borderHeadlineBlock1: "var(--aqua-700)",
-    textHeadlineOffsetBlock1: "var(--gray-400)",
+    bgBlock: "var(--gray-800)",
+    textBlock: "var(--gray-800)",
+    bgOffsetBlock: "var(--gray-50)",
+    textOffsetBlock: "var(--aqua-200)",
+    bgHeadlineBlock: "transparent",
+    textHeadlineBlock: "var(--aqua-200)",
+    borderHeadlineBlock: "var(--aqua-200)",
+    textHeadlineOffsetBlock: "var(--gray-400)",
     // Card 1
-    bgCardBlock1: "var(--gray-400)",
-    borderCardBlock1: "var(--gray-300)",
-    textHeadlineCardBlock1: "var(--gray-900)",
-    textCardBlock1: "var(--gray-800)",
-
-    // Block 2
-    bgBlock2: "var(--gray-600)",
-    textBlock2: "var(--gray-200)",
-    bgOffsetBlock2: "var(--gray-50)",
-    textOffsetBlock2: "var(--gray-200)",
-    bgHeadlineBlock2: "transparent",
-    textHeadlineBlock2: "var(--aqua-200)",
-    borderHeadlineBlock2: "var(--aqua-200)",
-    textHeadlineOffsetBlock2: "var(--gray-200)",
-    // Card 2
-    bgCardBlock2: "var(--gray-500)",
-    borderCardBlock2: "var(--gray-400)",
-    textHeadlineCardBlock2: "var(--gray-900)",
-    textCardBlock2: "var(--gray-900)",
-
-    // Block 3
-    bgBlock3: "var(--gray-700)",
-    textBlock3: "var(--gray-200)",
-    bgOffsetBlock3: "var(--gray-50)",
-    textOffsetBlock3: "var(--gray-200)",
-    bgHeadlineBlock3: "transparent",
-    textHeadlineBlock3: "var(--aqua-200)",
-    borderHeadlineBlock3: "var(--aqua-200)",
-    textHeadlineOffsetBlock3: "var(--gray-500)",
-    // Card 3
-    bgCardBlock3: "rgba(255, 255, 255, 0.25)",
-    borderCardBlock3: "rgba(255, 255, 255, 0.3)",
-    textHeadlineCardBlock3: "var(--gray-50)",
-    textCardBlock3: "var(--gray-100)",
-
-    // Block 4
-    bgBlock4: "var(--gray-800)",
-    textBlock4: "var(--gray-200)",
-    bgOffsetBlock4: "var(--gray-50)",
-    textOffsetBlock4: "var(--gray-200)",
-    bgHeadlineBlock4: "transparent",
-    textHeadlineBlock4: "var(--aqua-200)",
-    borderHeadlineBlock4: "var(--aqua-200)",
-    textHeadlineOffsetBlock4: "var(--gray-200)",
-    // Card 4
-    bgCardBlock4: "var(--gray-700)",
-    borderCardBlock4: "var(--gray-600)",
-    textCardBlock4: "var(--gray-700)",
-    textHeadlineCardBlock4: "var(--gray-300)",
+    bgCardBlock: "var(--gray-700)",
+    borderCardBlock: "var(--gray-700)",
+    textHeadlineCardBlock: "var(--gray-100)",
+    textCardBlock: "var(--gray-300)",
 
     /**
      * [Buttons]
@@ -286,7 +213,7 @@ export const darkTheme = {
     textButton: "var(--gray-100)",
     bgButtonHover: "var(--aqua-200)",
     textButtonHover: "white",
-    bgButtonDefault: "var(--gray-300)",
+    bgButtonDefault: "#6b46c1",
     textButtonDefault: "var(--gray-100)",
     bgButtonDefaultHover: "#6b46c1",
     textButtonDefaultHover: "white",
@@ -341,6 +268,11 @@ export const alt1Theme = {
     transHover: "var(--gray-100)",
     bgBody: "var(--orange-800)",
     textBody: "var(--orange-100)",
+    accentColor: "var(--aqua-400)",
+    textBase: "var(--gray-900)",
+    textOffset: "var(--gray-900)",
+    textNeutral: "var(--gray-900)",
+
     /**
      * [Header & Footer]
      */
@@ -352,6 +284,7 @@ export const alt1Theme = {
     iconHeaderHover: "var(--orange-100)",
     iconHeaderBGHover: "rgba(0,0,0,0.075)",
     bgFooter: "var(--orange-800)",
+    borderFooter: "var(--orange-800)",
     textFooter: "var(--orange-400)",
     iconFooter: "var(--orange-200)",
     iconFooterHover: "rgba(0,0,0,0.25)",
@@ -372,6 +305,7 @@ export const alt1Theme = {
      * [Hero]
      */
     bgHero: "var(--orange-700)",
+    borderHero: "var(--gray-700)",
     textHero: "var(--orange-200)",
     textOffsetHero: "var(--orange-300)",
     textHeadlineHero: "var(--orange-100)",
@@ -379,64 +313,20 @@ export const alt1Theme = {
      * [Blocks & Cards]
      */
     // Block 1
-    bgBlock1: "var(--orange-300)",
-    textBlock1: "var(--gray-200)",
-    bgOffsetBlock1: "var(--gray-50)",
-    textOffsetBlock1: "var(--gray-200)",
-    bgHeadlineBlock1: "transparent",
-    textHeadlineBlock1: "var(--orange-800)",
-    borderHeadlineBlock1: "var(--orange-800)",
-    textHeadlineOffsetBlock1: "var(--gray-800)",
+    bgBlock: "var(--orange-300)",
+    textBlock: "var(--gray-200)",
+    bgOffsetBlock: "var(--gray-50)",
+    textOffsetBlock: "var(--gray-200)",
+    bgHeadlineBlock: "transparent",
+    textHeadlineBlock: "var(--orange-800)",
+    borderHeadlineBlock: "var(--orange-800)",
+    textHeadlineOffsetBlock: "var(--gray-800)",
     // Card 1
-    bgCardBlock1: "var(--orange-200)",
-    borderCardBlock1: "var(--orange-100)",
-    textHeadlineCardBlock1: "var(--orange-900)",
-    textCardBlock1: "var(--orange-800)",
+    bgCardBlock: "var(--orange-200)",
+    borderCardBlock: "var(--orange-100)",
+    textHeadlineCardBlock: "var(--orange-900)",
+    textCardBlock: "var(--orange-800)",
 
-    // Block 2
-    bgBlock2: "var(--orange-400)",
-    textBlock2: "var(--gray-200)",
-    bgOffsetBlock2: "var(--gray-200)",
-    textOffsetBlock2: "var(--gray-200)",
-    bgHeadlineBlock2: "transparent",
-    textHeadlineBlock2: "var(--orange-900)",
-    borderHeadlineBlock2: "var(--orange-900)",
-    textHeadlineOffsetBlock2: "var(--gray-200)",
-    // Card 2
-    bgCardBlock2: "var(--orange-300)",
-    borderCardBlock2: "var(--orange-200)",
-    textHeadlineCardBlock2: "var(--orange-900)",
-    textCardBlock2: "var(--orange-800)",
-
-    // Block 3
-    bgBlock3: "var(--orange-500)",
-    textBlock3: "var(--orange-200)",
-    bgOffsetBlock3: "var(--gray-200)",
-    textOffsetBlock3: "var(--orange-200)",
-    bgHeadlineBlock3: "transparent",
-    textHeadlineBlock3: "var(--orange-200)",
-    borderHeadlineBlock3: "var(--orange-200)",
-    textHeadlineOffsetBlock3: "var(--gray-300)",
-    // Card 3
-    bgCardBlock3: "var(--orange-400)",
-    borderCardBlock3: "var(--orange-300)",
-    textHeadlineCardBlock3: "var(--orange-900)",
-    textCardBlock3: "var(--orange-900)",
-
-    // Block 4
-    bgBlock4: "var(--orange-600)",
-    textBlock4: "var(--gray-200)",
-    bgOffsetBlock4: "var(--gray-200)",
-    textOffsetBlock4: "var(--gray-200)",
-    bgHeadlineBlock4: "transparent",
-    textHeadlineBlock4: "var(--yellow)",
-    borderHeadlineBlock4: "var(--yellow)",
-    textHeadlineOffsetBlock4: "var(--gray-200)",
-    // Card 4
-    bgCardBlock4: "var(--orange-400)",
-    borderCardBlock4: "var(--orange-300)",
-    textHeadlineCardBlock4: "var(--orange-800)",
-    textCardBlock4: "var(--gray-700)",
     /**
      * [Buttons]
      */
@@ -499,6 +389,11 @@ export const alt2Theme = {
     transHover: "var(--gray-100)",
     bgBody: "var(--aqua-900)",
     textBody: "var(--aqua-100)",
+    accentColor: "var(--aqua-400)",
+    textBase: "var(--gray-900)",
+    textOffset: "var(--gray-900)",
+    textNeutral: "var(--gray-900)",
+
     /**
      * [Header & Footer]
      */
@@ -510,9 +405,11 @@ export const alt2Theme = {
     iconHeaderHover: "var(--aqua-100)",
     iconHeaderBGHover: "rgba(0,0,0,0.125)",
     bgFooter: "var(--aqua-800)",
+    borderFooter: "var(--aqua-800)",
     textFooter: "var(--aqua-400)",
     iconFooter: "var(--aqua-800)",
     iconFooterHover: "rgba(0,0,0,0.25)",
+
     /**
      * [Drawer & Navigation]
      */
@@ -525,75 +422,33 @@ export const alt2Theme = {
     textDrawerNavItemHover: "var(--cyan)",
     borderDrawerNavItem: "var(--aqua-800)",
     borderDrawerNavItemHover: "",
+
     /**
      * [Hero]
      */
     bgHero: "var(--aqua-700)",
     textHero: "var(--aqua-100)",
+    borderHero: "var(--gray-700)",
     textOffsetHero: "var(--cyan)",
     textHeadlineHero: "rgba(255, 255, 255, .75)",
+
     /**
      * [Blocks & Cards]
      */
     // Block 1
-    bgBlock1: "var(--aqua-400)",
-    textBlock1: "var(--gray-200)",
-    bgOffsetBlock1: "var(--gray-50)",
-    textOffsetBlock1: "var(--gray-200)",
-    bgHeadlineBlock1: "transparent",
-    textHeadlineBlock1: "var(--cyan)",
-    borderHeadlineBlock1: "var(--cyan)",
-    textHeadlineOffsetBlock1: "var(--gray-300)",
+    bgBlock: "var(--aqua-400)",
+    textBlock: "var(--gray-200)",
+    bgOffsetBlock: "var(--gray-50)",
+    textOffsetBlock: "var(--gray-200)",
+    bgHeadlineBlock: "transparent",
+    textHeadlineBlock: "var(--cyan)",
+    borderHeadlineBlock: "var(--cyan)",
+    textHeadlineOffsetBlock: "var(--gray-300)",
     // Card 1
-    bgCardBlock1: "var(--aqua-200)",
-    borderCardBlock1: "var(--aqua-100)",
-    textHeadlineCardBlock1: "var(--aqua-900)",
-    textCardBlock1: "var(--aqua-900)",
-
-    // Block 2
-    bgBlock2: "var(--aqua-500)",
-    textBlock2: "var(--gray-200)",
-    bgOffsetBlock2: "var(--gray-50)",
-    textOffsetBlock2: "var(--gray-200)",
-    bgHeadlineBlock2: "transparent",
-    textHeadlineBlock2: "var(--cyan)",
-    borderHeadlineBlock2: "var(--cyan)",
-    textHeadlineOffsetBlock2: "var(--gray-200)",
-    // Block 2
-    bgCardBlock2: "var(--aqua-300)",
-    borderCardBlock2: "var(--aqua-200)",
-    textHeadlineCardBlock2: "var(--aqua-900)",
-    textCardBlock2: "var(--aqua-900)",
-
-    // Block 3
-    bgBlock3: "var(--aqua-700)",
-    textBlock3: "var(--gray-200)",
-    bgOffsetBlock3: "var(--gray-50)",
-    textOffsetBlock3: "var(--gray-200)",
-    bgHeadlineBlock3: "transparent",
-    textHeadlineBlock3: "var(--cyan)",
-    borderHeadlineBlock3: "var(--cyan)",
-    textHeadlineOffsetBlock3: "var(--gray-200)",
-    // Block 3
-    bgCardBlock3: "var(--aqua-500)",
-    borderCardBlock3: "var(--aqua-400)",
-    textHeadlineCardBlock3: "rgba(255,255,255,0.85)",
-    textCardBlock3: "rgba(255,255,255,0.65)",
-
-    // Block 4
-    bgBlock4: "var(--aqua-800)",
-    textBlock4: "var(--aqua-600)",
-    bgOffsetBlock4: "rgba(255,255,255,0.85)",
-    textOffsetBlock4: "var(--aqua-700)",
-    bgHeadlineBlock4: "transparent",
-    textHeadlineBlock4: "var(--cyan)",
-    borderHeadlineBlock4: "var(--cyan)",
-    textHeadlineOffsetBlock4: "var(--gray-200)",
-    // Block 4
-    bgCardBlock4: "var(--aqua-600)",
-    borderCardBlock4: "var(--aqua-500)",
-    textHeadlineCardBlock4: "rgba(255,255,255,0.85)",
-    textCardBlock4: "rgba(255,255,255,0.65)",
+    bgCardBlock: "var(--aqua-200)",
+    borderCardBlock: "var(--aqua-100)",
+    textHeadlineCardBlock: "var(--aqua-900)",
+    textCardBlock: "var(--aqua-900)",
 
     /**
      * [Buttons]

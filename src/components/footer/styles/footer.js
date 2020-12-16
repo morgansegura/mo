@@ -1,27 +1,22 @@
 import styled from "styled-components"
+import { generateMedia } from "styled-media-query"
 
-export const Container = styled.footer``
+const customMedia = generateMedia({
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
+    xxl: "1536px",
+})
 
-export const Wrapper = styled.div`
+export const Container = styled.footer`
     position: relative;
     z-index: 1;
+    background-color: ${({ theme }) => theme.bgFooter};
+    border: 1px solid ${({ theme }) => theme.borderFooter};
     color: ${({ theme }) => theme.textFooter};
-    transition: height 0.15s ease-in-out;
     width: 100%;
-
-    &:before {
-        content: "";
-        z-index: -1;
-        position: absolute;
-        top: auto;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: ${({ theme }) => theme.bgFooter};
-        opacity: 0.85;
-        border-top: 1px solid ${({ theme }) => theme.borderHeader};
-        transition: opacity 0.4s ease-out;
-    }
+    padding: 1rem 2rem;
 
     a,
     .social-icon {
@@ -31,4 +26,14 @@ export const Wrapper = styled.div`
             color: ${({ theme }) => theme.iconFooterHover};
         }
     }
+`
+
+export const Wrapper = styled.div`
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    ${customMedia.greaterThan("lg")`
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    `};
 `

@@ -53,23 +53,24 @@ export function LayoutContainer({ children, location }) {
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
-            <Layout className="wrapper relative flex flex-col h-screen">
+            <Layout className="wrapper relative flex flex-col">
                 <HeaderContainer
-                    className={`fixed z-10 px-10 flex items-center justify-between ${
+                    className={`fixed z-10 flex items-center justify-between ${
                         toggleNav ? "nav-drawer-open" : ""
                     }`}
                 >
-                    <Hamburger
-                        className="flex"
-                        onClick={() => setToggleNav(!toggleNav)}
-                    />
-                    <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
-
+                    <div className="nav-box">
+                        <Hamburger
+                            className="flex"
+                            onClick={() => setToggleNav(!toggleNav)}
+                        />
+                        <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
+                    </div>
                     <MenuNavigationContainer
-                        className={`nav-menu font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-lg lg:shadow-none`}
+                        className={`nav-menu font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-xl`}
                     ></MenuNavigationContainer>
                 </HeaderContainer>
-                <Layout.Container className="content flex-1">
+                <Layout.Container className="layout content flex-1">
                     {children}
                     <FooterContainer>
                         Morgan Segura | {new Date().getFullYear()}

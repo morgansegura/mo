@@ -25,9 +25,9 @@ export default ({ data }) => {
                                 <Link to={fields.slug}>
                                     {!!frontmatter.cover ? (
                                         <Image
-                                            sizes={
+                                            fluid={
                                                 frontmatter.cover
-                                                    .childImageSharp.sizes
+                                                    .childImageSharp.fluid
                                             }
                                         />
                                     ) : null}
@@ -64,8 +64,8 @@ export const query = graphql`
                     cover {
                         publicURL
                         childImageSharp {
-                            sizes(maxWidth: 2000, traceSVG: { color: "#639" }) {
-                                ...GatsbyImageSharpSizes_tracedSVG
+                            fluid(maxWidth: 2000, traceSVG: { color: "#639" }) {
+                                ...GatsbyImageSharpFluid_tracedSVG
                             }
                         }
                     }

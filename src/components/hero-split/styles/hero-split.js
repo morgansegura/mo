@@ -14,6 +14,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     background-color: ${({ theme }) => theme.bgHero};
+    border: 1px solid ${({ theme }) => theme.borderHero};
     height: 100%;
 
     ${customMedia.between("md", "xxl")`

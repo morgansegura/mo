@@ -17,7 +17,10 @@ export const Container = styled.div`
 `
 
 export const Child = styled.div`
+    padding-left: 1rem;
+    padding-right: 1rem;
     ${customMedia.greaterThan("lg")`
-
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     `};
 `

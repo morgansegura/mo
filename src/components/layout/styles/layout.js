@@ -11,24 +11,19 @@ const customMedia = generateMedia({
 
 // Layout Components
 export const Wrapper = styled.div`
-    background-color: ${({ theme }) => theme.bgBody};
+    ${customMedia.greaterThan("lg")`
+        padding: 1rem;
+    `};
 `
 export const Container = styled.div`
+    background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
-    height: 100%;
     margin-top: 4rem;
+    padding-top: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 6rem);
 
     ${customMedia.greaterThan("lg")`
-      margin-left: 290px;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 1px;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        border-right: 1px solid ${({ theme }) => theme.borderContent};
-      }  
-   `};
+        margin-left: 290px;
+    `};
 `

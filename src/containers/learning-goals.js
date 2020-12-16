@@ -10,9 +10,9 @@ export function LearningGoalsContainer({ className }) {
                     Interested in Learning
                 </Block.Title>
             </Block.Header>
-            <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-6">
                 {interests.map((item, i) => (
-                    <Card key={i} className="card p-4 rounded-md shadow-lg">
+                    <Card key={i} className="card p-4 rounded-sm">
                         <div className="flex items-center mb-1">
                             {item.icon}
                             <h3 className="font-semibold text-lg">

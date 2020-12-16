@@ -28,6 +28,7 @@ export const Container = styled.div`
 
     svg {
         fill: ${({ theme }) => theme.iconHeader};
+        transition: transform 0.2s ease-out;
     }
 
     &:after {
@@ -43,6 +44,10 @@ export const Container = styled.div`
         transition: transform 0.2s ease-in;
     }
     .author-drawer-open & {
+        z-index: 11;
+        svg {
+            transform: rotate(90deg);
+        }
         &:after {
             /* background-color: ${({ theme }) => theme.iconHeaderBGHover}; */
             /* transform: scale(1); */

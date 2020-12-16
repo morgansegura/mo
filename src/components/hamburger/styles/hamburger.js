@@ -103,8 +103,7 @@ export const Container = styled.div`
     transition: transform 0.3s ease-out;
 
     .nav-drawer-open & {
-        z-index: 11;
-        transform: translateX(-80px);
+        /* transform: translateX(-80px); */
     }
 
     &:after {

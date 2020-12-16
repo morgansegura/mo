@@ -9,11 +9,32 @@ const customMedia = generateMedia({
     xl: "1280px",
     xxl: "1536px",
 })
-export const Container = styled.header``
+export const Container = styled.header`
+    .nav-box {
+        position: fixed;
+        z-index: 12;
+        height: 4rem;
+        width: 5rem;
+        display: flex;
+        align-items: center;
+        top: 0;
+        right: 1rem;
+
+        ${customMedia.greaterThan("lg")`
+            top: 1rem;
+            right: 2rem;      
+        `};
+    }
+`
 export const Wrapper = styled.div`
+    position: relative;
+    z-index: 10;
     transition: height 0.15s ease-in-out;
     width: 100%;
     height: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    /* box-shadow: 0 3px 2px 2px rgba(0, 0, 0, 0.1); */
 
     &:before {
         content: "";
@@ -25,20 +46,16 @@ export const Wrapper = styled.div`
         height: 100%;
         background-color: ${({ theme }) => theme.bgHeader};
         opacity: 0.85;
-        border-bottom: 1px solid ${({ theme }) => theme.borderHeader};
         transition: opacity 0.4s ease-out;
     }
     &.scrolled-header {
         /* height: 5rem; */
     }
     ${customMedia.greaterThan("lg")`
-
+        width: calc(100% - 2rem);        
     `};
     ${customMedia.greaterThan("xl")`
-        margin-left: 0;
-        border-left: 0 solid transparent;   
-        border-bottom: 1px solid ${({ theme }) => theme.borderContent};
-        width: 100%;
+        
     `};
 `
 
@@ -47,6 +64,8 @@ export const Navbar = styled.div``
 export const LogoContainer = styled.div`
     height: 2.5rem;
     .logo {
+        position: relative;
+        z-index: 11;
         margin-left: -25px;
         width: 2.5rem;
         height: 2.5rem;

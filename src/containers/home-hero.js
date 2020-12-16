@@ -34,7 +34,7 @@ export function HomeHeroContainer() {
             <HeroSplit.ImageContainer className="relative">
                 <BackgroundImage
                     Tag="div"
-                    className="bg-image w-full h-full"
+                    className="bg-image w-full"
                     fluid={heroImage}
                 ></BackgroundImage>
             </HeroSplit.ImageContainer>

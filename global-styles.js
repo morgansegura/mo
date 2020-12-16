@@ -60,31 +60,41 @@ const GlobalStyles = createGlobalStyle`
   html, body {
     background-color: ${({ theme }) => theme.bgBody};
   }
-  body {    
-    font-weight: 600;
+  body { 
+    position: realtive;
+    overflow: hidden;
     color: ${({ theme }) => theme.textBody};
     text-size-adjust: 100%;
     font-size: 100%;
     font-family: var(--sans-font);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     line-height: 1.85em;    
+    letter-spacing: 0.0125em;
   }
 
-  body::-webkit-scrollbar {
+  body::-webkit-scrollbar,
+  .sub-author-block::-webkit-scrollbar,
+  .layout::-webkit-scrollbar {
     position: absolute;
+    z-index: 12;
     width: 0.5rem;
-    margin-left: -8px;
+    margin-left: -16px;
+    background-color: ${({ theme }) => theme.bgDrawer};    
   }
   
-  body::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track,
+  .sub-author-block::-webkit-scrollbar-track,
+  .layout::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
   }
   
-  body::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb,
+  .sub-author-block::-webkit-scrollbar-thumb,
+  .layout::-webkit-scrollbar-thumb {
     background-color: ${({ theme }) => theme.scrollBar};
-    outline: 1px solid slategrey;
+    outline: 1px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease-out;
     
@@ -95,7 +105,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.scrollBarActive};
     }
   }
-  body, .bg-gradient {
+  .bg-gradient {
       background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
       background-size:  400% 400%;
       animation: gradient 20s ease infinite;
@@ -117,28 +127,31 @@ const GlobalStyles = createGlobalStyle`
       background-image: url('/src/assets/images/digital.svg');
     }
   }
+  .t-base {
+      color: ${({ theme }) => theme.textBase};
+  }
+  .t-offset {
+      color: ${({ theme }) => theme.textOffset};
+  }
+  .t-neutral {
+      color: ${({ theme }) => theme.textNeutral};
+  }
+  .t-accent {
+      color: ${({ theme }) => theme.accentColor};
+  }  
 
   :root { 
     /* Light && Dark Theme */
     --gray-50: #FAFAFA;    
-    --gray-100: #F5F5F5;    
-    --gray-200: #EEEEEE;    
-    --gray-300: #E0E0E0;    
-    --gray-400: #BDBDBD;    
-    --gray-500: #9E9E9E;    
-    --gray-600: #444;    
-    --gray-700: #333;    
-    --gray-800: #212121;    
-    --gray-900: #111;  
-    --steel-gray-100: #f7fafc;    
-    --steel-gray-200: #edf2f7;    
-    --steel-gray-300: #e2e8f0;    
-    --steel-gray-400: #cbd5e0;    
-    --steel-gray-500: #a0aec0;    
-    --steel-gray-600: #718096;    
-    --steel-gray-700: #4a5568;    
-    --steel-gray-800: #2d3748;    
-    --steel-gray-900: #1a202c;  
+    --gray-100: #F3F3F3;    
+    --gray-200: #E0E0E0;    
+    --gray-300: #CACACA;    
+    --gray-400: #AEAEAE;    
+    --gray-500: #4a4a4a;    
+    --gray-600: #3b3b3b;    
+    --gray-700: #343434;
+    --gray-800: #2e2e2e;    
+    --gray-900: #2a2a2a;  
     
     /* Aqua Theme */
     --aqua-100: #7FC0CF;    

@@ -14,35 +14,33 @@ export const Container = styled.div`
     &.author-menu {
         z-index: 10;
         position: fixed;
-        top: 0;
+        top: 4rem;
         bottom: 0;
         right: auto;
-        left: 0;
+        left: 1rem;
         width: 290px;
-        margin-top: 4rem;
+        height: calc(100% - 4rem);
         background-color: ${({ theme }) => theme.bgDrawer};
         border-right: 1px solid ${({ theme }) => theme.borderDrawer};
-        transform: translateY(0) translateX(-100%);
+        transform: translateY(0) translateX(calc(-100% - 1rem));
         transition: transform 0.3s ease-out;
 
+        ${customMedia.greaterThan("lg")`
+            top: 5rem;
+            height: calc(100% - 6rem);
+            transform: translateY(0) translateX(-1rem);
+        `}
+
         .author-drawer-open & {
-            transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(-1rem);
+            box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+            ${customMedia.greaterThan("lg")`
+                top: 5rem;
+                height: calc(100% - 6rem);
+	        `}
         }
 
-        .title {
-            font-size: 0.75rem;
-            color: ${({ theme }) => theme.textDrawerNavItemHover};
-        }
-        .subtitle {
-            font-weight: normal;
-            font-size: 0.75rem;
-            color: ${({ theme }) => theme.textDrawerNavItem};
-        }
-        .text {
-            font-weight: normal;
-            font-size: 0.75rem;
-            color: ${({ theme }) => theme.textDrawerNavItem};
-        }
         .hr {
             box-sizing: border-box;
             height: 2px;
@@ -53,8 +51,11 @@ export const Container = styled.div`
             background-color: ${({ theme }) => theme.borderDrawer};
         }
 
+        .sub-author-block {
+            overflow-y: auto;
+        }
         .author-block {
-            background-color: ${({ theme }) => theme.borderDrawer};
+            background-color: ${({ theme }) => theme.bgDrawerMenu};
             padding-top: 1.5rem;
             width: 100%;
         }
@@ -71,7 +72,14 @@ export const Container = styled.div`
             &-inner {
                 text-align: center;
             }
-
+            svg {
+                .svg-circle-bg {
+                    stroke: ${({ theme }) => theme.borderDrawer};
+                }
+                .svg-circle {
+                    stroke: ${({ theme }) => theme.accentColor};
+                }
+            }
             .label {
                 margin-top: 0.75rem;
                 font-size: 0.75rem;
@@ -88,11 +96,11 @@ export const Container = styled.div`
                 margin-bottom: 0.75rem;
 
                 svg {
-                    .svg-line {
-                        stroke: green;
-                    }
                     .svg-line-bg {
-                        stroke: red;
+                        stroke: ${({ theme }) => theme.borderDrawer};
+                    }
+                    .svg-line {
+                        stroke: ${({ theme }) => theme.accentColor};
                     }
                 }
             }
@@ -118,7 +126,7 @@ export const Container = styled.div`
     }
     &.nav-menu {
         position: fixed;
-        top: 0;
+        top: 4rem;
         bottom: 0;
         left: auto;
         right: 0;
@@ -131,7 +139,13 @@ export const Container = styled.div`
         transform: translateY(0) translateX(100%);
         transition: transform 0.3s ease-out;
 
+        ${customMedia.greaterThan("lg")`
+            top: 5rem;
+            height: calc(100% - 6rem);
+        `}
+
         .nav-drawer-open & {
+            box-shadow: -3px 2px 2px 2px rgba(0, 0, 0, 0.1);
             transform: translateX(0);
         }
     }

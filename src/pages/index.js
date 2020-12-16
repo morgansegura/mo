@@ -34,25 +34,25 @@ const IndexPage = () => {
                     <HomeHeroContainer />
                 </Containers.Child>
                 <Containers.Child>
-                    <ExpertiseContainer className="block2" />
+                    <ExpertiseContainer className="py-6" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DesignCreativeContainer className="overflow-hidden bg-gradient" />
+                    <DesignCreativeContainer className="overflow-hidden bg-gradient rounded-sm" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DesignGoalsContainer className="block3" />
+                    <DesignGoalsContainer className="py-6" />
                 </Containers.Child>
                 <Containers.Child>
-                    <PreferredTechContainer className="block4" />
+                    <PreferredTechContainer className="" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DevCreativeContainer className="bg-gradient relative overflow-hidden" />
+                    <DevCreativeContainer className="bg-gradient relative overflow-hidden rounded-sm" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DevGoalsContainer className="block1" />
+                    <DevGoalsContainer className="" />
                 </Containers.Child>
                 <Containers.Child>
-                    <LearningGoalsContainer className="block2" />
+                    <LearningGoalsContainer className="" />
                 </Containers.Child>
             </Containers>
         </LayoutContainer>

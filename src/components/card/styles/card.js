@@ -10,124 +10,38 @@ import styled from "styled-components"
 // })
 
 export const Container = styled.div`
-    .block1 &.card,
-    .block1 & {
-        background-color: ${({ theme }) => theme.bgCardBlock1};
-        border: 1px solid ${({ theme }) => theme.borderCardBlock1};
+    background-color: ${({ theme }) => theme.bgCardBlock};
+    border: 1px solid ${({ theme }) => theme.borderCardBlock};
+    color: ${({ theme }) => theme.textCardBlock};
+    box-shadow: 0 3px 2px 2px rgba(0, 0, 0, 0.1);
+    h1,
+    h2,
+    h3 {
+        color: ${({ theme }) => theme.textHeadlineCardBlock};
+    }
 
-        h3 {
-            color: ${({ theme }) => theme.textHeadlineCardBlock1};
-        }
-        p {
-            color: ${({ theme }) => theme.textCardBlock1};
-        }
-        a {
-            opacity: 0.9;
-            transition: opacity 0.3s ease-out;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        .bg-offset {
-            background-color: ${({ theme }) => theme.bgOffsetBlock1};
-        }
-        .small-card {
-            background-color: ${({ theme }) => theme.bgCardBlock1};
-        }
-        .bg-label {
-            color: ${({ theme }) => theme.textOffsetBlock1};
-            background-color: ${({ theme }) => theme.bgOffsetBlock1};
+    a {
+        opacity: 0.9;
+        transition: opacity 0.3s ease-out;
+        &:hover {
+            opacity: 1;
         }
     }
-    .block2 &.card,
-    .block2 & {
-        background-color: ${({ theme }) => theme.bgCardBlock2};
-        border: 1px solid ${({ theme }) => theme.borderCardBlock2};
-        h3 {
-            color: ${({ theme }) => theme.textHeadlineCardBlock2};
-        }
-        p {
-            color: ${({ theme }) => theme.textCardBlock2};
-        }
-        a {
-            opacity: 0.9;
-            transition: opacity 0.3s ease-out;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        .bg-offset {
-            background-color: ${({ theme }) => theme.bgOffsetBlock2};
-        }
-        .small-card {
-            background-color: ${({ theme }) => theme.bgCardBlock2};
-        }
-        .bg-label {
-            color: ${({ theme }) => theme.textOffsetBlock2};
-            background-color: ${({ theme }) => theme.bgOffsetBlock2};
-        }
+    .bg-offset {
+        background-color: ${({ theme }) => theme.bgOffsetBlock};
     }
-    .block3 &.card,
-    .block3 & {
-        background-color: ${({ theme }) => theme.bgCardBlock3};
-        border: 1px solid ${({ theme }) => theme.borderCardBlock3};
-        h3 {
-            color: ${({ theme }) => theme.textHeadlineCardBlock3};
-        }
-        p {
-            color: ${({ theme }) => theme.textCardBlock3};
-        }
-        a {
-            opacity: 0.9;
-            transition: opacity 0.3s ease-out;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        .bg-offset {
-            background-color: ${({ theme }) => theme.bgOffsetBlock3};
-        }
-        .small-card {
-            background-color: ${({ theme }) => theme.bgCardBlock3};
-        }
-        .bg-label {
-            color: ${({ theme }) => theme.textOffsetBlock3};
-            background-color: ${({ theme }) => theme.bgOffsetBlock3};
-        }
+    .small-card {
+        background-color: ${({ theme }) => theme.bgCardBlock};
     }
-    .block4 &.card,
-    .block4 & {
-        background-color: ${({ theme }) => theme.bgCardBlock4};
-        border: 1px solid ${({ theme }) => theme.borderCardBlock4};
-        h3 {
-            color: ${({ theme }) => theme.textHeadlineCardBlock4};
-        }
-        p {
-            color: ${({ theme }) => theme.textCardBlock4};
-        }
-        a {
-            opacity: 0.9;
-            transition: opacity 0.3s ease-out;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        .bg-offset {
-            background-color: ${({ theme }) => theme.bgOffsetBlock4};
-        }
-        .small-card {
-            background-color: ${({ theme }) => theme.bgCardBlock4};
-        }
-        .bg-label {
-            left: 100%;
-            min-width: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform: translateX(-150%);
-            color: ${({ theme }) => theme.textOffsetBlock4};
-            background-color: ${({ theme }) => theme.bgOffsetBlock4};
-        }
+    .bg-label {
+        left: 100%;
+        min-width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-150%);
+        color: ${({ theme }) => theme.textOffsetBlock};
+        background-color: ${({ theme }) => theme.bgOffsetBlock};
     }
 `
 export const Header = styled.header`

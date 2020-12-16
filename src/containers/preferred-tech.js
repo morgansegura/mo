@@ -11,11 +11,11 @@ export function PreferredTechContainer({ className }) {
                 </Block.Title>
             </Block.Header>
 
-            <div className="grid grid-cols-2 gap-1 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
                 {technology.map((tech, i) => (
                     <Card
                         key={i}
-                        className="small-card relative col-span-1 rounded-md flex justify-center py-8 px-8"
+                        className="small-card relative col-span-1 rounded-sm flex justify-center py-8 px-8"
                         href={tech.url}
                     >
                         <div className="bg-offset rounded-full p-2">

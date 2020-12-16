@@ -11,73 +11,23 @@ const customMedia = generateMedia({
 
 export const Container = styled.section`
     height: 100%;
-    padding: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: ${({ theme }) => theme.textBlock};
 
     ${customMedia.greaterThan("lg")`
-        padding: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     `};
-
-    &.block1 {
-        background-color: ${({ theme }) => theme.bgBlock1};
-        h2 {
-            color: ${({ theme }) => theme.textHeadlineBlock1};
-            border: 1px solid ${({ theme }) => theme.borderHeadlineBlock1};
-            border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock1};
-            background-color: ${({ theme }) => theme.bgHeadlineBlock1};
-        }
-        h3 {
-            font-family: var(--headline-serif);
-        }
-        p {
-            color: ${({ theme }) => theme.textBlock1};
-        }
+    background-color: ${({ theme }) => theme.bgBlock};
+    h2 {
+        color: ${({ theme }) => theme.textHeadlineBlock};
+        border: 1px solid ${({ theme }) => theme.borderHeadlineBlock};
+        border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock};
+        background-color: ${({ theme }) => theme.bgHeadlineBlock};
     }
-    &.block2 {
-        background-color: ${({ theme }) => theme.bgBlock2};
-        h2 {
-            color: ${({ theme }) => theme.textHeadlineBlock2};
-            border: 1px solid ${({ theme }) => theme.borderHeadlineBlock2};
-            border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock2};
-            background-color: ${({ theme }) => theme.bgHeadlineBlock2};
-        }
-
-        h3 {
-            font-family: var(--headline-serif);
-        }
-        p {
-            color: ${({ theme }) => theme.textBlock2};
-        }
-    }
-    &.block3 {
-        background-color: ${({ theme }) => theme.bgBlock3};
-        h2 {
-            color: ${({ theme }) => theme.textHeadlineBlock3};
-            border: 1px solid ${({ theme }) => theme.borderHeadlineBlock3};
-            border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock3};
-            background-color: ${({ theme }) => theme.bgHeadlineBlock3};
-        }
-
-        h3 {
-            font-family: var(--headline-serif);
-        }
-        p {
-            color: ${({ theme }) => theme.textBlock3};
-        }
-    }
-    &.block4 {
-        background-color: ${({ theme }) => theme.bgBlock4};
-        h2 {
-            color: ${({ theme }) => theme.textHeadlineBlock4};
-            border: 1px solid ${({ theme }) => theme.borderHeadlineBlock4};
-            border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock4};
-            background-color: ${({ theme }) => theme.bgHeadlineBlock4};
-        }
-        h3 {
-            font-family: var(--headline-serif);
-        }
-        p {
-            color: ${({ theme }) => theme.textBlock4};
-        }
+    h3 {
+        font-family: var(--headline-serif);
     }
 
     .sass {
