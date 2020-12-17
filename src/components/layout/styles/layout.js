@@ -20,10 +20,11 @@ export const Container = styled.div`
     position: relative;
     padding-top: 1rem;
     margin-top: 4rem;
-    overflow-y: auto;
-    height: calc(100vh - 4rem);
+
+    height: 100vh;
 
     ${customMedia.greaterThan("lg")`
+        overflow-y: auto;
         margin-top: 4rem;
         height: calc(100vh - 6rem);
         margin-left: 290px;
