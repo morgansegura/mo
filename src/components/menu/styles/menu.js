@@ -37,6 +37,7 @@ export const Container = styled.div`
             box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
 
             ${customMedia.greaterThan("lg")`
+                transform: translateY(0) translateX(-1rem);
                 top: 5rem;
                 height: calc(100% - 6rem);
 	        `}
@@ -165,7 +166,11 @@ export const Container = styled.div`
 
         .nav-drawer-open & {
             box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
-            transform: translateX(-1rem);
+            transform: translateX(0);
+
+            ${customMedia.greaterThan("lg")`
+                transform: translateX(-1rem);
+            `}
         }
     }
 `

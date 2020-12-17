@@ -8,7 +8,7 @@ import { FooterContainer } from "./footer"
 import { MenuNavigationContainer } from "./menu-navigation"
 
 import Layout from "../components/layout"
-import Hamburger from "../components/hamburger"
+import { Hamburger, MoreIcon } from "../components"
 
 import GlobalStyles from "../../global-styles"
 import { useThemeMode } from "../components/theme/useThemeMode"
@@ -32,6 +32,7 @@ export function LayoutContainer({ children, location }) {
     // `)
 
     const [toggleNav, setToggleNav] = useState(false)
+    const [toggleAuthor, setToggleAuthor] = useState(false)
 
     // Toggle Theme Colors Mode
     const [theme, toggleTheme, componentMounted] = useThemeMode()
@@ -50,19 +51,36 @@ export function LayoutContainer({ children, location }) {
         return <div />
     }
 
+    const handleAuthorNav = event => {
+        setToggleAuthor(!toggleAuthor)
+        if (toggleNav) {
+            setToggleNav(!toggleNav)
+        }
+    }
+    const handleMainNav = event => {
+        setToggleNav(!toggleNav)
+        if (toggleAuthor) {
+            setToggleAuthor(!toggleAuthor)
+        }
+    }
+
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
             <Layout className="wrapper relative flex flex-col">
                 <HeaderContainer
-                    className={`fixed z-10 flex items-center justify-between ${
-                        toggleNav ? "nav-drawer-open" : ""
-                    }`}
+                    className={`fixed z-10 flex items-center justify-between 
+                    ${toggleNav ? "nav-drawer-open" : ""}
+                    ${toggleAuthor ? "author-drawer-open" : ""}`}
                 >
+                    <MoreIcon
+                        className="toggle-author"
+                        onClick={event => handleAuthorNav(event)}
+                    />
                     <div className="nav-box">
                         <Hamburger
                             className="flex"
-                            onClick={() => setToggleNav(!toggleNav)}
+                            onClick={event => handleMainNav(event)}
                         />
                         <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
                     </div>

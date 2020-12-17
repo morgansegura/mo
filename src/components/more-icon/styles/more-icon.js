@@ -10,7 +10,8 @@ const customMedia = generateMedia({
 })
 
 export const Container = styled.div`
-    position: relative;
+    position: fixed;
+    left: 1.5rem;
     z-index: -1;
     font-size: 1.5rem;
     z-index: 10;

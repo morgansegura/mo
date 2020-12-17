@@ -19,7 +19,6 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
     padding-top: 1rem;
-    margin-top: 4rem;
     overflow-y: auto;
 
     ${customMedia.greaterThan("lg")`

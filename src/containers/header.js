@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { MoreIcon, Header } from "../components"
+import { Header } from "../components"
 import { MenuContainer } from "./menu"
 
 import LogoImage from "../assets/images/segura-icon.svg"
@@ -24,20 +24,12 @@ export function HeaderContainer({ className, children }) {
         }
     }
 
-    const [toggleAuthor, setToggleAuthor] = useState(false)
-
     return (
         <Header className={`header ${className}`} onScroll={handleScroll}>
             <Header.Container className="flex w-full items-center">
                 <Header.LogoContainer
-                    className={`flex items-center transition ease-out duration-150 ${
-                        toggleAuthor ? "author-drawer-open" : ""
-                    }`}
+                    className={`flex items-center transition ease-out duration-150`}
                 >
-                    <MoreIcon
-                        className="toggle-author"
-                        onClick={() => setToggleAuthor(!toggleAuthor)}
-                    />
                     <Link to="/" title="Home" aria-label="Home">
                         <LogoImage className="logo" />
                     </Link>

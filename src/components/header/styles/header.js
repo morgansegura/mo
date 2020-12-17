@@ -10,6 +10,8 @@ const customMedia = generateMedia({
     xxl: "1536px",
 })
 export const Container = styled.header`
+    position: fixed;
+    width: 100%;
     .nav-box {
         position: fixed;
         z-index: 12;
@@ -67,7 +69,7 @@ export const LogoContainer = styled.div`
     .logo {
         position: relative;
         z-index: 11;
-        margin-left: -25px;
+        margin-left: 1.5rem;
         width: 2.5rem;
         height: 2.5rem;
     }
