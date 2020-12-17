@@ -9,7 +9,7 @@ const customMedia = generateMedia({
     xl: "1280px",
     xxl: "1536px",
 })
-export const Container = styled.header`
+export const Wrapper = styled.header`
     position: fixed;
     width: 100%;
     .nav-box {
@@ -28,7 +28,7 @@ export const Container = styled.header`
         `};
     }
 `
-export const Wrapper = styled.div`
+export const Container = styled.div`
     position: relative;
     z-index: 10;
     transition: height 0.15s ease-in-out;
