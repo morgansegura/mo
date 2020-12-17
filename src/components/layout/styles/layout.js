@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
-    padding-top: 1rem;
+    padding-top: 5rem;
     overflow-y: auto;
 
     ${customMedia.greaterThan("lg")`
