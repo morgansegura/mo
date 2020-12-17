@@ -62,7 +62,6 @@ const GlobalStyles = createGlobalStyle`
   }
   body { 
     position: realtive;
-    overflow: hidden;
     color: ${({ theme }) => theme.textBody};
     text-size-adjust: 100%;
     font-size: 100%;
