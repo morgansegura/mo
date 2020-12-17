@@ -20,19 +20,22 @@ export const Wrapper = styled.header`
         display: flex;
         align-items: center;
         top: 0;
-        right: 1rem;
+        right: 0;
 
         ${customMedia.greaterThan("lg")`
             top: 1rem;
-            right: 2rem;      
+            right: 3rem;      
         `};
     }
+    ${customMedia.greaterThan("lg")`
+        width: calc(100% - 0.5rem);
+    `};
 `
 export const Container = styled.div`
     position: relative;
     z-index: 10;
-    transition: height 0.15s ease-in-out;
     width: 100%;
+    transition: height 0.15s ease-in-out;
     height: 4rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -55,7 +58,7 @@ export const Container = styled.div`
         /* height: 5rem; */
     }
     ${customMedia.greaterThan("lg")`
-        width: calc(100% - 2rem);        
+        width: calc(100% - 25px);        
     `};
     ${customMedia.greaterThan("xl")`
         

@@ -11,19 +11,44 @@ const customMedia = generateMedia({
 
 // Layout Components
 export const Wrapper = styled.div`
+    position: fixed;
+    height: auto;
+    overflow: visible;
+    overflow-x: hidden;
+
     ${customMedia.greaterThan("lg")`
         padding: 1rem;
+
+        &:before {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1rem;
+            background-color: ${({ theme }) => theme.bgBody};
+            z-index: 9999;
+        }        
+        &:after {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: auto;
+            bottom: 0;
+            width: 100%;
+            height: 1rem;
+            background-color: ${({ theme }) => theme.bgBody};
+            z-index: 9999;
+        }        
     `};
 `
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
     padding-top: 5rem;
-    overflow-y: auto;
 
     ${customMedia.greaterThan("lg")`
-        margin-top: 4rem;
-        height: calc(100vh - 6rem);
+        height: 100%;
         margin-left: 290px;
     `};
 `

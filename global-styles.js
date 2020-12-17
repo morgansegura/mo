@@ -72,7 +72,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.85em;    
     letter-spacing: 0.0125em;
   }
-
+/*
   body::-webkit-scrollbar,
   .sub-author-block::-webkit-scrollbar,
   .layout::-webkit-scrollbar {
@@ -104,6 +104,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.scrollBarActive};
     }
   }
+  */
   .bg-gradient {
       background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
       background-size:  400% 400%;

@@ -26,7 +26,7 @@ export function HeaderContainer({ className, children }) {
 
     return (
         <Header className={`header ${className}`} onScroll={handleScroll}>
-            <Header.Container className="flex w-full items-center">
+            <Header.Container className="flex items-center">
                 <Header.LogoContainer
                     className={`flex items-center transition ease-out duration-150`}
                 >
