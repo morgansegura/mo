@@ -19,11 +19,12 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
     padding-top: 1rem;
+    margin-top: 4rem;
     overflow-y: auto;
     height: calc(100vh - 4rem);
 
     ${customMedia.greaterThan("lg")`
-    margin-top: 4rem;
+        margin-top: 4rem;
         height: calc(100vh - 6rem);
         margin-left: 290px;
     `};
