@@ -12,12 +12,13 @@ const customMedia = generateMedia({
 
 export const Container = styled.div`
     &.author-menu {
-        z-index: 10;
         position: relative;        
         background-color: ${({ theme }) => theme.bgDrawer};
         margin-left: 1rem;
         margin-right: 1rem;
         margin-bottom: 2rem;
+        border: 1px solid ${({ theme }) => theme.borderDrawer};
+        border-radius: 0.65rem;
         transition: transform 0.3s ease-out;
 
         ${customMedia.greaterThan("lg")`
@@ -25,10 +26,8 @@ export const Container = styled.div`
             width: 290px;
             top: 7rem;
             left: 1rem;
-            border: 1px solid ${({ theme }) => theme.borderDrawer};
             bottom: auto;
             margin: auto;
-            // box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
             transform: translateY(0) translateX(0);
             background-color: transparent;
         `}

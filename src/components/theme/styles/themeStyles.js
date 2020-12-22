@@ -21,7 +21,7 @@ export const lightTheme = {
     logo: "#5c5c6f",
     logoHover: "var(--gray-700)",
     transHover: "var(--gray-100)",
-    bgBody: "var(--gray-200)",
+    bgBody: "var(--gray-100)",
     bgLayout: "var(--gray-100)",
     textBody: "var(--gray-900)",
 

@@ -16,10 +16,13 @@ export const Container = styled.footer`
     border: 1px solid ${({ theme }) => theme.borderFooter};
     color: ${({ theme }) => theme.textFooter};
     width: 100%;
-    padding: 1rem 2rem;
     border-radius: 0.75rem;
-    margin-bottom: 2rem;
-    /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+
+    ${customMedia.greaterThan("lg")`
+        margin-top: 2rem;
+    `};
 
     a,
     .social-icon {
@@ -33,12 +36,5 @@ export const Container = styled.footer`
 `
 
 export const Wrapper = styled.div`
-    padding-right: 1rem;
-    padding-left: 1rem;
 
-    ${customMedia.greaterThan("lg")`
-        border-radius: 0.75rem;
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-    `};
 `

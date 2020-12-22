@@ -6,7 +6,9 @@ import { LayoutContainer } from "../containers/layout"
 
 const IndexWrapper = styled.main``
 
-const PostWrapper = styled.div``
+const PostWrapper = styled.div`
+
+`
 
 const Image = styled(Img)`
     border-radius: 5px;
@@ -15,14 +17,12 @@ const Image = styled(Img)`
 export default ({ data }) => {
     return (
         <LayoutContainer>
-            <IndexWrapper className="p-16 lg:p-20 h-full text-gray-900">
-                <div className={`grid gap-4 ${data.all}`}>
-                    {data.allMdx.nodes.length}
-                    {/* <Dump data={data}></Dump> */}
+            <IndexWrapper className="px-8 pb-8">
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols gap-8 ${data.all}`}>
                     {data.allMdx.nodes.map(
                         ({ id, excerpt, frontmatter, fields }) => (
-                            <PostWrapper key={id}>
-                                <Link to={fields.slug}>
+                            <PostWrapper key={id} className="bg-gray-200">
+                                <Link to={fields.slug} className="height: 100%; width: 100%;">
                                     {!!frontmatter.cover ? (
                                         <Image
                                             fluid={

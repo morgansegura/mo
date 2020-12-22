@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+// import { Link } from 'gatsby'
 // import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
@@ -68,7 +69,7 @@ export function LayoutContainer({ children, location }) {
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
-            <Layout className="wrapper relative flex flex-col">
+            <Layout className="wrapper">
                 <HeaderContainer
                     className={`fixed z-10 flex items-center justify-between 
                     ${toggleNav ? "nav-drawer-open" : ""}

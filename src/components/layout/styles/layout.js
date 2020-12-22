@@ -11,44 +11,13 @@ const customMedia = generateMedia({
 
 // Layout Components
 export const Wrapper = styled.div`
-    height: auto;
-    overflow: visible;
-    overflow-x: hidden;
-
-    ${customMedia.greaterThan("lg")`
-        padding: 1rem 0 1rem 1rem;
-
-        &:before {
-            content: '';
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 1rem;
-            background-color: ${({ theme }) => theme.bgBody};
-            z-index: 9999;
-        }        
-        &:after {
-            content: '';
-            position: fixed;
-            left: 0;
-            top: auto;
-            bottom: 0;
-            width: 100%;
-            height: 1rem;
-            background-color: ${({ theme }) => theme.bgBody};
-            z-index: 9999;
-        }        
-    `};
+    
 `
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgLayout};
-    position: relative;
-    padding-top: 6rem;
+    padding: 6rem 1.5rem 1.5rem 1.5rem;
 
     ${customMedia.greaterThan("lg")`
-        height: 100%;
-        margin-left: 290px;
-        background-color: transparent;
+        padding: 6rem 2rem 2rem 2rem;
     `};
 `

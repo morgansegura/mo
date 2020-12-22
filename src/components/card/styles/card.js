@@ -14,16 +14,14 @@ export const Container = styled.div`
     border: 1px solid ${({ theme }) => theme.borderCardBlock};
     border-radius: 0.75rem;
     color: ${({ theme }) => theme.textCardBlock};
-    /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
-    h1,
-    h2,
-    h3 {
+
+    .card-title {
         font-family: var(--headline-font);
         font-weight: 600;
         color: ${({ theme }) => theme.textHeadlineCardBlock};
     }
 
-    a {
+    .card-link {
         opacity: 0.9;
         transition: opacity 0.3s ease-out;
         &:hover {
@@ -33,22 +31,9 @@ export const Container = styled.div`
     .bg-offset {
         background-color: ${({ theme }) => theme.bgOffsetBlock};
     }
-    .small-card {
-        background-color: ${({ theme }) => theme.bgCardBlock};
-    }
-    .bg-label {
-        left: 100%;
-        min-width: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateX(-150%);
-        color: ${({ theme }) => theme.textOffsetBlock};
-        background-color: ${({ theme }) => theme.bgOffsetBlock};
-    }
 `
 export const Header = styled.header`
-    margin-bottom: 1.5rem;
+
 `
 export const SectionTitle = styled.h2``
 export const Footer = styled.footer``
