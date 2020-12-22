@@ -11,7 +11,6 @@ const customMedia = generateMedia({
 
 // Layout Components
 export const Wrapper = styled.div`
-    position: fixed;
     height: auto;
     overflow: visible;
     overflow-x: hidden;
