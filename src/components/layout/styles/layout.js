@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     overflow-x: hidden;
 
     ${customMedia.greaterThan("lg")`
-        padding: 1rem;
+        padding: 1rem 0 1rem 1rem;
 
         &:before {
             content: '';
@@ -44,10 +44,11 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgLayout};
     position: relative;
-    padding-top: 5rem;
+    padding-top: 6rem;
 
     ${customMedia.greaterThan("lg")`
         height: 100%;
         margin-left: 290px;
+        background-color: transparent;
     `};
 `

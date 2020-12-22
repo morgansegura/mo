@@ -19,15 +19,12 @@ export const Container = styled.section`
     `};
     background-color: ${({ theme }) => theme.bgBlock};
     h2.block-title {
+        border-radius: 0.5rem;
         color: ${({ theme }) => theme.textHeadlineBlock};
         border: 1px solid ${({ theme }) => theme.borderHeadlineBlock};
         border-left: 5px solid ${({ theme }) => theme.borderHeadlineBlock};
         background-color: ${({ theme }) => theme.bgHeadlineBlock};
     }
-    h3 {
-        font-family: var(--headline-serif);
-    }
-
     .sass {
         color: #c69;
     }

@@ -15,7 +15,7 @@ export const ButtonLink = styled(Link)`
 `
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgButton};
-    border-radius: 4px;
+    border-radius: 0.25rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     text-align: center;

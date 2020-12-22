@@ -127,6 +127,9 @@ const GlobalStyles = createGlobalStyle`
       background-image: url('/src/assets/images/digital.svg');
     }
   }
+  .shadow-custom {
+    box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  }
   .t-base {
       color: ${({ theme }) => theme.textBase};
   }
@@ -148,10 +151,10 @@ const GlobalStyles = createGlobalStyle`
   :root { 
     /* Light && Dark Theme */
     --gray-50: #fefefe;
-    --gray-100: #f0f0f5;    
-    --gray-200: #e0e0e6;    
-    --gray-300: #d6d6d6;    
-    --gray-400: #8c8c8e;    
+    --gray-100: #f6f6f7;    
+    --gray-200: #f0f0f5;    
+    --gray-300: #e0e0e6;    
+    --gray-400: #d3d3da;    
     --gray-500: #4a4a4a;    
     --gray-600: #3b3b3b;    
     --gray-700: #343434;
@@ -195,8 +198,8 @@ const GlobalStyles = createGlobalStyle`
     --accent3: #16c79b;
     --accent4: #ff714a;
 
-    --headline-font: 'Cairo', sans-serif;
-    --sans-font: 'Open Sans', sans-serif;
+    --headline-font: 'Lexend Giga', sans-serif;
+    --sans-font: 'Roboto', sans-serif;
     --serif-font: 'Roboto Slab', serif;
   }
   

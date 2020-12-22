@@ -13,34 +13,27 @@ const customMedia = generateMedia({
 export const Container = styled.div`
     &.author-menu {
         z-index: 10;
-        position: fixed;
-        top: 4rem;
-        bottom: 0;
-        right: auto;
-        left: 1rem;
-        width: 290px;
-        height: calc(100% - 4rem);
+        position: relative;        
         background-color: ${({ theme }) => theme.bgDrawer};
-        border-right: 1px solid ${({ theme }) => theme.borderDrawer};
-        transform: translateY(0) translateX(calc(-100% - 1rem));
-        /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2); */
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
         transition: transform 0.3s ease-out;
 
         ${customMedia.greaterThan("lg")`
-            top: 5rem;
-            height: calc(100% - 6rem);
-            transform: translateY(0) translateX(-1rem);
+            position: fixed;
+            width: 290px;
+            top: 7rem;
+            left: 1rem;
+            border: 1px solid ${({ theme }) => theme.borderDrawer};
+            bottom: auto;
+            margin: auto;
+            // box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+            transform: translateY(0) translateX(0);
+            background-color: transparent;
         `}
 
         .author-drawer-open & {
-            transform: translateY(0) translateX(-1rem);
-            box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
-
-            ${customMedia.greaterThan("lg")`
-                transform: translateY(0) translateX(-1rem);
-                top: 5rem;
-                height: calc(100% - 6rem);
-	        `}
         }
 
         .hr {
@@ -60,14 +53,18 @@ export const Container = styled.div`
             background-color: ${({ theme }) => theme.bgDrawerMenu};
             padding-top: 1.5rem;
             width: 100%;
+            border-radius: 0.75rem;
         }
         .skills-block {
-            padding: 1.5rem 2rem;
+            background-color: ${({ theme }) => theme.borderDrawer};
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
         .social-block {
-            position: absolute;
+            /* position: absolute; */
             width: 100%;
-            bottom: 0;
+            /* bottom: 0; */
             display: flex;
             padding: 1.5rem 2rem;
             justify-content: space-between;
@@ -81,6 +78,10 @@ export const Container = styled.div`
                     opacity: 0.75;
                 }
             }
+            ${customMedia.greaterThan("lg")`
+                padding: 1rem 2.5rem;
+                border-radius: 9999px;
+	        `}
         }
         .circle-progress {
             width: 100%;
@@ -155,7 +156,6 @@ export const Container = styled.div`
         padding-left: 1rem;
         padding-right: 1rem;
         background-color: ${({ theme }) => theme.bgDrawer};
-        border-right: 1px solid ${({ theme }) => theme.borderDrawer};
         transform: translateY(0) translateX(100%);
         transition: transform 0.3s ease-out;
 
@@ -165,7 +165,7 @@ export const Container = styled.div`
         `}
 
         .nav-drawer-open & {
-            box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
+            /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
             transform: translateX(0);
 
             ${customMedia.greaterThan("lg")`

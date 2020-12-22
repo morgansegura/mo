@@ -6,7 +6,7 @@ export function PreferredTechContainer({ className }) {
     return (
         <Block className={className}>
             <Block.Header>
-                <Block.Title className="block-title inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
+                <Block.Title className="block-title inline-flex items-center uppercase tracking-wide shadow-lg px-4 py-2 font-headline font-semibold text-lg">
                     Preferred Tech
                 </Block.Title>
             </Block.Header>
@@ -15,7 +15,7 @@ export function PreferredTechContainer({ className }) {
                 {technology.map((tech, i) => (
                     <Card
                         key={i}
-                        className="small-card relative col-span-1 rounded-sm flex justify-center py-8 px-8"
+                        className="small-card relative col-span-1 flex justify-center py-8 px-8"
                         href={tech.url}
                     >
                         <div className="bg-offset rounded-full p-2">

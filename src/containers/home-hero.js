@@ -30,8 +30,8 @@ export function HomeHeroContainer() {
     // const avatar = data.avatar.childImageSharp.fluid
 
     return (
-        <HeroSplit>
-            <HeroSplit.ImageContainer className="relative">
+        <HeroSplit className="overflow-hidden">
+            <HeroSplit.ImageContainer>
                 <BackgroundImage
                     Tag="div"
                     className="bg-image w-full"
@@ -84,12 +84,7 @@ export function HomeHeroContainer() {
                         positive difference in the world.
                     </HeroSplit.Text>
                 </HeroSplit.TextContainer>
-                <HeroSplit.ButtonLink
-                    className="mt-6 ml-auto text-center block py-3 px-6 rounded-md shadow-md font-semibold text-lg font-sans"
-                    to={"/"}
-                >
-                    Download CV
-                </HeroSplit.ButtonLink>
+
             </HeroSplit.Body>
         </HeroSplit>
     )

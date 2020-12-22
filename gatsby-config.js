@@ -150,7 +150,7 @@ module.exports = {
                         weights: ["300", "400", "600", "700"],
                     },
                     {
-                        family: "Cairo",
+                        family: "Roboto",
                         weights: ["400", "600", "700"],
                     },
                     {

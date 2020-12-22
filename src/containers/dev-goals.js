@@ -6,14 +6,14 @@ export function DevGoalsContainer({ className }) {
     return (
         <Block className={className}>
             <Block.Header>
-                <Block.Title className="block-title inline-flex items-center uppercase tracking-wide rounded-md shadow-lg px-4 py-2 font-headline font-semibold text-lg">
+                <Block.Title className="block-title inline-flex items-center uppercase tracking-wide shadow-xl px-4 py-2 font-headline font-semibold text-lg">
                     {new Date().getFullYear() + 1} Dev Goals
                 </Block.Title>
             </Block.Header>
 
             <div className="font-sans grid grid-cols-1 md:grid-cols-2 gap-6">
                 {devGoals.map((item, i) => (
-                    <Card key={i} className="card p-4 rounded-sm">
+                    <Card key={i} className="card p-4">
                         <div className="flex items-center mb-1">
                             {item.icon}
                             <h3 className="font-semibold text-lg">

@@ -45,7 +45,7 @@ export function MenuContainer({ ...restProps }) {
                         fluid={avatar}
                         alt="Morgan Segura"
                     />
-                    <div className="text-center pt-2 pb-8">
+                    <div className="text-center pt-2">
                         <div className="t-base text-base">Morgan Segura</div>
                         <div className="t-neutral text-sm -mb-1 font-light">
                             Front-end Web Developer
@@ -54,8 +54,6 @@ export function MenuContainer({ ...restProps }) {
                             Ui/UX Designer
                         </div>
                     </div>
-                </AuthorCard>
-                <div className="sub-author-block w-full">
                     <div className="skills-block w-full">
                         <div className="location flex w-full justify-between">
                             <div className="t-base text-sm font-light flex-1">
@@ -81,8 +79,58 @@ export function MenuContainer({ ...restProps }) {
                                 9
                             </div>
                         </div>
-                        <div className="hr" />
                     </div>
+
+                    <div className="social-block">
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://www.linkedin.com/in/morgan-segura-4b08429/"
+                            title="Network with me on Linkedin."
+                        >
+                            <SiLinkedin />
+                        </a>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://github.com/morgansegura"
+                            title="Check out my code on Github."
+                        >
+                            <SiGithub />
+                        </a>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://twitter.com/codestandard"
+                            title="Read my tweets on Twitter."
+                        >
+                            <SiTwitter />
+                        </a>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://dribbble.com/MorganSegura"
+                            title="Check out my designs on Dribbble."
+                        >
+                            <SiDribbble />
+                        </a>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://www.behance.net/morgansegu6872"
+                            title="Check out my projects on Behance."
+                        >
+                            <SiBehance />
+                        </a>
+                    </div>
+                    <div className="w-full px-8 pt-4 pb-8">
+                        <Button onClick={() => setToggleModal(!toggleModal)}>
+                            Hire Me
+                        </Button>
+                    </div>                                           
+                </AuthorCard>
+                <div className="sub-author-block w-full">
+
                     {/*
                     <div className="circle-progress">
                         <div className="grid grid-cols-3 gap-4">
@@ -175,53 +223,7 @@ export function MenuContainer({ ...restProps }) {
                         <div className="hr" />
                     </div>
                     */}
-                    <div className="px-8">
-                        <Button onClick={() => setToggleModal(!toggleModal)}>
-                            Hire Me
-                        </Button>
-                    </div>
-                    <div className="social-block">
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://www.linkedin.com/in/morgan-segura-4b08429/"
-                            title="Network with me on Linkedin."
-                        >
-                            <SiLinkedin />
-                        </a>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://github.com/morgansegura"
-                            title="Check out my code on Github."
-                        >
-                            <SiGithub />
-                        </a>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://twitter.com/codestandard"
-                            title="Read my tweets on Twitter."
-                        >
-                            <SiTwitter />
-                        </a>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://dribbble.com/MorganSegura"
-                            title="Check out my designs on Dribbble."
-                        >
-                            <SiDribbble />
-                        </a>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://www.behance.net/morgansegu6872"
-                            title="Check out my projects on Behance."
-                        >
-                            <SiBehance />
-                        </a>
-                    </div>
+
                 </div>
             </Menu>
             {toggleModal && (

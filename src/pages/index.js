@@ -37,7 +37,7 @@ const IndexPage = () => {
                     <ExpertiseContainer className="pt-8" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DesignCreativeContainer className="overflow-hidden bg-gradient rounded-sm mt-8" />
+                    <DesignCreativeContainer className="overflow-hidden bg-gradient rounded-xl mt-8" />
                 </Containers.Child>
                 <Containers.Child className="flex flex-col justify-center">
                     <DesignGoalsContainer className="pt-8" />
@@ -46,7 +46,7 @@ const IndexPage = () => {
                     <PreferredTechContainer className="pt-8" />
                 </Containers.Child>
                 <Containers.Child>
-                    <DevCreativeContainer className="bg-gradient relative overflow-hidden rounded-sm mt-8" />
+                    <DevCreativeContainer className="bg-gradient relative overflow-hidden rounded-xl mt-8" />
                 </Containers.Child>
                 <Containers.Child>
                     <DevGoalsContainer className="pt-8" />

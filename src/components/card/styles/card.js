@@ -12,11 +12,14 @@ import styled from "styled-components"
 export const Container = styled.div`
     background-color: ${({ theme }) => theme.bgCardBlock};
     border: 1px solid ${({ theme }) => theme.borderCardBlock};
+    border-radius: 0.75rem;
     color: ${({ theme }) => theme.textCardBlock};
     /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
     h1,
     h2,
     h3 {
+        font-family: var(--headline-font);
+        font-weight: 600;
         color: ${({ theme }) => theme.textHeadlineCardBlock};
     }
 

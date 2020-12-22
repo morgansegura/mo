@@ -15,6 +15,8 @@ export const Container = styled.section`
     flex-direction: column;
     background-color: ${({ theme }) => theme.bgHero};
     border: 1px solid ${({ theme }) => theme.borderHero};
+    /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
+    border-radius: 0.75rem;
     flex-direction: column;
 
     ${customMedia.greaterThan("xxl")`

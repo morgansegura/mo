@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Header } from "../components"
-import { MenuContainer } from "./menu"
 
 import LogoImage from "../assets/images/segura-icon.svg"
 
@@ -33,9 +32,6 @@ export function HeaderContainer({ className, children }) {
                     <Link to="/" title="Home" aria-label="Home">
                         <LogoImage className="logo" />
                     </Link>
-                    <MenuContainer
-                        className={`author-menu font-sans font-semibold flex items-center flex-col min-h-device shadow-lg lg:shadow-none`}
-                    ></MenuContainer>
                 </Header.LogoContainer>
                 <Header.Navbar className="flex-1 flex justify-end items-center">
                     {children}

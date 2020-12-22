@@ -20,7 +20,7 @@ export default ({ data }) => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 mb-4">
                     {data.allMdx.nodes.map(
                         ({ id, excerpt, frontmatter, fields }) => (
-                            <Card key={id} className="card p-4 rounded-sm">
+                            <Card key={id} className="card p-4">
                                 <Link to={fields.slug}>
                                     {!!frontmatter.cover ? (
                                         <Image

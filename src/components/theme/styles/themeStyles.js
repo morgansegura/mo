@@ -34,13 +34,13 @@ export const lightTheme = {
      * [Header & Footer]
      */
     bgHeader: "var(--gray-50)",
-    borderHeader: "var(--gray-100)",
+    borderHeader: "rgba(0,0,0,0.05)",
     borderContent: "var(--gray-300)",
     iconHeader: "#5c5c6f",
     iconHeaderBG: "transparent",
     iconHeaderHover: "var(--gray-700)",
     iconHeaderBGHover: "rgba(0,0,0,0.075)",
-    bgFooter: "var(--gray-50)",
+    bgFooter: "var(--gray-200)",
     borderFooter: "var(--gray-200)",
     textFooter: "#5c5c6f",
     iconFooter: "var(--gray-800)",
@@ -50,7 +50,7 @@ export const lightTheme = {
      * [Drawer & Navigation]
      */
     bgDrawer: "var(--gray-100)",
-    borderDrawer: "var(--gray-200)",
+    borderDrawer: "var(--gray-300)",
     bgDrawerMenu: "var(--gray-50)",
     bgDrawerNavItem: "var(--gray-100)",
     bgDrawerNavItemHover: "rgba(0,0,0,0.05)",
@@ -62,7 +62,7 @@ export const lightTheme = {
      * [Hero]
      */
     bgHero: "var(--gray-50)",
-    borderHero: "var(--gray-200)",
+    borderHero: "var(--gray-50)",
     textHero: "var(--gray-800)",
     textOffsetHero: "var(--purple)",
     textHeadlineHero: "var(--gray-900)",
@@ -80,7 +80,7 @@ export const lightTheme = {
     textHeadlineOffsetBlock: "var(--gray-800)",
     // Card 1
     bgCardBlock: "var(--gray-50)",
-    borderCardBlock: "var(--gray-200)",
+    borderCardBlock: "var(--gray-50)",
     textHeadlineCardBlock: "var(--gray-700)",
     textCardBlock: "#5c5c6f",
 

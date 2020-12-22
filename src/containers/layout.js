@@ -5,10 +5,11 @@ import { ThemeProvider } from "styled-components"
 
 import { HeaderContainer } from "./header"
 import { FooterContainer } from "./footer"
+import { MenuContainer } from "./menu"
 import { MenuNavigationContainer } from "./menu-navigation"
 
 import Layout from "../components/layout"
-import { Hamburger, MoreIcon } from "../components"
+import { Hamburger } from "../components"
 
 import GlobalStyles from "../../global-styles"
 import { useThemeMode } from "../components/theme/useThemeMode"
@@ -73,10 +74,6 @@ export function LayoutContainer({ children, location }) {
                     ${toggleNav ? "nav-drawer-open" : ""}
                     ${toggleAuthor ? "author-drawer-open" : ""}`}
                 >
-                    <MoreIcon
-                        className="toggle-author"
-                        onClick={event => handleAuthorNav(event)}
-                    />
                     <div className="nav-box">
                         <Hamburger
                             className="flex"
@@ -89,6 +86,9 @@ export function LayoutContainer({ children, location }) {
                     ></MenuNavigationContainer>
                 </HeaderContainer>
                 <Layout.Container className="layout content">
+                    <MenuContainer
+                        className={`author-menu font-sans font-semibold flex items-center flex-col min-h-device`}
+                    ></MenuContainer>                
                     {children}
                     <FooterContainer>
                         Morgan Segura | {new Date().getFullYear()}
