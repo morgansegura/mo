@@ -145,8 +145,9 @@ export const Container = styled.div`
 	    `}
     }
     &.nav-menu {
+        z-index: 1;
         position: fixed;
-        top: 4rem;
+        top: 0;
         bottom: 0;
         left: auto;
         right: 0;
@@ -164,12 +165,7 @@ export const Container = styled.div`
         `}
 
         .nav-drawer-open & {
-            /* box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1); */
             transform: translateX(0);
-
-            ${customMedia.greaterThan("lg")`
-                transform: translateX(-1rem);
-            `}
         }
     }
 `

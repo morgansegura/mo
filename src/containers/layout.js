@@ -69,11 +69,9 @@ export function LayoutContainer({ children, location }) {
     return (
         <ThemeProvider theme={themeMode}>
             <GlobalStyles />
-            <Layout className="wrapper">
+            <Layout className={`wrapper  ${toggleNav ? "nav-drawer-open" : ""} ${toggleAuthor ? "author-drawer-open" : ""}`}>
                 <HeaderContainer
-                    className={`fixed z-10 flex items-center justify-between 
-                    ${toggleNav ? "nav-drawer-open" : ""}
-                    ${toggleAuthor ? "author-drawer-open" : ""}`}
+                    className={`fixed z-10 flex items-center justify-between`}
                 >
                     <div className="nav-box">
                         <Hamburger
@@ -82,9 +80,6 @@ export function LayoutContainer({ children, location }) {
                         />
                         <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
                     </div>
-                    <MenuNavigationContainer
-                        className={`nav-menu font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-xl`}
-                    ></MenuNavigationContainer>
                 </HeaderContainer>
                 <Layout.Container className="layout content">
                     <MenuContainer
@@ -95,6 +90,10 @@ export function LayoutContainer({ children, location }) {
                         Morgan Segura | {new Date().getFullYear()}
                     </FooterContainer>
                 </Layout.Container>
+
+                <MenuNavigationContainer 
+                className={`nav-menu font-sans font-semibold z-10 inset-0 flex items-center flex-col min-h-device shadow-xl`} />                
+
             </Layout>
         </ThemeProvider>
     )

@@ -11,20 +11,28 @@ const customMedia = generateMedia({
 })
 export const Wrapper = styled.header`
     width: 100%;
+    transition: all 0.3s ease-out;
 
     .nav-box {
         display: flex;
         align-items: center;
     }
+    .nav-drawer-open & {
+        width: calc(100% - 200px);              
+    }    
 `
 export const Container = styled.div`
     position: relative;
     width: 100%; 
     background: red;
-    padding: 0.75rem 2rem;  
+    padding: 0.25rem 1.5rem;  
     display: flex;
     align-items: center;
     transition: all 0.3s ease-out;
+
+    ${customMedia.greaterThan("lg")`
+        padding: 0.75rem 2rem; 
+    `};
 
     &:before {
         content: "";
@@ -42,15 +50,13 @@ export const Container = styled.div`
         box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.1);
         background-color: ${({ theme }) => theme.bgHeader};
     }
-    ${customMedia.greaterThan("lg")`
-        padding: 0.75rem 2rem; 
-    `};
 `
 
 export const Navbar = styled.div``
 
 export const LogoContainer = styled.div`
     .logo {
+        margin-left: -1px;
         width: 2.5rem;
         height: 2.5rem;
     }
