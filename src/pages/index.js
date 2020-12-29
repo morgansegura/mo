@@ -1,10 +1,8 @@
 import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
-import { LayoutContainer } from "../containers/layout"
-import { HomeHeroContainer } from "../containers/home-hero"
-import { DesignCreativeContainer } from "../containers/design-creative"
-import { DevCreativeContainer } from "../containers/dev-creative"
-import { SEO } from "../components"
+
+import DefaultLayout from "../shared/layouts/DefaultLayout"
+import SEO from "../shared/components/ConfigElements/SEO"
 
 const IndexPage = () => {
     // const data = useStaticQuery(graphql`
@@ -17,14 +15,13 @@ const IndexPage = () => {
     //     }
     // `)
     return (
-        <LayoutContainer>
+        <DefaultLayout>
             <SEO
                 title="I make interactive web applications to help make your experience better."
                 keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
             />
-            <HomeHeroContainer />
-
-        </LayoutContainer>
+            Home Page
+        </DefaultLayout>
     )
 }
 

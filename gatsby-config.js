@@ -11,11 +11,11 @@ module.exports = {
         `gatsby-transformer-yaml`,
         `gatsby-plugin-catch-links`,
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-postcss`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         "gatsby-plugin-twitter",
         "gatsby-plugin-sitemap",
+        `gatsby-plugin-sass`,
         // "gatsby-plugin-preact",
         // "gatsby-plugin-loadable-components-ssr",
         // Plugin MDX for Blog
@@ -106,13 +106,6 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/src/components`,
-                name: `components`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
                 path: `${__dirname}/content/posts`,
                 name: `posts`,
             },
@@ -122,13 +115,6 @@ module.exports = {
             options: {
                 path: `${__dirname}/content/projects`,
                 name: `projects`,
-            },
-        },
-        // Styled Components
-        {
-            resolve: `gatsby-plugin-styled-components`,
-            options: {
-                // Add any options here
             },
         },
         // SVGs

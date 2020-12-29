@@ -1,8 +1,8 @@
+import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { CodeBlock } from "./src/components"
+import CodeBlock from "./src/shared/components/UIElements/CodeBlock"
 import theme from "prism-react-renderer/themes/nightOwl"
-import React from "react"
 
 const components = {
     pre: props => {
@@ -46,6 +46,6 @@ const components = {
     },
 }
 
-export const wrapRootElement = ({ element }) => (
-    <MDXProvider components={components}>{element}</MDXProvider>
-)
+export const wrapRootElement = ({ element }) => {
+    return <MDXProvider components={components}>{element}</MDXProvider>
+}

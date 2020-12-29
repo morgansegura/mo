@@ -1,11 +1,12 @@
+import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import React from "react"
-import SEO from "../components/seo"
-import { LayoutContainer } from "../containers/layout"
-import { CodeBlock } from "../components"
-import { useSiteMetadata } from "../hooks/useSiteMetadata"
+
+import SEO from "../shared/components/ConfigElements/SEO"
+import DefaultLayout from "../shared/layouts/DefaultLayout"
+import CodeBlock from "../shared/components/UIElements/CodeBlock"
+import { useSiteMetadata } from "../shared/hooks/site-metadata"
 
 export default ({ data, pageContext }) => {
     const {
@@ -22,7 +23,7 @@ export default ({ data, pageContext }) => {
 
     const shortcodes = { CodeBlock }
     return (
-        <LayoutContainer>
+        <DefaultLayout>
             <SEO
                 title={title}
                 description={excerpt}
@@ -65,7 +66,7 @@ export default ({ data, pageContext }) => {
                     </React.Fragment>
                 )}
             </div>
-        </LayoutContainer>
+        </DefaultLayout>
     )
 }
 

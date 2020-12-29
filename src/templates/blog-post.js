@@ -1,11 +1,12 @@
+import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import React from "react"
-import SEO from "../components/seo"
-import { LayoutContainer } from "../containers/layout"
-import { Article, CodeBlock } from "../components"
-import { useSiteMetadata } from "../hooks/useSiteMetadata"
+
+import SEO from "../shared/components/ConfigElements/SEO"
+import DefaultLayout from "../shared/layouts/DefaultLayout"
+
+import { useSiteMetadata } from "../shared/hooks/site-metadata"
 
 export default ({ data, pageContext }) => {
     const {
@@ -20,9 +21,8 @@ export default ({ data, pageContext }) => {
     const { title, date, cover } = frontmatter
     const { previous, next } = pageContext
 
-    const shortcodes = { CodeBlock }
     return (
-        <LayoutContainer>
+        <DefaultLayout>
             <SEO
                 title={title}
                 description={excerpt}
@@ -40,12 +40,10 @@ export default ({ data, pageContext }) => {
                 publishedDate={date}
                 modifiedDate={new Date(Date.now()).toISOString()}
             />
-            <Article className="pb-20 px-10 lg:px-16">
-                <Article.Title className="font-bold text-2xl">
-                    {frontmatter.title}
-                </Article.Title>
-                <Article.Text>{frontmatter.date}</Article.Text>
-                <MDXProvider components={shortcodes}>
+            <div className="pb-20 px-10 lg:px-16">
+                <h1 className="font-bold text-2xl">{frontmatter.title}</h1>
+                <p>{frontmatter.date}</p>
+                <MDXProvider>
                     <MDXRenderer>{body}</MDXRenderer>
                 </MDXProvider>
                 {previous === false ? null : (
@@ -66,8 +64,8 @@ export default ({ data, pageContext }) => {
                         )}
                     </>
                 )}
-            </Article>
-        </LayoutContainer>
+            </div>
+        </DefaultLayout>
     )
 }
 

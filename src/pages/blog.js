@@ -1,21 +1,12 @@
+import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import React from "react"
-import styled from "styled-components"
-import { LayoutContainer } from "../containers/layout"
-import { Card } from "../components"
-
-// const IndexWrapper = styled.main``
-
-// const PostWrapper = styled.div``
-
-const Image = styled(Img)`
-    border-radius: 5px;
-`
+import DefaultLayout from "../shared/layouts/DefaultLayout"
+import Card from "../shared/components/UIElements/Card"
 
 export default ({ data }) => {
     return (
-        <LayoutContainer>
+        <DefaultLayout>
             <div className="h-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4 lg:p-6 mb-4">
                     {data.allMdx.nodes.map(
@@ -23,7 +14,7 @@ export default ({ data }) => {
                             <Card key={id} className="card p-4">
                                 <Link to={fields.slug}>
                                     {!!frontmatter.cover ? (
-                                        <Image
+                                        <Img
                                             fluid={
                                                 frontmatter.cover
                                                     .childImageSharp.fluid
@@ -39,7 +30,7 @@ export default ({ data }) => {
                     )}
                 </div>
             </div>
-        </LayoutContainer>
+        </DefaultLayout>
     )
 }
 
